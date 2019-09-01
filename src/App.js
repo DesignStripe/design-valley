@@ -2,17 +2,51 @@ import React from "react";
 import Card from "./components/Card";
 import CardsContainer from "./components/CardsContainer";
 
+const cardData = [
+  {
+    image: "https://picsum.photos/200/",
+    title: "Name of app",
+    description: "Desription of the design resource here"
+  },
+  {
+    image: "https://picsum.photos/200/",
+    title: "Name of app",
+    description: "Desription of the design resource here"
+  },
+  {
+    image: "https://picsum.photos/200/",
+    title: "Name of app",
+    description: "Desription of the design resource here"
+  },
+  {
+    image: "https://picsum.photos/200/",
+    title: "Name of app",
+    description: "Desription of the design resource here"
+  },
+  {
+    image: "https://picsum.photos/200/",
+    title: "Name of app",
+    description: "Desription of the design resource here"
+  },
+  {
+    image: "https://picsum.photos/200/",
+    title: "Name of app",
+    description: "Desription of the design resource here"
+  }
+];
+
 function App() {
   return (
     <div className="App">
       <CardsContainer>
-        <Card> Hello</Card>
-        <Card> Hi</Card>
-        <Card> My name is dsadas</Card>
-        <Card> das</Card>
-        <Card> Hello</Card>
-        <Card> dasda</Card>
-        <Card> dsa</Card>
+        {cardData.map((card, index) => (
+          <Card
+            key={index}
+            image={card.image + 300 + index}
+            title={card.title}
+            description={card.description}
+          />
+        ))}
       </CardsContainer>
     </div>
   );
