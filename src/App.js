@@ -1,54 +1,31 @@
 import React from "react";
-import Card from "./components/Card";
-import CardsContainer from "./components/CardsContainer";
+import styled from "styled-components";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-const cardData = [
-  {
-    image: "https://picsum.photos/200/",
-    title: "Name of app",
-    description: "Desription of the design resource here"
-  },
-  {
-    image: "https://picsum.photos/200/",
-    title: "Name of app",
-    description: "Desription of the design resource here"
-  },
-  {
-    image: "https://picsum.photos/200/",
-    title: "Name of app",
-    description: "Desription of the design resource here"
-  },
-  {
-    image: "https://picsum.photos/200/",
-    title: "Name of app",
-    description: "Desription of the design resource here"
-  },
-  {
-    image: "https://picsum.photos/200/",
-    title: "Name of app",
-    description: "Desription of the design resource here"
-  },
-  {
-    image: "https://picsum.photos/200/",
-    title: "Name of app",
-    description: "Desription of the design resource here"
-  }
-];
+import Card from "./components/Card";
+import Cards from "./components/Cards";
+import Sidebar from "./components/Sidebar";
+
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+  ${"" /* background-color: gray; */}
+
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <CardsContainer>
-        {cardData.map((card, index) => (
-          <Card
-            key={index}
-            image={card.image + 300 + index}
-            title={card.title}
-            description={card.description}
-          />
-        ))}
-      </CardsContainer>
-    </div>
+    <Router>
+      <Container>
+        <Sidebar />
+        <Route path="/" exact component={Cards} />
+        <Route path="/cards" exact component={Cards} />
+        <Route path="/card/:id" component={Card} />
+      </Container>
+    </Router>
   );
 }
 
