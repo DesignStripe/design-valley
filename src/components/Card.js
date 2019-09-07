@@ -8,14 +8,14 @@ const Container = styled.div`
   background-color: #fff;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
   padding: 1rem;
-  margin: 1rem;
+  margin: 0.5rem;
 
   width: 300px;
   box-sizing: border-box;
 
   flex: 0 1 24%;
 
-  flex: 0 1 calc(25% - 1em);
+  flex: 0 1 calc(30%);
 
   &:hover {
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
