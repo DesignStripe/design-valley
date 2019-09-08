@@ -8,7 +8,7 @@ const Container = styled.div`
   background-color: #fff;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
   padding: 1rem;
-  margin: 0.5rem;
+  margin: 1rem;
 
   width: 300px;
   box-sizing: border-box;
@@ -18,7 +18,7 @@ const Container = styled.div`
   flex: 0 1 calc(30%);
 
   &:hover {
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     transform: translateY(-1px);
   }
 `;

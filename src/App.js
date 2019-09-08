@@ -3,10 +3,11 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import Home from "./components/Home";
+import HomeContainer from "./containers/HomeContainer";
+import CategoryContainer from "./containers/CategoryContainer";
+
 import Nav from "./components/Nav";
 import Card from "./components/Card";
-import Cards from "./components/Cards";
 import MainSection from "./components/MainSection";
 import Sidebar from "./components/Sidebar";
 
@@ -32,8 +33,8 @@ function App() {
         </Nav>
         <MainSection>
           <Sidebar items={menuItems} />
-          <Route path="/" exact component={Home} />
-          <Route path="/category/:id" exact component={Cards} />
+          <Route path="/" exact component={HomeContainer} />
+          <Route path="/category/:id" exact component={CategoryContainer} />
           <Route path="/card/:id" component={Card} />
         </MainSection>
       </Router>

@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import Card from "./Card";
-
-import { fetchToolByCategory } from "../api/requests";
 
 const Container = styled.div`
   display: flex;
@@ -15,14 +13,7 @@ const Container = styled.div`
   margin-right: 1rem;
 `;
 
-const Cards = ({ match }) => {
-  const { id } = match.params;
-  const [tools, setTools] = useState([]);
-
-  useEffect(() => {
-    fetchToolByCategory(id).then(res => setTools(res));
-  }, [id]);
-
+const Cards = ({ tools }) => {
   return (
     <Container>
       {tools.map((card, index) => (
