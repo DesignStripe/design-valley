@@ -4,4 +4,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - [ ] Add Image component
 - [ ] Handle app's Typography
-- [ ] Make main content container scrollable
+- [x] Make main content container scrollable
+- [x] Add real data
+- [ ] Fetch tools' images
