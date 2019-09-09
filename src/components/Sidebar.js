@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Icon, Menu, Sidebar } from "semantic-ui-react";
+import { Menu, Sidebar } from "semantic-ui-react";
 
 const StyledSidebar = styled(Sidebar)`
   background-color: #f5f5f5;
@@ -10,6 +10,9 @@ const StyledSidebar = styled(Sidebar)`
   border-radius: 8px;
   padding: 1rem;
   display: flex;
+  float: left;
+  height: calc(100% - 2rem);
+
   flex-direction: column;
   min-width: 200px;
   box-sizing: border-box;

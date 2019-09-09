@@ -10,6 +10,7 @@ const Container = styled.div`
 
   overflow-y: scroll;
   width: 100%;
+  min-height: 308px;
   margin-right: 1rem;
 `;
 

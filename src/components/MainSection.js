@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 const MainSection = styled.div`
-  width: 100vw;
-  height: 100vh;
-  ${"" /* background-color: gray; */}
+  width: calc(100vw - 200px);
+  height: 100%;
+  float: right;
+  overflow-y: scroll;
 
-  display: flex;
-  flex-direction: row;
-  position: fixed;
+  background-color: salmon;
 `;
 
 export default MainSection;

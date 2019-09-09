@@ -1,6 +1,8 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Nav = styled.header`
+const Container = styled.header`
   width: 100vw;
   height: 64px;
   display: flex;
@@ -22,5 +24,14 @@ const Nav = styled.header`
     text-transform: capitalize;
   }
 `;
+
+const Nav = ({ title }) => {
+  return (
+    <Container>
+      <Link className="logo" to="/" />
+      <h2 className="title">{title}</h2>
+    </Container>
+  );
+};
 
 export default Nav;
