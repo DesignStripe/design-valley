@@ -5,8 +5,6 @@ const MainSection = styled.div`
   height: 100%;
   float: right;
   overflow-y: scroll;
-
-  background-color: salmon;
 `;
 
 export default MainSection;

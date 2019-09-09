@@ -5,17 +5,18 @@ import styled from "styled-components";
 import { Menu, Sidebar } from "semantic-ui-react";
 
 const StyledSidebar = styled(Sidebar)`
-  background-color: #f5f5f5;
-  margin: 1rem;
-  border-radius: 8px;
-  padding: 1rem;
-  display: flex;
-  float: left;
   height: calc(100% - 2rem);
-
-  flex-direction: column;
   min-width: 200px;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
+  float: left;
+  overflow-y: scroll;
 
   & > * {
     padding: 0.5rem;

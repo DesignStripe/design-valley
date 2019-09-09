@@ -1,9 +1,5 @@
-const items = [
-  { id: "colors", name: "Colors" },
-  { id: "gradients", name: "Gradients" },
-  { id: "web-accessibility", name: "Web Accessibility" },
-  { id: "design-systems", name: "Design Systems" },
-  { id: "design-tools", name: "Design Tools" }
-];
+import categories from "./categories.json";
+
+const items = categories.sort((a, b) => (a.name > b.name ? 1 : -1));
 
 export default items;

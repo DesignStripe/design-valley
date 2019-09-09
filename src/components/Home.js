@@ -11,11 +11,11 @@ const Container = styled.div`
 const Home = ({ featured, popular, favorite }) => {
   return (
     <Container>
-      <h2>Featured </h2>
+      <h2 style={{ margin: "1rem 0 0 1rem" }}>Featured </h2>
       <Cards tools={featured} />
-      <h2>Popular </h2>
+      <h2 style={{ margin: "1rem 0 0 1rem" }}>Popular </h2>
       <Cards tools={popular} />
-      <h2>Favorite</h2>
+      <h2 style={{ margin: "1rem 0 0 1rem" }}>Favorite</h2>
       <Cards tools={favorite} />
     </Container>
   );
