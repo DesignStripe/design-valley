@@ -15,20 +15,11 @@ import Sidebar from "./components/Sidebar";
 import menuItems from "./data/menuItems";
 import theme from "./utils/theme";
 
-const findTitleFromPathname = () => {
-  const pathname = window.location.pathname;
-  if (pathname === "/") return "Home";
-
-  const title = pathname.replace("/category/", "").replace("-", " ");
-  return title;
-};
-
 function App() {
-  const title = findTitleFromPathname();
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <Nav title={title} />
+        <Nav />
         <Body>
           <Sidebar items={menuItems} />
           <MainSection>

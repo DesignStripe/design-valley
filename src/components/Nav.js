@@ -1,6 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
+import categories from "../data/categories.json";
 
 const Container = styled.header`
   width: 100vw;
@@ -25,7 +26,24 @@ const Container = styled.header`
   }
 `;
 
-const Nav = ({ title }) => {
+const findTitleFromPathname = () => {
+  const pathname = window.location.pathname;
+  if (pathname === "/") return "Home";
+
+  const categoryId = pathname.replace("/category/", "");
+  const title = categories.find(category => category.id === categoryId).name;
+  return title;
+};
+
+const Nav = ({ history }) => {
+  const [title, setTitle] = useState("");
+
+  history.listen((location, action) => {
+    setTitle(findTitleFromPathname());
+  });
+
+  useEffect(() => setTitle(findTitleFromPathname()), []);
+
   return (
     <Container>
       <Link className="logo" to="/" />
@@ -34,4 +52,4 @@ const Nav = ({ title }) => {
   );
 };
 
-export default Nav;
+export default withRouter(Nav);
