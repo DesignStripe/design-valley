@@ -1,5 +1,6 @@
 import axios from "axios";
 import tools from "../data/tools";
+import { getFavorites } from "../utils/cookies";
 
 function fetchToolByCategory(id) {
   const selectedTools = tools.filter(tool => tool.category === id);
@@ -23,10 +24,14 @@ function fetchPopular() {
 }
 
 function fetchFavorite() {
-  // pick em from cookies...
-  const selectedTools = [tools[3], tools[4]];
+  const favoritesIds = getFavorites();
 
-  return new Promise((resolve, reject) => resolve(selectedTools));
+  const favoriteTools = favoritesIds.map(favoriteId =>
+    tools.find(tool => tool.id === favoriteId)
+  );
+  console.log(favoriteTools);
+
+  return new Promise((resolve, reject) => resolve(favoriteTools));
   // axios.get("");
 }
 

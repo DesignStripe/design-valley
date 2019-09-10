@@ -17,12 +17,14 @@ const Container = styled.div`
 const Cards = ({ tools }) => {
   return (
     <Container>
-      {tools.map((card, index) => (
+      {tools.map((tool, index) => (
         <Card
-          key={index}
-          image={card.image + 300 + index}
-          title={card.name}
-          description={card.description}
+          key={tool.id}
+          id={tool.id}
+          image={tool.image + 300 + index}
+          url={tool.url}
+          title={tool.name}
+          description={tool.description}
         />
       ))}
     </Container>

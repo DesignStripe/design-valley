@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { FiHeart } from "react-icons/fi";
+import { updateFavorites, getFavorites } from "../utils/cookies";
 
 import Image from "./Image";
 
@@ -23,12 +25,58 @@ const Container = styled.div`
   }
 `;
 
-const Card = ({ image, title, description }) => {
+const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`;
+
+function getInitialSaveStatus(id) {
+  const favorites = getFavorites();
+  const isSaved = favorites.some(tool => tool === id);
+  return isSaved;
+}
+
+const Card = ({ image, title, description, id, url }) => {
+  const [isSaved, setIsSaved] = useState(getInitialSaveStatus(id));
+
+  function saveTool(id) {
+    const previousFavorites = getFavorites();
+    const newFavorites = [...previousFavorites, id];
+    updateFavorites(newFavorites);
+    setIsSaved(true);
+  }
+
+  function removeTool(id) {
+    const previousFavorites = getFavorites();
+    const newFavorites = previousFavorites.filter(toolId => toolId !== id);
+    updateFavorites(newFavorites);
+    setIsSaved(false);
+  }
+
   return (
     <Container>
       <Image fitContainer src={image} ratio="16:9" />
-      <h2>{title}</h2>
+      <Row>
+        <h2>{title}</h2>
+        {isSaved ? (
+          <FiHeart
+            size={24}
+            onClick={() => removeTool(id)}
+            fill="red"
+            stroke="none"
+          />
+        ) : (
+          <FiHeart size={24} onClick={() => saveTool(id)} />
+        )}
+      </Row>
       <p>{description}</p>
+
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        Visit
+      </a>
     </Container>
   );
 };
