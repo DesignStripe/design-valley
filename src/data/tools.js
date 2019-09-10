@@ -2,7 +2,7 @@ const tools = [
   {
     category: "stock-images",
     name: "Burst by Shopify",
-    url: "https://burst.shopify.com/)",
+    url: "https://burst.shopify.com/",
     description: "Download free, high-resolution images.",
     image: "https://picsum.photos/200/",
     id: 0
@@ -10,7 +10,7 @@ const tools = [
   {
     category: "stock-images",
     name: "Gratisography",
-    url: "https://gratisography.com/)",
+    url: "https://gratisography.com/",
     description:
       "The world's quirkiest collection of free high-resolution pictures you can use on your personal and commercial projects.",
     image: "https://picsum.photos/200/",
@@ -19,7 +19,7 @@ const tools = [
   {
     category: "stock-images",
     name: "Life of Pix",
-    url: "https://www.lifeofpix.com/)",
+    url: "https://www.lifeofpix.com/",
     description: "Free high resolution photography.",
     image: "https://picsum.photos/200/",
     id: 2
@@ -27,7 +27,7 @@ const tools = [
   {
     category: "stock-images",
     name: "Moose",
-    url: "https://photos.icons8.com/)",
+    url: "https://photos.icons8.com/",
     description:
       "A collection of stock photography in a single style. Good for collages. Free for commercial use.",
     image: "https://picsum.photos/200/",
@@ -36,7 +36,7 @@ const tools = [
   {
     category: "stock-images",
     name: "New Old Stock",
-    url: "http://nos.twnsnd.co/)",
+    url: "http://nos.twnsnd.co/",
     description: "Vintage photos from the public archives.",
     image: "https://picsum.photos/200/",
     id: 4
@@ -44,7 +44,7 @@ const tools = [
   {
     category: "stock-images",
     name: "Pexels",
-    url: "https://www.pexels.com)",
+    url: "https://www.pexels.com",
     description: "Free stock photos you can use everywhere.",
     image: "https://picsum.photos/200/",
     id: 5
@@ -52,7 +52,7 @@ const tools = [
   {
     category: "stock-images",
     name: "Pixabay",
-    url: "https://pixabay.com/)",
+    url: "https://pixabay.com/",
     description:
       "Over 1.6 million royalty free stock photos and videos shared by our generous community.",
     image: "https://picsum.photos/200/",
@@ -61,7 +61,7 @@ const tools = [
   {
     category: "stock-images",
     name: "reshot",
-    url: "https://www.reshot.com/)",
+    url: "https://www.reshot.com/",
     description: "Handpicked, non-stocky images. Yours to use as you wish.",
     image: "https://picsum.photos/200/",
     id: 7
@@ -69,7 +69,7 @@ const tools = [
   {
     category: "stock-images",
     name: "StockSnap",
-    url: "https://stocksnap.io/)",
+    url: "https://stocksnap.io/",
     description:
       "High quality and high resolution stock images free from all copyright restrictions(CC0).",
     image: "https://picsum.photos/200/",
@@ -78,7 +78,7 @@ const tools = [
   {
     category: "stock-images",
     name: "Unsplash",
-    url: "https://unsplash.com/)",
+    url: "https://unsplash.com/",
     description:
       "Beautiful, free images and photos that you can download and use for any project.",
     image: "https://picsum.photos/200/",
@@ -87,7 +87,7 @@ const tools = [
   {
     category: "stock-videos",
     name: "Coverr",
-    url: "https://coverr.co/)",
+    url: "https://coverr.co/",
     description:
       "Download royalty free (for personal and commercial use), unique and beautiful video footage for your website or any project.",
     image: "https://picsum.photos/200/",
@@ -96,7 +96,7 @@ const tools = [
   {
     category: "stock-videos",
     name: "Life of Vids",
-    url: "https://www.lifeofvids.com/)",
+    url: "https://www.lifeofvids.com/",
     description:
       "Free videos for personal & commercial uses. New videos added weekly.",
     image: "https://picsum.photos/200/",
@@ -105,7 +105,7 @@ const tools = [
   {
     category: "stock-videos",
     name: "Mixkit",
-    url: "https://mixkit.co/)",
+    url: "https://mixkit.co/",
     description:
       "Extraordinary HD videos for you to use, completely free of charge.",
     image: "https://picsum.photos/200/",
@@ -114,7 +114,7 @@ const tools = [
   {
     category: "stock-videos",
     name: "Pexels Videos",
-    url: "https://www.pexels.com/videos/)",
+    url: "https://www.pexels.com/videos/",
     description: "The best free videos shared by the Pexels community.",
     image: "https://picsum.photos/200/",
     id: 13
@@ -122,7 +122,7 @@ const tools = [
   {
     category: "stock-videos",
     name: "Videvo",
-    url: "https://www.videvo.net/)",
+    url: "https://www.videvo.net/",
     description: "Free HD stock footage & motion graphics for any project.",
     image: "https://picsum.photos/200/",
     id: 14
@@ -130,7 +130,7 @@ const tools = [
   {
     category: "icons",
     name: "Animaticons",
-    url: "http://animaticons.co/)",
+    url: "http://animaticons.co/",
     description: "Beautiful, customizable animated GIF icons",
     image: "https://picsum.photos/200/",
     id: 15
@@ -138,7 +138,7 @@ const tools = [
   {
     category: "icons",
     name: "Eva Icons",
-    url: "https://akveo.github.io/eva-icons/#/)",
+    url: "https://akveo.github.io/eva-icons/#/",
     description:
       "Eva Icons is a pack of more than 480 beautifully crafted Open Source icons for common actions and items.",
     image: "https://picsum.photos/200/",
@@ -147,7 +147,7 @@ const tools = [
   {
     category: "icons",
     name: "Evericons",
-    url: "http://www.evericons.com)",
+    url: "http://www.evericons.com",
     description:
       "Evericons is a collection of 460+ well-crafted icons for your next project.",
     image: "https://picsum.photos/200/",
@@ -156,7 +156,7 @@ const tools = [
   {
     category: "icons",
     name: "Feather icons",
-    url: "https://feathericons.com/)",
+    url: "https://feathericons.com/",
     description:
       "Feather is a collection of simply beautiful open source icons. Each icon is designed on a 24x24 grid with an emphasis on simplicity, consistency and readability.",
     image: "https://picsum.photos/200/",
@@ -165,7 +165,7 @@ const tools = [
   {
     category: "icons",
     name: "Flaticon",
-    url: "https://www.flaticon.com)",
+    url: "https://www.flaticon.com",
     description:
       "The largest database of free icons available in PNG, SVG, EPS, PSD and BASE 64 formats.",
     image: "https://picsum.photos/200/",
@@ -174,7 +174,7 @@ const tools = [
   {
     category: "icons",
     name: "Font Awesome",
-    url: "https://fontawesome.com/)",
+    url: "https://fontawesome.com/",
     description:
       "Get vector icons and social logos on your website with Font Awesome, the web's most popular icon set and toolkit.",
     image: "https://picsum.photos/200/",
@@ -183,7 +183,7 @@ const tools = [
   {
     category: "icons",
     name: "Grommet Icons",
-    url: "https://icons.grommet.io/)",
+    url: "https://icons.grommet.io/",
     description: "Iconography for Grommet and React.js",
     image: "https://picsum.photos/200/",
     id: 21
@@ -191,7 +191,7 @@ const tools = [
   {
     category: "icons",
     name: "IconBros",
-    url: "https://www.iconbros.com/)",
+    url: "https://www.iconbros.com/",
     description: "1227+ free icons grouped in 38 collections.",
     image: "https://picsum.photos/200/",
     id: 22
@@ -199,7 +199,7 @@ const tools = [
   {
     category: "icons",
     name: "iconmonstr",
-    url: "https://iconmonstr.com/)",
+    url: "https://iconmonstr.com/",
     description: "Discover 4432+ free icons in 307 collections",
     image: "https://picsum.photos/200/",
     id: 23
@@ -207,7 +207,7 @@ const tools = [
   {
     category: "icons",
     name: "Icons8",
-    url: "https://icons8.com/icons)",
+    url: "https://icons8.com/icons",
     description:
       "Get free icons designed to combine perfectly and fit into the style of your design.",
     image: "https://picsum.photos/200/",
@@ -216,7 +216,7 @@ const tools = [
   {
     category: "icons",
     name: "Ionicons",
-    url: "https://ionicons.com/)",
+    url: "https://ionicons.com/",
     description:
       "Premium designed icons for use in web, iOS, Android, and desktop apps. Support for SVG and web font. Completely open source, MIT licensed and built by the Ionic Framework team.",
     image: "https://picsum.photos/200/",
@@ -225,7 +225,7 @@ const tools = [
   {
     category: "icons",
     name: "Ikonate",
-    url: "https://www.ikonate.com/)",
+    url: "https://www.ikonate.com/",
     description: "Fully customisable & accessible vector icons",
     image: "https://picsum.photos/200/",
     id: 26
@@ -233,7 +233,7 @@ const tools = [
   {
     category: "icons",
     name: "Material Design icons",
-    url: "https://materialdesignicons.com/)",
+    url: "https://materialdesignicons.com/",
     description:
       "Material Design Icons' growing icon collection allows designers and developers targeting various platforms to download icons in the format, color and size they need for any project.",
     image: "https://picsum.photos/200/",
@@ -242,7 +242,7 @@ const tools = [
   {
     category: "icons",
     name: "Nucleo app",
-    url: "https://nucleoapp.com/)",
+    url: "https://nucleoapp.com/",
     description:
       "Nucleo is a beautiful library of 26831 icons, and a powerful application to collect, customize and export all your icons.",
     image: "https://picsum.photos/200/",
@@ -251,7 +251,7 @@ const tools = [
   {
     category: "icons",
     name: "Οutlane",
-    url: "https://outlane.co/graphics/animated-svg-icons-pack/)",
+    url: "https://outlane.co/graphics/animated-svg-icons-pack/",
     description:
       "The pack includes 100 hand-crafted animated vector icons that you can use on any website or app.",
     image: "https://picsum.photos/200/",
@@ -260,7 +260,7 @@ const tools = [
   {
     category: "icons",
     name: "Potlab Icons",
-    url: "http://www.potlabicons.com)",
+    url: "http://www.potlabicons.com",
     description: "Animated SVG icons for web projects.",
     image: "https://picsum.photos/200/",
     id: 30
@@ -268,7 +268,7 @@ const tools = [
   {
     category: "icons",
     name: "Tilda Icons",
-    url: "https://tilda.cc/free-icons/)",
+    url: "https://tilda.cc/free-icons/",
     description: "Free icons for Landing Pages. 700+ Icons/43 Themes!",
     image: "https://picsum.photos/200/",
     id: 31
@@ -276,7 +276,7 @@ const tools = [
   {
     category: "icons",
     name: "Prefect Icons",
-    url: "http://www.perfecticons.com/)",
+    url: "http://www.perfecticons.com/",
     description: "Download Free Perfect Vector Icons.",
     image: "https://picsum.photos/200/",
     id: 32
@@ -284,7 +284,7 @@ const tools = [
   {
     category: "icons",
     name: "Remix Icons",
-    url: "https://remixicon.com/)",
+    url: "https://remixicon.com/",
     description:
       "Remix Icon is a set of open-source neutral-style system symbols elaborately crafted for designers and developers.",
     image: "https://picsum.photos/200/",
@@ -293,7 +293,7 @@ const tools = [
   {
     category: "icons",
     name: "Slice",
-    url: "https://slice.design/glyphs)",
+    url: "https://slice.design/glyphs",
     description: "Various Perfectly Shaped Glyphs",
     image: "https://picsum.photos/200/",
     id: 34
@@ -301,7 +301,7 @@ const tools = [
   {
     category: "icons",
     name: "Streamline 3.0",
-    url: "https://streamlineicons.com)",
+    url: "https://streamlineicons.com",
     description: "Over 10.500 in three different weight.",
     image: "https://picsum.photos/200/",
     id: 35
@@ -309,7 +309,7 @@ const tools = [
   {
     category: "icons",
     name: "The Noun Project",
-    url: "https://thenounproject.com/)",
+    url: "https://thenounproject.com/",
     description: "Over 2 Million curated icons, created by a global community.",
     image: "https://picsum.photos/200/",
     id: 36
@@ -317,7 +317,7 @@ const tools = [
   {
     category: "icons",
     name: "Unicons",
-    url: "https://iconscout.com/unicons)",
+    url: "https://iconscout.com/unicons",
     description:
       "1000+ Pixel-perfect vector icons and Iconfont for your next project.",
     image: "https://picsum.photos/200/",
@@ -326,7 +326,7 @@ const tools = [
   {
     category: "icons",
     name: "useAnimations",
-    url: "https://useanimations.com)",
+    url: "https://useanimations.com",
     description:
       "Animated icons in Lottie Framework and After Effects for immediate implementation to your apps or websites.",
     image: "https://picsum.photos/200/",
@@ -335,7 +335,7 @@ const tools = [
   {
     category: "icons",
     name: "Zwicon",
-    url: "https://www.zwicon.com)",
+    url: "https://www.zwicon.com",
     description: "Handcrafted iconset for your next project",
     image: "https://picsum.photos/200/",
     id: 39
@@ -343,7 +343,7 @@ const tools = [
   {
     category: "fonts",
     name: "1001FreeFonts",
-    url: "https://www.1001freefonts.com/)",
+    url: "https://www.1001freefonts.com/",
     description:
       "Download 41882 fonts in 21841 families for Windows, Mac and Linux. 1001 Free Fonts offers a huge selection of free fonts. New fonts are added daily.",
     image: "https://picsum.photos/200/",
@@ -352,7 +352,7 @@ const tools = [
   {
     category: "fonts",
     name: "Aleo",
-    url: "https://www.behance.net/gallery/8018673/ALEO-Free-Font-Family)",
+    url: "https://www.behance.net/gallery/8018673/ALEO-Free-Font-Family",
     description: "Free contemporary slab serif typeface.",
     image: "https://picsum.photos/200/",
     id: 41
@@ -360,7 +360,7 @@ const tools = [
   {
     category: "fonts",
     name: "Archetype",
-    url: "https://archetypeapp.com/)",
+    url: "https://archetypeapp.com/",
     description:
       "Archetype makes beautiful web typography designs quick and easy to create.",
     image: "https://picsum.photos/200/",
@@ -370,7 +370,7 @@ const tools = [
     category: "fonts",
     name: "Behance",
     url:
-      "https://www.behance.net/search?content=projects&sort=appreciations&time=week&search=free%20font)",
+      "https://www.behance.net/search?content=projects&sort=appreciations&time=week&search=free%20font",
     description:
       "Behance is a network of sites and services specializing in self-promotion, including consulting, online portfolio sites and many free font resources. All you have to do is to add some clever search filters, such as 'free font'.",
     image: "https://picsum.photos/200/",
@@ -379,7 +379,7 @@ const tools = [
   {
     category: "fonts",
     name: "Clear Sans",
-    url: "https://01.org/clear-SANS)",
+    url: "https://01.org/clear-SANS",
     description:
       "Clear Sans has been recognized as a versatile OpenType font for screen, print, and Web.",
     image: "https://picsum.photos/200/",
@@ -389,7 +389,7 @@ const tools = [
     category: "fonts",
     name: "Cooper Hewitt",
     url:
-      "https://www.cooperhewitt.org/open-source-at-cooper-hewitt/cooper-hewitt-the-typeface-by-chester-jenkins/)",
+      "https://www.cooperhewitt.org/open-source-at-cooper-hewitt/cooper-hewitt-the-typeface-by-chester-jenkins/",
     description: "The Typeface created by Chester Jenkins.",
     image: "https://picsum.photos/200/",
     id: 45
@@ -397,7 +397,7 @@ const tools = [
   {
     category: "fonts",
     name: "Dafont",
-    url: "https://www.dafont.com/)",
+    url: "https://www.dafont.com/",
     description:
       "Archive of freely downloadable fonts. Browse by alphabetical listing, by style, by author or by popularity.",
     image: "https://picsum.photos/200/",
@@ -406,7 +406,7 @@ const tools = [
   {
     category: "fonts",
     name: "FontPair",
-    url: "https://fontpair.co/)",
+    url: "https://fontpair.co/",
     description:
       "Font Pair helps designers pair Google Fonts together. Beautiful Google Font combinations and pairs.",
     image: "https://picsum.photos/200/",
@@ -415,7 +415,7 @@ const tools = [
   {
     category: "fonts",
     name: "FontSpark",
-    url: "https://fontspark.app/)",
+    url: "https://fontspark.app/",
     description:
       "Helping designers discover the perfect font for their next design project.",
     image: "https://picsum.photos/200/",
@@ -424,7 +424,7 @@ const tools = [
   {
     category: "fonts",
     name: "FontSquirrel",
-    url: "https://www.fontsquirrel.com/)",
+    url: "https://www.fontsquirrel.com/",
     description:
       "Font Squirrel scours the internet for high quality, legitimately free fonts.",
     image: "https://picsum.photos/200/",
@@ -433,7 +433,7 @@ const tools = [
   {
     category: "fonts",
     name: "Google Fonts",
-    url: "https://fonts.google.com/)",
+    url: "https://fonts.google.com/",
     description:
       "Google Fonts is a library of 900 libre licensed fonts, an interactive web directory for browsing the library, and APIs for conveniently using the fonts via CSS and Android.",
     image: "https://picsum.photos/200/",
@@ -442,7 +442,7 @@ const tools = [
   {
     category: "fonts",
     name: "Google Noto Font",
-    url: "https://www.google.com/get/noto/)",
+    url: "https://www.google.com/get/noto/",
     description: "Beautiful and free fonts for all languages.",
     image: "https://picsum.photos/200/",
     id: 51
@@ -450,7 +450,7 @@ const tools = [
   {
     category: "fonts",
     name: "Leon Sans",
-    url: "https://leon-kim.com/)",
+    url: "https://leon-kim.com/",
     description:
       "Leon Sans is a geometric sans-serif typeface made with code in 2019 by Jongmin Kim.",
     image: "https://picsum.photos/200/",
@@ -459,7 +459,7 @@ const tools = [
   {
     category: "fonts",
     name: "Optician Sans",
-    url: "https://optician-sans.com)",
+    url: "https://optician-sans.com",
     description:
       "A free font based on the historical eye charts and optotypes used by opticians world wide.",
     image: "https://picsum.photos/200/",
@@ -468,7 +468,7 @@ const tools = [
   {
     category: "fonts",
     name: "Picas",
-    url: "https://picas.now.sh/)",
+    url: "https://picas.now.sh/",
     description: "Generate Project Logo with Google Fonts",
     image: "https://picsum.photos/200/",
     id: 54
@@ -476,7 +476,7 @@ const tools = [
   {
     category: "fonts",
     name: "Type-Scale",
-    url: "https://type-scale.com/)",
+    url: "https://type-scale.com/",
     description: "Preview and choose the right type scale for your project.",
     image: "https://picsum.photos/200/",
     id: 55
@@ -484,7 +484,7 @@ const tools = [
   {
     category: "fonts",
     name: "Typewolf",
-    url: "https://www.typewolf.com/)",
+    url: "https://www.typewolf.com/",
     description:
       "Typewolf helps designers choose the perfect font combination for their next design project",
     image: "https://picsum.photos/200/",
@@ -493,14 +493,14 @@ const tools = [
   {
     category: "fonts",
     name: "Variable Fonts",
-    url: "https://colordesigner.io/)",
+    url: "https://colordesigner.io/",
     description: "A simple resource for finding and trying variable fonts.",
     image: "https://picsum.photos/200/",
     id: 57
   },
   {
     name: "Absurb",
-    url: "https://absurd.design/)",
+    url: "https://absurd.design/",
     description:
       "What about surrealist illustrations for landing pages? Take every user on an individual journey through their own imagination.",
     image: "https://picsum.photos/200/",
@@ -509,7 +509,7 @@ const tools = [
   {
     category: "illustrations",
     name: "Avataaars",
-    url: "https://getavataaars.com/)",
+    url: "https://getavataaars.com/",
     description:
       "Mix and match avatar illustrations. Combine clothes, hair, emotions, accessories, and colors.",
     image: "https://picsum.photos/200/",
@@ -518,7 +518,7 @@ const tools = [
   {
     category: "illustrations",
     name: "Blobmaker",
-    url: "https://www.blobmaker.app/)",
+    url: "https://www.blobmaker.app/",
     description: "Create organic svg shapes in just a few seconds.",
     image: "https://picsum.photos/200/",
     id: 60
@@ -526,7 +526,7 @@ const tools = [
   {
     category: "illustrations",
     name: "Charco",
-    url: "https://www.karthiksrinivas.in/charco)",
+    url: "https://www.karthiksrinivas.in/charco",
     description:
       "A set of 16 handcrafted illustrations for your web & app projects by Karthik Srinivas.",
     image: "https://picsum.photos/200/",
@@ -535,7 +535,7 @@ const tools = [
   {
     category: "illustrations",
     name: "Delesign",
-    url: "https://delesign.com/free-designs/graphics/)",
+    url: "https://delesign.com/free-designs/graphics/",
     description:
       "Use our royalty-free designs for your website, social media, blog, email newsletters, and more.",
     image: "https://picsum.photos/200/",
@@ -544,7 +544,7 @@ const tools = [
   {
     category: "illustrations",
     name: "DrawKit",
-    url: "https://www.drawkit.io/)",
+    url: "https://www.drawkit.io/",
     description:
       "DrawKit is a collection of free, beautiful, customisable MIT licensed SVG illustrations in two styles",
     image: "https://picsum.photos/200/",
@@ -553,7 +553,7 @@ const tools = [
   {
     category: "illustrations",
     name: "FreePik",
-    url: "https://www.freepik.com/)",
+    url: "https://www.freepik.com/",
     description:
       "More than 3 millions free vectors, PSD, photos and free icons.",
     image: "https://picsum.photos/200/",
@@ -562,7 +562,7 @@ const tools = [
   {
     category: "illustrations",
     name: "IRA Design",
-    url: "https://iradesign.io/)",
+    url: "https://iradesign.io/",
     description:
       "With IRA Design, you can create amazing illustrations, using hand-drawn sketch components, a cool selection of 5 gradients and ai., svg. or png. formats.",
     image: "https://picsum.photos/200/",
@@ -571,7 +571,7 @@ const tools = [
   {
     category: "illustrations",
     name: "Ηumaaans",
-    url: "https://www.humaaans.com/)",
+    url: "https://www.humaaans.com/",
     description: "Mix-&-match illustrations of people with a design library.",
     image: "https://picsum.photos/200/",
     id: 66
@@ -579,7 +579,7 @@ const tools = [
   {
     category: "illustrations",
     name: "Lukasz Adam",
-    url: "https://lukaszadam.com/illustrations)",
+    url: "https://lukaszadam.com/illustrations",
     description:
       "Free vector art illustrations and icons. Available for personal and commercial use.",
     image: "https://picsum.photos/200/",
@@ -588,7 +588,7 @@ const tools = [
   {
     category: "illustrations",
     name: "ManyPixels",
-    url: "https://gallery.manypixels.co/)",
+    url: "https://gallery.manypixels.co/",
     description:
       "Each week, discover royalty-free illustrations to power up your projects.",
     image: "https://picsum.photos/200/",
@@ -597,7 +597,7 @@ const tools = [
   {
     category: "illustrations",
     name: "Mixkit",
-    url: "https://mixkit.co/)",
+    url: "https://mixkit.co/",
     description:
       "Mixkit is a curated gallery of high-quality videos and art, made by some of the world’s most talented creators, with all content licensed for free.",
     image: "https://picsum.photos/200/",
@@ -606,7 +606,7 @@ const tools = [
   {
     category: "illustrations",
     name: "Ouch",
-    url: "https://icons8.com/ouch)",
+    url: "https://icons8.com/ouch",
     description: "Free illustrations to class up your project.",
     image: "https://picsum.photos/200/",
     id: 70
@@ -614,7 +614,7 @@ const tools = [
   {
     category: "illustrations",
     name: "Stubborn Generator",
-    url: "https://stubborn.fun/)",
+    url: "https://stubborn.fun/",
     description:
       "Stubborn Generator is a collection of 25 incredibly cool characters.",
     image: "https://picsum.photos/200/",
@@ -623,7 +623,7 @@ const tools = [
   {
     category: "illustrations",
     name: "Undraw",
-    url: "http://undraw.co/)",
+    url: "http://undraw.co/",
     description:
       "Open-source illustrations for every project you can imagine and create.",
     image: "https://picsum.photos/200/",
@@ -632,7 +632,7 @@ const tools = [
   {
     category: "illustrations",
     name: "404 Illustrations",
-    url: "https://www.kapwing.com/404-illustrations)",
+    url: "https://www.kapwing.com/404-illustrations",
     description: "Trendy, ready to use images for your 404 page",
     image: "https://picsum.photos/200/",
     id: 73
@@ -767,7 +767,7 @@ const tools = [
   {
     category: "design-inspiration",
     name: "awwwards.",
-    url: "https://www.awwwards.com/)",
+    url: "https://www.awwwards.com/",
     description:
       "Awwwards are the Website Awards that recognize and promote the talent and effort of the best developers, designers and web agencies in the world.",
     image: "https://picsum.photos/200/",
@@ -776,7 +776,7 @@ const tools = [
   {
     category: "design-inspiration",
     name: "Behance",
-    url: "https://www.behance.net/)",
+    url: "https://www.behance.net/",
     description:
       "Showcase and discover the latest work from top online portfolios by creative professionals across industries.",
     image: "https://picsum.photos/200/",
@@ -785,7 +785,7 @@ const tools = [
   {
     category: "design-inspiration",
     name: "CallToIdea",
-    url: "https://www.calltoidea.com/)",
+    url: "https://www.calltoidea.com/",
     description:
       "Calltoidea is the unique place where you can find inspiration. A great tool created by a designer for web professionals.",
     image: "https://picsum.photos/200/",
@@ -794,7 +794,7 @@ const tools = [
   {
     category: "design-inspiration",
     name: "DesignMunk",
-    url: "https://designmunk.com/)",
+    url: "https://designmunk.com/",
     description:
       "The ultimate hand picked landing page inspirations from around the web.",
     image: "https://picsum.photos/200/",
@@ -803,7 +803,7 @@ const tools = [
   {
     category: "design-inspiration",
     name: "Deviant Art",
-    url: "https://www.deviantart.com)",
+    url: "https://www.deviantart.com",
     description:
       "DeviantArt is the world's largest online social community for artists and art enthusiasts, allowing people to connect through the creation and sharing of art.",
     image: "https://picsum.photos/200/",
@@ -812,7 +812,7 @@ const tools = [
   {
     category: "design-inspiration",
     name: "Dribbble",
-    url: "https://dribbble.com/)",
+    url: "https://dribbble.com/",
     description:
       "Dribbble is the leading destination to find & showcase creative work and home to the world's best design professionals.",
     image: "https://picsum.photos/200/",
@@ -821,7 +821,7 @@ const tools = [
   {
     category: "design-inspiration",
     name: "h69",
-    url: "https://www.h69.design/)",
+    url: "https://www.h69.design/",
     description: "Landing page colletions & Free resources for designers.",
     image: "https://picsum.photos/200/",
     id: 94
@@ -829,7 +829,7 @@ const tools = [
   {
     category: "design-inspiration",
     name: "Httpster",
-    url: "https://httpster.net)",
+    url: "https://httpster.net",
     description:
       "Httpster is an inspiration resource showcasing totally rocking websites made by people from all over the world.",
     image: "https://picsum.photos/200/",
@@ -838,7 +838,7 @@ const tools = [
   {
     category: "design-inspiration",
     name: "Land-Book",
-    url: "https://land-book.com/)",
+    url: "https://land-book.com/",
     description:
       "We collect awesome websites to help creatives find inspiration & motivation to do rad stuff.",
     image: "https://picsum.photos/200/",
@@ -847,7 +847,7 @@ const tools = [
   {
     category: "design-inspiration",
     name: "Lapa Ninja",
-    url: "https://www.lapa.ninja/)",
+    url: "https://www.lapa.ninja/",
     description:
       "The best landing page design inspiration from around the web.",
     image: "https://picsum.photos/200/",
@@ -856,7 +856,7 @@ const tools = [
   {
     category: "design-inspiration",
     name: "Muzli",
-    url: "https://muz.li/)",
+    url: "https://muz.li/",
     description:
       "Muzli is a new-tab Chrome extension that instantly delivers relevant design stories and inspiration.",
     image: "https://picsum.photos/200/",
@@ -865,7 +865,7 @@ const tools = [
   {
     category: "design-inspiration",
     name: "OnePageLove",
-    url: "https://onepagelove.com/)",
+    url: "https://onepagelove.com/",
     description:
       "One Page Love is a One Page website design gallery showcasing the best Single Page websites, templates and resources.",
     image: "https://picsum.photos/200/",
@@ -874,7 +874,7 @@ const tools = [
   {
     category: "design-inspiration",
     name: "Pttrns",
-    url: "https://pttrns.com/)",
+    url: "https://pttrns.com/",
     description:
       "Pttrns is the finest collection of mobile design patterns, resources and inspiration.",
     image: "https://picsum.photos/200/",
@@ -883,7 +883,7 @@ const tools = [
   {
     category: "design-inspiration",
     name: "Webframe",
-    url: "https://webframe.xyz/)",
+    url: "https://webframe.xyz/",
     description: "Discover and be inspired by beautiful webapp designs",
     image: "https://picsum.photos/200/",
     id: 101
@@ -891,7 +891,7 @@ const tools = [
   {
     category: "colors",
     name: "Accessible Color Matrix",
-    url: "https://toolness.github.io/accessible-color-matrix/)",
+    url: "https://toolness.github.io/accessible-color-matrix/",
     description:
       "A tool to help designers build color palettes with combinations that conform with accessibility standards.",
     image: "https://picsum.photos/200/",
@@ -900,7 +900,7 @@ const tools = [
   {
     category: "colors",
     name: "Colorable",
-    url: "https://colors.muz.li/)",
+    url: "https://colors.muz.li/",
     description: "Color combination contrast tester.",
     image: "https://picsum.photos/200/",
     id: 103
@@ -908,7 +908,7 @@ const tools = [
   {
     category: "colors",
     name: "Colorbook",
-    url: "https://www.colorbook.io/)",
+    url: "https://www.colorbook.io/",
     description:
       "Your hex color information and conversion source. We at colorbook have one mission: we want to give each color its place. Think of it as of a facebook of colors.",
     image: "https://picsum.photos/200/",
@@ -917,7 +917,7 @@ const tools = [
   {
     category: "colors",
     name: "ColorBox",
-    url: "https://www.colorbox.io/)",
+    url: "https://www.colorbox.io/",
     description: "Colorbox is a color tool to produce color sets.",
     image: "https://picsum.photos/200/",
     id: 105
@@ -925,7 +925,7 @@ const tools = [
   {
     category: "colors",
     name: "Color-hex",
-    url: "https://www.color-hex.com/color-palettes/)",
+    url: "https://www.color-hex.com/color-palettes/",
     description:
       "Color-hex gives information about colors including color models (RGB,HSL,HSV and CMYK).",
     image: "https://picsum.photos/200/",
@@ -934,7 +934,7 @@ const tools = [
   {
     category: "colors",
     name: "Color Designer",
-    url: "https://colordesigner.io/)",
+    url: "https://colordesigner.io/",
     description: "Just pick a color, and the app does the rest.",
     image: "https://picsum.photos/200/",
     id: 107
@@ -942,7 +942,7 @@ const tools = [
   {
     category: "colors",
     name: "Color Hunt",
-    url: "https://colorhunt.co/)",
+    url: "https://colorhunt.co/",
     description:
       "Color Hunt is a free and open platform for color inspiration with thousands of trendy hand-picked color palettes.",
     image: "https://picsum.photos/200/",
@@ -951,7 +951,7 @@ const tools = [
   {
     category: "colors",
     name: "Colorinspire",
-    url: "https://www.colorinspire.io/)",
+    url: "https://www.colorinspire.io/",
     description:
       "Curated color inspiration. Free to use for your next project.",
     image: "https://picsum.photos/200/",
@@ -960,7 +960,7 @@ const tools = [
   {
     category: "colors",
     name: "Color Lisa",
-    url: "http://www.colorlisa.com/)",
+    url: "http://www.colorlisa.com/",
     description:
       "Color palette masterpieces from the world's greatest artists.",
     image: "https://picsum.photos/200/",
@@ -969,7 +969,7 @@ const tools = [
   {
     category: "colors",
     name: "Color Quote",
-    url: "https://www.felixjoy.co/colorquote#color-hero)",
+    url: "https://www.felixjoy.co/colorquote#color-hero",
     description:
       "Daily dose of color combination and inspirational quote cards for designers and developers.",
     image: "https://picsum.photos/200/",
@@ -978,7 +978,7 @@ const tools = [
   {
     category: "colors",
     name: "Color Safe",
-    url: "http://colorsafe.co/)",
+    url: "http://colorsafe.co/",
     description:
       "Empowering designers with beautiful and accessible color palettes based on WCAG Guidelines of text and background contrast ratios.",
     image: "https://picsum.photos/200/",
@@ -987,7 +987,7 @@ const tools = [
   {
     category: "colors",
     name: "Color Space",
-    url: "https://mycolor.space/)",
+    url: "https://mycolor.space/",
     description: "Build beautiful color palettes by entering just one color.",
     image: "https://picsum.photos/200/",
     id: 113
@@ -995,7 +995,7 @@ const tools = [
   {
     category: "colors",
     name: "Color Tool",
-    url: "https://material.io/tools/color/)",
+    url: "https://material.io/tools/color/",
     description:
       "Create, share, and apply color palettes to your UI, as well as measure the accessibility level of any color combination.",
     image: "https://picsum.photos/200/",
@@ -1004,7 +1004,7 @@ const tools = [
   {
     category: "colors",
     name: "Colors by Eva Design System",
-    url: "https://colors.eva.design/)",
+    url: "https://colors.eva.design/",
     description:
       "Generate color pallets using deep learning powered algorithm.",
     image: "https://picsum.photos/200/",
@@ -1013,7 +1013,7 @@ const tools = [
   {
     category: "colors",
     name: "Colors by Klart",
-    url: "https://klart.io/colors/)",
+    url: "https://klart.io/colors/",
     description: "Colors is a 100% data-driven collection of color palettes.",
     image: "https://picsum.photos/200/",
     id: 116
@@ -1021,7 +1021,7 @@ const tools = [
   {
     category: "colors",
     name: "CopyPalette",
-    url: "https://copypalette.netlify.com)",
+    url: "https://copypalette.netlify.com",
     description: "Hassle-free export your palette to SVG format",
     image: "https://picsum.photos/200/",
     id: 117
@@ -1029,7 +1029,7 @@ const tools = [
   {
     category: "colors",
     name: "Culrs",
-    url: "https://culrs.com/)",
+    url: "https://culrs.com/",
     description:
       "Colors that work together are curated and fashioned into quality palettes that you can incorporate.",
     image: "https://picsum.photos/200/",
@@ -1038,7 +1038,7 @@ const tools = [
   {
     category: "colors",
     name: "Flat UI Colors",
-    url: "https://flatuicolors.com/)",
+    url: "https://flatuicolors.com/",
     description: "280 handpicked colors ready for COPY & PASTE.",
     image: "https://picsum.photos/200/",
     id: 119
@@ -1046,7 +1046,7 @@ const tools = [
   {
     category: "colors",
     name: "Khroma",
-    url: "http://khroma.co/)",
+    url: "http://khroma.co/",
     description: "Discover, search, and save color combinations you'll love.",
     image: "https://picsum.photos/200/",
     id: 120
@@ -1054,7 +1054,7 @@ const tools = [
   {
     category: "colors",
     name: "Muzli Colors",
-    url: "https://colors.muz.li/)",
+    url: "https://colors.muz.li/",
     description: "Create Beautiful Color Schemes that works.",
     image: "https://picsum.photos/200/",
     id: 121
@@ -1062,7 +1062,7 @@ const tools = [
   {
     category: "colors",
     name: "Palettee app",
-    url: "https://palettte.app/)",
+    url: "https://palettte.app/",
     description: "The definite palette editing and remapping tool.",
     image: "https://picsum.photos/200/",
     id: 122
@@ -1070,7 +1070,7 @@ const tools = [
   {
     category: "colors",
     name: "Palx",
-    url: "https://palx.jxnblk.com/)",
+    url: "https://palx.jxnblk.com/",
     description:
       "Provide a single color value and Palx returns a full-spectrum color palette",
     image: "https://picsum.photos/200/",
@@ -1079,7 +1079,7 @@ const tools = [
   {
     category: "colors",
     name: "Picular",
-    url: "https://picular.co/)",
+    url: "https://picular.co/",
     description:
       "A rocket fast primary color generator using Google's image search.",
     image: "https://picsum.photos/200/",
@@ -1088,7 +1088,7 @@ const tools = [
   {
     category: "colors",
     name: "Tints and Shades generator",
-    url: "https://maketintsandshades.com/)",
+    url: "https://maketintsandshades.com/",
     description: "Easily make tints and shades in 10% increments",
     image: "https://picsum.photos/200/",
     id: 125
@@ -1096,7 +1096,7 @@ const tools = [
   {
     category: "gradients",
     name: "Eggradients",
-    url: "https://www.eggradients.com/)",
+    url: "https://www.eggradients.com/",
     description:
       "A gradient color palette containing +200 gradient background color.",
     image: "https://picsum.photos/200/",
@@ -1105,7 +1105,7 @@ const tools = [
   {
     category: "gradients",
     name: "Grabient",
-    url: "https://www.grabient.com/)",
+    url: "https://www.grabient.com/",
     description: "Beautiful and simple UI for generating web gradients.",
     image: "https://picsum.photos/200/",
     id: 127
@@ -1113,7 +1113,7 @@ const tools = [
   {
     category: "gradients",
     name: "Gradient Backgrounds",
-    url: "https://cssgradient.io/gradient-backgrounds/)",
+    url: "https://cssgradient.io/gradient-backgrounds/",
     description:
       "A curated list of the best gradient websites across the internet.",
     image: "https://picsum.photos/200/",
@@ -1122,7 +1122,7 @@ const tools = [
   {
     category: "gradients",
     name: "Gradient Cards",
-    url: "https://gradients.cssgears.com)",
+    url: "https://gradients.cssgears.com",
     description: "A simple and beautiful list of editable gradients",
     image: "https://picsum.photos/200/",
     id: 129
@@ -1130,7 +1130,7 @@ const tools = [
   {
     category: "gradients",
     name: "GradientsList",
-    url: "https://www.gradientslist.com)",
+    url: "https://www.gradientslist.com",
     description:
       "Gradients List is the biggest collection of gradients on the web.",
     image: "https://picsum.photos/200/",
@@ -1139,7 +1139,7 @@ const tools = [
   {
     category: "gradients",
     name: "uiGradients",
-    url: "https://uigradients.com/#IbizaSunset)",
+    url: "https://uigradients.com/#IbizaSunset",
     description:
       "A handpicked collection of beautiful color gradients for designers and developers.",
     image: "https://picsum.photos/200/",
@@ -1148,7 +1148,7 @@ const tools = [
   {
     category: "gradients",
     name: "WebGradients",
-    url: "https://webgradients.com/)",
+    url: "https://webgradients.com/",
     description:
       "WebGradients is a free collection of 180 linear gradients that you can use as content backdrops in any part of your website.",
     image: "https://picsum.photos/200/",
@@ -1157,7 +1157,7 @@ const tools = [
   {
     category: "design-tools",
     name: "Affinity",
-    url: "https://affinity.serif.com/en-gb/)",
+    url: "https://affinity.serif.com/en-gb/",
     description:
       "Affinity - the fastest, smoothest, most precise professional creative software.",
     image: "https://picsum.photos/200/",
@@ -1166,7 +1166,7 @@ const tools = [
   {
     category: "design-tools",
     name: "Photoshop",
-    url: "https://www.adobe.com/products/photoshop.html)",
+    url: "https://www.adobe.com/products/photoshop.html",
     description:
       "The industry standard in digital imaging and used by professionals worldwide for design, photography, video editing & more.",
     image: "https://picsum.photos/200/",
@@ -1175,7 +1175,7 @@ const tools = [
   {
     category: "design-tools",
     name: "Procreate",
-    url: "https://procreate.art/)",
+    url: "https://procreate.art/",
     description:
       "Procreate is the most powerful and intuitive digital illustration app available for iPad.",
     image: "https://picsum.photos/200/",
@@ -1184,7 +1184,7 @@ const tools = [
   {
     category: "design-tools",
     name: "Lunacy",
-    url: "https://icons8.com/lunacy)",
+    url: "https://icons8.com/lunacy",
     description: "Free graphic design software with built-in design resources",
     image: "https://picsum.photos/200/",
     id: 136
@@ -1192,7 +1192,7 @@ const tools = [
   {
     category: "prototyping-tools",
     name: "Adobe XD CC",
-    url: "https://www.adobe.com/gr_en/products/xd.html)",
+    url: "https://www.adobe.com/gr_en/products/xd.html",
     description:
       "Design, prototype, and share engaging user experiences across platforms, screens, and devices with Adobe XD CC.",
     image: "https://picsum.photos/200/",
@@ -1201,7 +1201,7 @@ const tools = [
   {
     category: "prototyping-tools",
     name: "Figma",
-    url: "https://www.figma.com/)",
+    url: "https://www.figma.com/",
     description:
       "A better way to design. Design, prototype, and gather feedback all in one place with Figma.",
     image: "https://picsum.photos/200/",
@@ -1210,7 +1210,7 @@ const tools = [
   {
     category: "prototyping-tools",
     name: "InVision Studio",
-    url: "https://www.invisionapp.com/studio)",
+    url: "https://www.invisionapp.com/studio",
     description:
       "A new platform inspired by the world’s best design teams. Design, prototype, and animate—all in one place.",
     image: "https://picsum.photos/200/",
@@ -1219,7 +1219,7 @@ const tools = [
   {
     category: "prototyping-tools",
     name: "Sketch App",
-    url: "https://www.sketchapp.com/)",
+    url: "https://www.sketchapp.com/",
     description:
       "Sketch is a design toolkit built to help you create your best work — from your earliest ideas, through to final artwork.",
     image: "https://picsum.photos/200/",
@@ -1228,7 +1228,7 @@ const tools = [
   {
     category: "prototyping-tools",
     name: "UXPin",
-    url: "https://www.uxpin.com/)",
+    url: "https://www.uxpin.com/",
     description:
       "Design tool like no other. Prototypes that feel real, with powers of code components, logic, states and design systems.",
     image: "https://picsum.photos/200/",
@@ -1237,7 +1237,7 @@ const tools = [
   {
     category: "presentation-tools",
     name: "Beautiful.ai",
-    url: "https://www.beautiful.ai)",
+    url: "https://www.beautiful.ai",
     description: "A.I. Powered Presentation Software",
     image: "https://picsum.photos/200/",
     id: 142
@@ -1245,7 +1245,7 @@ const tools = [
   {
     category: "presentation-tools",
     name: "DeckRobot",
-    url: "https://deckrobot.com/)",
+    url: "https://deckrobot.com/",
     description: "Make consistent corporate slide decks in one click",
     image: "https://picsum.photos/200/",
     id: 143
@@ -1253,7 +1253,7 @@ const tools = [
   {
     category: "presentation-tools",
     name: "Google Slides",
-    url: "https://www.google.com/slides/about/)",
+    url: "https://www.google.com/slides/about/",
     description:
       "Create a new presentation and edit it with others at the same time — from your computer, phone or tablet.",
     image: "https://picsum.photos/200/",
@@ -1262,7 +1262,7 @@ const tools = [
   {
     category: "presentation-tools",
     name: "Keynote",
-    url: "https://www.apple.com/keynote/)",
+    url: "https://www.apple.com/keynote/",
     description:
       "Keynote is the most powerful presentation app ever designed for a mobile device.",
     image: "https://picsum.photos/200/",
@@ -1271,7 +1271,7 @@ const tools = [
   {
     category: "presentation-tools",
     name: "Microsoft PowerPoint",
-    url: "https://products.office.com/en/powerpoint)",
+    url: "https://products.office.com/en/powerpoint",
     description:
       "Microsoft PowerPoint is the best presentation software for meetings, industry talks and business proposals.",
     image: "https://picsum.photos/200/",
@@ -1280,7 +1280,7 @@ const tools = [
   {
     category: "presentation-tools",
     name: "Prezi",
-    url: "https://prezi.com/)",
+    url: "https://prezi.com/",
     description:
       "The presentation software that uses motion, zoom, and spatial relationships to bring your ideas to life and make you a great presenter.",
     image: "https://picsum.photos/200/",
@@ -1289,7 +1289,7 @@ const tools = [
   {
     category: "presentation-tools",
     name: "Slides",
-    url: "https://slides.com/)",
+    url: "https://slides.com/",
     description:
       "Slides is a place for creating, presenting and sharing presentations. The Slides editor is available right in your browser.",
     image: "https://picsum.photos/200/",
@@ -1298,7 +1298,7 @@ const tools = [
   {
     category: "animation-tools",
     name: "Adobe After Effects",
-    url: "https://www.adobe.com/gr_en/products/aftereffects.html)",
+    url: "https://www.adobe.com/gr_en/products/aftereffects.html",
     description:
       "With After Effects CC, the industry-standard motion graphics and visual effects software, you can take any idea and make it move.",
     image: "https://picsum.photos/200/",
@@ -1307,7 +1307,7 @@ const tools = [
   {
     category: "animation-tools",
     name: "Animator by Haiku",
-    url: "https://www.haikuforteams.com/)",
+    url: "https://www.haikuforteams.com/",
     description:
       "Haiku Animator is the premier solution for creating cross-platform UI animations.",
     image: "https://picsum.photos/200/",
@@ -1316,7 +1316,7 @@ const tools = [
   {
     category: "animation-tools",
     name: "Anime.js",
-    url: "https://animejs.com/)",
+    url: "https://animejs.com/",
     description:
       "Anime.js is a lightweight Javascript animation library designed to help you make complex animations with ease.",
     image: "https://picsum.photos/200/",
@@ -1325,7 +1325,7 @@ const tools = [
   {
     category: "animation-tools",
     name: "Animista",
-    url: "http://animista.net/)",
+    url: "http://animista.net/",
     description:
       "Animista is a place where you can play with a collection of ready to use CSS animations, tweak them and download only those you will actually use.",
     image: "https://picsum.photos/200/",
@@ -1334,7 +1334,7 @@ const tools = [
   {
     category: "animation-tools",
     name: "CSSFX",
-    url: "https://cssfx.dev/)",
+    url: "https://cssfx.dev/",
     description: "Beautifully simple click-to-copy CSS effects",
     image: "https://picsum.photos/200/",
     id: 153
@@ -1342,7 +1342,7 @@ const tools = [
   {
     category: "animation-tools",
     name: "Easings",
-    url: "https://easings.net/)",
+    url: "https://easings.net/",
     description:
       "Easing functions specify the rate of change of a parameter over time.",
     image: "https://picsum.photos/200/",
@@ -1351,7 +1351,7 @@ const tools = [
   {
     category: "animation-tools",
     name: "Flinto",
-    url: "https://www.flinto.com/)",
+    url: "https://www.flinto.com/",
     description:
       "Flinto is a Mac app used by top designers around the world to create interactive and animated prototypes of their app designs.",
     image: "https://picsum.photos/200/",
@@ -1360,7 +1360,7 @@ const tools = [
   {
     category: "animation-tools",
     name: "Keyframes",
-    url: "https://keyframes.app/)",
+    url: "https://keyframes.app/",
     description: "An insanely simple way to create CSS animations.",
     image: "https://picsum.photos/200/",
     id: 156
@@ -1368,7 +1368,7 @@ const tools = [
   {
     category: "animation-tools",
     name: "LightBox",
-    url: "https://uselightbox.com/)",
+    url: "https://uselightbox.com/",
     description: "LightBox is a 2D, Hand-Drawn animation package.",
     image: "https://picsum.photos/200/",
     id: 157
@@ -1376,7 +1376,7 @@ const tools = [
   {
     category: "animation-tools",
     name: "Principle",
-    url: "https://principleformac.com/)",
+    url: "https://principleformac.com/",
     description:
       "Principle makes it easy to design animated and interactive user interfaces.",
     image: "https://picsum.photos/200/",
@@ -1385,7 +1385,7 @@ const tools = [
   {
     category: "animation-tools",
     name: "Lottie",
-    url: "https://airbnb.design/lottie/)",
+    url: "https://airbnb.design/lottie/",
     description:
       "Lottie is an iOS, Android, and React Native library that renders After Effects animations in real time",
     image: "https://picsum.photos/200/",
@@ -1394,7 +1394,7 @@ const tools = [
   {
     category: "animation-tools",
     name: "Spirit",
-    url: "https://spiritapp.io)",
+    url: "https://spiritapp.io",
     description:
       "The ultimate tool to create high-quality animations directly in the browser.",
     image: "https://picsum.photos/200/",
@@ -1403,7 +1403,7 @@ const tools = [
   {
     category: "animation-tools",
     name: "SVG Artista",
-    url: "https://svgartista.net/)",
+    url: "https://svgartista.net/",
     description: "Little tool that helps you create SVG animations",
     image: "https://picsum.photos/200/",
     id: 161
@@ -1411,7 +1411,7 @@ const tools = [
   {
     category: "animation-tools",
     name: "Zdog",
-    url: "https://zzz.dog/)",
+    url: "https://zzz.dog/",
     description:
       "Round, flat, designer-friendly pseudo-3D engine for canvas & SVG",
     image: "https://picsum.photos/200/",
@@ -1420,7 +1420,7 @@ const tools = [
   {
     category: "mockup-tools",
     name: "Clean Mockups",
-    url: "https://cleanmock.com/)",
+    url: "https://cleanmock.com/",
     description: "Create stunning mockups that make your design standout",
     image: "https://picsum.photos/200/",
     id: 163
@@ -1428,7 +1428,7 @@ const tools = [
   {
     category: "mockup-tools",
     name: "Facebook Design",
-    url: "https://facebook.design/toolsandresources/)",
+    url: "https://facebook.design/toolsandresources/",
     description: "A collection of free resources made by designers at Facebook",
     image: "https://picsum.photos/200/",
     id: 164
@@ -1436,7 +1436,7 @@ const tools = [
   {
     category: "mockup-tools",
     name: "LS Graphics",
-    url: "https://www.ls.graphics/free)",
+    url: "https://www.ls.graphics/free",
     description:
       "Branding mockups, devices mockups, scene creators and UI kits for free",
     image: "https://picsum.photos/200/",
@@ -1445,7 +1445,7 @@ const tools = [
   {
     category: "mockup-tools",
     name: "Mockup World",
-    url: "https://www.mockupworld.co/all-mockups/)",
+    url: "https://www.mockupworld.co/all-mockups/",
     description: "The best free Mockups from the Web",
     image: "https://picsum.photos/200/",
     id: 166
@@ -1453,7 +1453,7 @@ const tools = [
   {
     category: "mockup-tools",
     name: "UX Planet list",
-    url: "https://uxplanet.org/free-macbook-mockups-psd-sketch-369d20b5638b)",
+    url: "https://uxplanet.org/free-macbook-mockups-psd-sketch-369d20b5638b",
     description: "A great list of free MacBook Mockups",
     image: "https://picsum.photos/200/",
     id: 167
@@ -1461,7 +1461,7 @@ const tools = [
   {
     category: "mockup-tools",
     name: "Threed.io",
-    url: "http://threed.io)",
+    url: "http://threed.io",
     description: "Generate 3D Mockups right in your Browser.",
     image: "https://picsum.photos/200/",
     id: 168
@@ -1469,7 +1469,7 @@ const tools = [
   {
     category: "mockup-tools",
     name: "Qurb",
-    url: "https://qurb.rishimohan.me/)",
+    url: "https://qurb.rishimohan.me/",
     description: "Web-based free mockup generator",
     image: "https://picsum.photos/200/",
     id: 169
@@ -1477,7 +1477,7 @@ const tools = [
   {
     category: "web-accessibility",
     name: "Contraste",
-    url: "https://contrasteapp.com/)",
+    url: "https://contrasteapp.com/",
     description:
       "Contraste is a simple app for checking the accessibility of text against the Web Content Accessibility Guidelines (WCAG).",
     image: "https://picsum.photos/200/",
@@ -1486,7 +1486,7 @@ const tools = [
   {
     category: "web-accessibility",
     name: "Color Safe",
-    url: "http://colorsafe.co/)",
+    url: "http://colorsafe.co/",
     description:
       "Empowering designers with beautiful and accessible color palettes based on WCAG Guidelines of text and background contrast ratios.",
     image: "https://picsum.photos/200/",
@@ -1495,7 +1495,7 @@ const tools = [
   {
     category: "web-accessibility",
     name: "Stark",
-    url: "https://www.getstark.co/)",
+    url: "https://www.getstark.co/",
     description:
       "The plugin to help you design and build products that are accessible, ethical, and inclusive.",
     image: "https://picsum.photos/200/",
@@ -1504,7 +1504,7 @@ const tools = [
   {
     category: "web-accessibility",
     name: "The A11Y Project",
-    url: "https://a11yproject.com)",
+    url: "https://a11yproject.com",
     description: "A community-driven effort to make web accessibility easier.",
     image: "https://picsum.photos/200/",
     id: 173
@@ -1512,7 +1512,7 @@ const tools = [
   {
     category: "ui-kits",
     name: "Eva",
-    url: "https://eva.design/)",
+    url: "https://eva.design/",
     description:
       "Customizable Design System easily adaptable to your Brand. Available for Sketch with Mobile and Web component libraries.",
     image: "https://picsum.photos/200/",
@@ -1521,7 +1521,7 @@ const tools = [
   {
     category: "ui-kits",
     name: "UI Store",
-    url: "https://www.uistore.design/)",
+    url: "https://www.uistore.design/",
     description: "252 Free Handpicked UI Kits for your real life projects",
     image: "https://picsum.photos/200/",
     id: 175
@@ -1530,7 +1530,7 @@ const tools = [
     category: "ui-kits",
     name: "Velocity UI Kit",
     url:
-      "https://www.invisionapp.com/inside-design/design-resources/design-system-dashboard-ui-kit/)",
+      "https://www.invisionapp.com/inside-design/design-resources/design-system-dashboard-ui-kit/",
     description: "A dashboard UI kit with a robust design system",
     image: "https://picsum.photos/200/",
     id: 176
