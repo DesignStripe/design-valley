@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FiHeart } from "react-icons/fi";
-import { updateFavorites, getFavorites } from "../utils/cookies";
+import { getFavorites, addFavorite, removeFavorite } from "../utils/cookies";
 
 import Image from "./Image";
 
@@ -43,16 +43,12 @@ const Card = ({ image, title, description, id, url }) => {
   const [isSaved, setIsSaved] = useState(getInitialSaveStatus(id));
 
   function saveTool(id) {
-    const previousFavorites = getFavorites();
-    const newFavorites = [...previousFavorites, id];
-    updateFavorites(newFavorites);
+    addFavorite(id);
     setIsSaved(true);
   }
 
   function removeTool(id) {
-    const previousFavorites = getFavorites();
-    const newFavorites = previousFavorites.filter(toolId => toolId !== id);
-    updateFavorites(newFavorites);
+    removeFavorite(id);
     setIsSaved(false);
   }
 
