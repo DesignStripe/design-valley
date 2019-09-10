@@ -7,3 +7,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] Make main content container scrollable
 - [x] Add real data
 - [ ] Fetch tools' images
+- [x] Save tools using cookies(Favorites)
+- [ ] Add night mode
+- [ ] Create color palette and implement it as theme.js
