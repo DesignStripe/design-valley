@@ -46,7 +46,9 @@ const Nav = ({ history }) => {
 
   return (
     <Container>
-      <Link className="logo" to="/" />
+      <Link className="logo" to="/">
+        Design Valley
+      </Link>
       <h2 className="title">{title}</h2>
     </Container>
   );
