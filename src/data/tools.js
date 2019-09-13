@@ -640,127 +640,137 @@ const tools = [
   {
     category: "design-systems",
     name: "Ant Design",
-    url: "https://ant.design/)** by [Alibaba",
+    url: "https://ant.design/",
+    company: "Alibaba",
     description:
-      "https://www.alibaba.com/) - An enterprise-class UI design language and React implementation.",
+      "An enterprise-class UI design language and React implementation.",
     image: "https://picsum.photos/200/",
     id: 74
   },
   {
     category: "design-systems",
     name: "Atlaskit",
-    url: "https://atlaskit.atlassian.com/)** by [Atlassian",
+    url: "https://atlaskit.atlassian.com/",
+    company: "Atlassian",
     description:
-      "https://atlassian.com/) - Atlassian's official UI library, built according to the Atlassian Design Guidelines.",
+      "Atlassian's official UI library, built according to the Atlassian Design Guidelines.",
     image: "https://picsum.photos/200/",
     id: 75
   },
   {
     category: "design-systems",
     name: "Audi Design",
-    url:
-      "https://www.audi.com/ci/en/guides/user-interface/introduction.html)** by [Audi",
+    url: "https://www.audi.com/ci/en/guides/user-interface/introduction.html",
+    company: "Audi",
     description:
-      "https://www.audi.com/en.html) - Audi user interfaces are as varied as their uses – ranging from inspiring websites to applications for a particular service.",
+      "Audi user interfaces are as varied as their uses – ranging from inspiring websites to applications for a particular service.",
     image: "https://picsum.photos/200/",
     id: 76
   },
   {
     category: "design-systems",
     name: "Backpack",
-    url: "https://backpack.github.io/)** by [Skyscanner",
+    url: "https://backpack.github.io/",
+    company: "Skyscanner",
     description:
-      "https://www.skyscanner.net/) - Backpack is a collection of design resources, reusable components and guidelines for creating Skyscanner products.",
+      "Backpack is a collection of design resources, reusable components and guidelines for creating Skyscanner products.",
     image: "https://picsum.photos/200/",
     id: 77
   },
   {
     category: "design-systems",
     name: "Grommet",
-    url: "https://v2.grommet.io/)** by [HP Enterprise",
+    url: "https://v2.grommet.io/",
+    company: "HP Enterprise",
     description:
-      "https://www.hpe.com/emea_europe/en/home.html) - Build responsive and accessible mobile-first projects for the web with an easy to use component library.",
+      "Build responsive and accessible mobile-first projects for the web with an easy to use component library.",
     image: "https://picsum.photos/200/",
     id: 78
   },
   {
     category: "design-systems",
     name: "IBM Carbon",
-    url: "https://www.carbondesignsystem.com/)** by [IBM Cloud products",
+    url: "https://www.carbondesignsystem.com/",
+    company: "IBM Cloud products",
     description:
-      ") - The Carbon Design System is IBM’s open-source design system for products and experiences.",
+      "The Carbon Design System is IBM’s open-source design system for products and experiences.",
     image: "https://picsum.photos/200/",
     id: 79
   },
   {
     category: "design-systems",
     name: "Lightning",
-    url: "https://www.lightningdesignsystem.com/)** by [SalesForce",
-    description:
-      "https://www.salesforce.com/eu/) - Create the world’s best enterprise app experiences.",
+    url: "https://www.lightningdesignsystem.com/",
+    company: "SalesForce",
+    description: "Create the world’s best enterprise app experiences.",
     image: "https://picsum.photos/200/",
     id: 80
   },
   {
     category: "design-systems",
     name: "Mailchimp Patterns",
-    url: "https://ux.mailchimp.com/patterns)** by [Mailchimp",
-    description:
-      "https://mailchimp.com/) - UX patterns by the Mailchimp design team.",
+    url: "https://ux.mailchimp.com/patterns",
+    company: "Mailchimp",
+    description: "UX patterns by the Mailchimp design team.",
     image: "https://picsum.photos/200/",
     id: 81
   },
   {
     category: "design-systems",
     name: "Material UI",
-    url: "https://material-ui.com/)** by [Google",
-    description:
-      "https://www.google.com/) - React components that implement Google's Material Design.",
+    url: "https://material-ui.com/",
+    company: "Google",
+    description: "React components that implement Google's Material Design.",
     image: "https://picsum.photos/200/",
     id: 82
   },
   {
     category: "design-systems",
     name: "Nachos",
-    url: "https://design.trello.com/)** by [Trello",
+    url: "https://design.trello.com/",
+    company: "Trello",
     description:
-      "https://trello.com/) - Nachos is Trello's design system (and also our favorite snack).",
+      "Nachos is Trello's design system (and also our favorite snack).",
     image: "https://picsum.photos/200/",
     id: 83
   },
   {
     category: "design-systems",
     name: "Plasma",
-    url: "https://github.com/wework/plasma)** by [WeWork",
+    url: "https://github.com/wework/plasma",
+    company: "WeWork",
     description:
-      "https://www.wework.com/) - Plasma is a design system for creating sensible, modern interfaces.",
+      "Plasma is a design system for creating sensible, modern interfaces.",
     image: "https://picsum.photos/200/",
     id: 84
   },
   {
     category: "design-systems",
     name: "Pluralsight",
-    url: "https://design-system.pluralsight.com/)** by [Pluralsight",
+    url: "https://design-system.pluralsight.com/",
+    company: "Pluralsight",
     description:
-      "https://www.pluralsight.com/) - The UI building blocks for creating a cohesive design across Pluralsight products",
+      "The UI building blocks for creating a cohesive design across Pluralsight products",
     image: "https://picsum.photos/200/",
     id: 85
   },
   {
     category: "design-systems",
     name: "Polaris",
-    url: "https://polaris.shopify.com/)** by [Shopify",
+    url: "https://polaris.shopify.com/",
+    company: "Shopify",
     description:
-      "https://www.shopify.com/) - Our design system helps us work together to build a great experience for all of Shopify’s merchants.",
+      "Our design system helps us work together to build a great experience for all of Shopify’s merchants.",
     image: "https://picsum.photos/200/",
     id: 86
   },
   {
     category: "design-systems",
     name: "Primer",
-    url: "https://primer.style/)** by [Github",
+    url: "https://primer.style/",
+    company: "Github",
     description:
-      "https://github.com/) - Resources, tooling, and design guidelines for building interfaces with GitHub’s design system.",
+      "Resources, tooling, and design guidelines for building interfaces with GitHub’s design system.",
     image: "https://picsum.photos/200/",
     id: 87
   },
