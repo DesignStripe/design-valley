@@ -35,6 +35,12 @@ const ImageDiv = styled.div`
   border: 0;
   border-radius: ${props => props.theme.borderRadius};
   ${props =>
+    props.isSharp &&
+    `
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  `};
+  ${props =>
     props.grayscale && "-webkit-filter: grayscale(100%); filter: gray;"}
 `;
 
@@ -51,7 +57,15 @@ function getRatioPercent(ratio) {
   }
 }
 
-const Image = ({ src, ratio, size, fitContainer, grayscale, original }) => {
+const Image = ({
+  src,
+  ratio,
+  size,
+  fitContainer,
+  grayscale,
+  original,
+  isSharp
+}) => {
   const ratioPercent = getRatioPercent(ratio) * 100;
 
   return (
@@ -65,6 +79,7 @@ const Image = ({ src, ratio, size, fitContainer, grayscale, original }) => {
         size={size}
         grayscale={grayscale}
         original={original}
+        isSharp={isSharp}
       />
     </ImageWrapper>
   );
@@ -75,7 +90,8 @@ Image.propTypes = {
   src: PropTypes.string.isRequired,
   ratio: PropTypes.oneOf(["1:1", "4:3", "16:9"]),
   original: PropTypes.bool,
-  grayscale: PropTypes.bool
+  grayscale: PropTypes.bool,
+  isSharp: PropTypes.bool
 };
 
 Image.defaultProps = {
@@ -84,7 +100,8 @@ Image.defaultProps = {
   src: "",
   ratio: "1:1",
   original: false,
-  grayscale: false
+  grayscale: false,
+  isSharp: false
 };
 
 export default Image;

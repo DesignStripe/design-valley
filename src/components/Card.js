@@ -14,7 +14,7 @@ const Container = styled.div`
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+  ${"" /* padding: 1rem; */}
   margin: 1rem;
 
   width: 100%;
@@ -41,6 +41,14 @@ const CardContent = styled.div`
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
+  padding: 1rem;
+
+  & > * {
+    margin-bottom: 1rem;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const Title = styled.h2`
@@ -49,8 +57,9 @@ const Title = styled.h2`
   -webkit-box-orient: vertical;
   overflow: hidden;
 
+  color: rgba(0, 0, 0, 0.6);
+
   margin: 0;
-  margin: 1rem 0;
   margin-right: 1rem;
 `;
 
@@ -60,8 +69,22 @@ const Description = styled.p`
   -webkit-box-orient: vertical;
   overflow: hidden;
 
-  margin: 0;
-  margin-bottom: 2rem;
+  color: rgba(0, 0, 0, 0.4);
+
+  margin: 0 0 1rem 0;
+`;
+
+const Tag = styled.span`
+  border: none;
+  vertical-align: baseline;
+  background: #cfffdf none;
+  color: #009732;
+  margin: 0 0.25em 0 0;
+  padding: 4px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
 `;
 
 const CustomButton = styled(Button)`
@@ -92,6 +115,7 @@ const CustomButton = styled(Button)`
     box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
 
   padding: 12px 0;
+  font-size: 14px;
   font-family: Rubik, "sans-serif";
 
   &:hover {
@@ -117,7 +141,7 @@ function getInitialSaveStatus(id) {
   return isSaved;
 }
 
-const Card = ({ image, title, description, id, url }) => {
+const Card = ({ image, title, description, id, url, category }) => {
   const [isSaved, setIsSaved] = useState(getInitialSaveStatus(id));
 
   function saveTool(id) {
@@ -132,7 +156,7 @@ const Card = ({ image, title, description, id, url }) => {
 
   return (
     <Container>
-      <Image fitContainer src={image} ratio="16:9" />
+      <Image fitContainer src={image} ratio="16:9" isSharp />
       <CardContent>
         <Row>
           <Title>{title}</Title>
@@ -140,25 +164,32 @@ const Card = ({ image, title, description, id, url }) => {
             <FiHeart
               size={20}
               onClick={() => removeTool(id)}
-              fill="red"
+              // fill="#ed2939"
+              fill="#ea3c53"
               stroke="none"
             />
           ) : (
-            <FiHeart size={20} onClick={() => saveTool(id)} />
+            <FiHeart
+              size={20}
+              onClick={() => saveTool(id)}
+              stroke="rgba(0, 0, 0, 0.4)"
+            />
           )}
         </Row>
         <Description>{description}</Description>
 
-        {/* <a href={url} target="_blank" rel="noopener noreferrer"> */}
+        {/* <Row>
+          <Tag>{category}</Tag>
+        </Row> */}
+
         <CustomButton
           onClick={() => {
             const newTab = window.open(url, "_blank");
             newTab.focus();
           }}
         >
-          Visit tool
+          Go to Website
         </CustomButton>
-        {/* </a> */}
       </CardContent>
     </Container>
   );

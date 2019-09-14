@@ -24,6 +24,7 @@ const Cards = ({ tools }) => {
           image={tool.image + 300 + index}
           url={tool.url}
           title={tool.name}
+          category={tool.category}
           description={tool.description}
         />
       ))}
