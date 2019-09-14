@@ -1,6 +1,6 @@
 import axios from "axios";
 import tools from "../data/tools";
-import { getFavorites } from "../utils/cookies";
+import { getFavorites } from "../utils/localStorage";
 
 function fetchToolByCategory(id) {
   const selectedTools = tools.filter(tool => tool.category === id);

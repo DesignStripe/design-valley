@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FiHeart } from "react-icons/fi";
-import { getFavorites, addFavorite, removeFavorite } from "../utils/cookies";
+import {
+  getFavorites,
+  addFavorite,
+  removeFavorite
+} from "../utils/localStorage";
 
 import Image from "./Image";
 
