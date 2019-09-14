@@ -178,9 +178,9 @@ const Card = ({ image, title, description, id, url, category }) => {
         </Row>
         <Description>{description}</Description>
 
-        {/* <Row>
+        <Row>
           <Tag>{category}</Tag>
-        </Row> */}
+        </Row>
 
         <CustomButton
           onClick={() => {
