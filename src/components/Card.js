@@ -77,8 +77,8 @@ const Description = styled.p`
 const Tag = styled.span`
   border: none;
   vertical-align: baseline;
-  background: #cfffdf none;
-  color: #009732;
+  background: rgba(0, 139, 46, 0.1) none;
+  color: rgba(0, 139, 46, 1);
   margin: 0 0.25em 0 0;
   padding: 4px;
   text-transform: uppercase;
