@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { rgba } from "polished";
 import { FiHeart } from "react-icons/fi";
 import { Button } from "semantic-ui-react";
 import {
@@ -77,8 +78,8 @@ const Description = styled.p`
 const Tag = styled.span`
   border: none;
   vertical-align: baseline;
-  background: rgba(0, 139, 46, 0.1) none;
-  color: rgba(0, 139, 46, 1);
+  background: ${props => rgba(props.color, 0.1)} none;
+  color: ${props => rgba(props.color, 1)};
   margin: 0 0.25em 0 0;
   padding: 4px;
   text-transform: uppercase;
@@ -179,7 +180,7 @@ const Card = ({ image, title, description, id, url, category }) => {
         <Description>{description}</Description>
 
         <Row>
-          <Tag>{category}</Tag>
+          <Tag color={category.color}>{category.name}</Tag>
         </Row>
 
         <CustomButton
