@@ -1,18 +1,38 @@
 [
-  { "name": "Stock Images", "id": "stock-images" },
-  { "name": "Stock Videos", "id": "stock-videos" },
-  { "name": "Icons", "id": "icons" },
-  { "name": "Fonts", "id": "fonts" },
-  { "name": "Illustrations", "id": "illustrations" },
-  { "name": "Design Systems", "id": "design-systems" },
-  { "name": "Design Inpiration", "id": "design-inspiration" },
-  { "name": "Colors", "id": "colors" },
-  { "name": "Gradients", "id": "gradients" },
-  { "name": "Design Tools", "id": "design-tools" },
-  { "name": "Prototyping Tools", "id": "prototyping-tools" },
-  { "name": "Presentation Tools", "id": "presentation-tools" },
-  { "name": "Animation Tools", "id": "animation-tools" },
-  { "name": "Mockup Tools", "id": "mockup-tools" },
-  { "name": "Web Accessibility", "id": "web-accessibility" },
-  { "name": "UI kits", "id": "ui-kits" }
+  {
+    "name": "Stock Images",
+    "id": "stock-images",
+    "color": "#DC143C"
+  },
+  { "name": "Stock Videos", "id": "stock-videos", "color": "#C71585" },
+  { "name": "Icons", "id": "icons", "color": "#FF4500" },
+  { "name": "Fonts", "id": "fonts", "color": "#FF8C00" },
+  { "name": "Illustrations", "id": "illustrations", "color": "#FFD700" },
+  { "name": "Design Systems", "id": "design-systems", "color": "#BDB76B" },
+  {
+    "name": "Design Inpiration",
+    "id": "design-inspiration",
+    "color": "#663399"
+  },
+  { "name": "Colors", "id": "colors", "color": "#483D8B" },
+  { "name": "Gradients", "id": "gradients", "color": "#006400" },
+  { "name": "Design Tools", "id": "design-tools", "color": "#008080" },
+  {
+    "name": "Prototyping Tools",
+    "id": "prototyping-tools",
+    "color": "#4682B4"
+  },
+  {
+    "name": "Presentation Tools",
+    "id": "presentation-tools",
+    "color": "#0000FF"
+  },
+  { "name": "Animation Tools", "id": "animation-tools", "color": "#191970" },
+  { "name": "Mockup Tools", "id": "mockup-tools", "color": "#A52A2A" },
+  {
+    "name": "Web Accessibility",
+    "id": "web-accessibility",
+    "color": "#111111"
+  },
+  { "name": "UI kits", "id": "ui-kits", "color": "#2F4F4F" }
 ]
