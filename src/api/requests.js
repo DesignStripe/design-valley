@@ -3,15 +3,25 @@ import tools from "../data/tools";
 import categories from "../data/categories";
 import { getFavorites } from "../utils/localStorage";
 
+const defaultCategory = {
+  name: "",
+  id: "",
+  color: "#111111"
+};
+
 function findCategory(id) {
-  return categories.find(category => category.id === id);
+  return categories.find(category => {
+    console.log(category.id);
+    console.log(id);
+
+    return category.id === id;
+  });
 }
 
 function populateCategory(arr) {
   return arr.map(item => {
     const categoryId = item.category;
-    item.category = findCategory(categoryId);
-    return item;
+    return { ...item, category: findCategory(categoryId) };
   });
 }
 
