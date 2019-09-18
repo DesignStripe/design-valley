@@ -34,7 +34,7 @@ function fetchToolByCategory(id) {
 }
 
 function fetchFeatured() {
-  const selectedTools = [tools[0]];
+  const selectedTools = [tools[0], tools[1], tools[2], tools[4]];
 
   return new Promise((resolve, reject) =>
     resolve(populateCategory(selectedTools))
@@ -43,7 +43,7 @@ function fetchFeatured() {
 }
 
 function fetchPopular() {
-  const selectedTools = [tools[1]];
+  const selectedTools = [tools[5], tools[6], tools[7], tools[8]];
 
   return new Promise((resolve, reject) =>
     resolve(populateCategory(selectedTools))

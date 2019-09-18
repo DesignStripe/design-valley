@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { rgba } from "polished";
 import { FiHeart } from "react-icons/fi";
-import { Button } from "semantic-ui-react";
+import { Button, Popup } from "semantic-ui-react";
 import {
   getFavorites,
   addFavorite,
