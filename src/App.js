@@ -5,6 +5,9 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import HomeContainer from "./containers/HomeContainer";
 import CategoryContainer from "./containers/CategoryContainer";
+import PopularContainer from "./containers/PopularContainer";
+import FavoritesContainer from "./containers/FavoritesContainer";
+import FeaturedContainer from "./containers/FeaturedContainer";
 
 import Nav from "./components/Nav";
 import Card from "./components/Card";
@@ -26,6 +29,9 @@ function App() {
             <Route path="/" exact component={HomeContainer} />
             <Route path="/category/:id" exact component={CategoryContainer} />
             <Route path="/card/:id" component={Card} />
+            <Route path="/popular" exact component={PopularContainer} />
+            <Route path="/featured" exact component={FeaturedContainer} />
+            <Route path="/favorites" exact component={FavoritesContainer} />
           </MainSection>
         </Body>
       </Router>

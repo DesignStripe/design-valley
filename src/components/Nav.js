@@ -30,9 +30,15 @@ const findTitleFromPathname = () => {
   const pathname = window.location.pathname;
   if (pathname === "/") return "Home";
 
-  const categoryId = pathname.replace("/category/", "");
-  const title = categories.find(category => category.id === categoryId).name;
-  return title;
+  const isCategory = pathname.indexOf("/category/") !== -1;
+  if (isCategory) {
+    const categoryId = pathname.replace("/category/", "");
+    const title = categories.find(category => category.id === categoryId).name;
+    return title;
+  } else {
+    const title = pathname.replace("/", "");
+    return title;
+  }
 };
 
 const Nav = ({ history }) => {

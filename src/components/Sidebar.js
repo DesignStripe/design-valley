@@ -22,7 +22,7 @@ const StyledSidebar = styled(Sidebar)`
     padding: 0.5rem;
     margin-bottom: 1rem;
   }
-  & > *:hover {
+  & > a:hover {
     background-color: #eee;
     border-radius: 8px;
     cursor: pointer;
@@ -34,10 +34,23 @@ const StyledSidebar = styled(Sidebar)`
   & > a {
     text-decoration: none;
     color: #212121;
+    display: flex;
+    align-items: center;
   }
   & > a:hover {
     color: ${p => p.theme.colors.primary};
   }
+
+  & > a > svg {
+    margin-right: 0.5rem;
+  }
+`;
+
+const Divider = styled.div`
+  width: 50%;
+  margin: 1rem auto 2rem auto;
+  margin-bottom: 1rem;
+  border-top: 1px solid #dfdfdf;
 `;
 
 const VerticalSidebar = ({ items }) => (
@@ -51,11 +64,19 @@ const VerticalSidebar = ({ items }) => (
     visible={true}
     width="wide"
   >
-    {items.map(item => (
-      <Menu.Item as={Link} to={`/category/${item.id}`}>
-        {item.name}
-      </Menu.Item>
-    ))}
+    {items.map(item =>
+      item.name === "devider" ? (
+        <Divider />
+      ) : (
+        <Menu.Item
+          as={Link}
+          to={item.isHighlighted ? `/${item.id}` : `/category/${item.id}`}
+        >
+          {item.icon}
+          {item.name}
+        </Menu.Item>
+      )
+    )}
   </StyledSidebar>
 );
 
