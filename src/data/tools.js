@@ -825,7 +825,7 @@ const tools = [
     url: "https://dribbble.com/",
     description:
       "Dribbble is the leading destination to find & showcase creative work and home to the world's best design professionals.",
-    image: "https://picsum.photos/200/",
+    image: "https://i.imgur.com/QbY2IdT.png",
     id: 93
   },
   {
@@ -1179,7 +1179,7 @@ const tools = [
     url: "https://www.adobe.com/products/photoshop.html",
     description:
       "The industry standard in digital imaging and used by professionals worldwide for design, photography, video editing & more.",
-    image: "https://picsum.photos/200/",
+    image: "https://i.imgur.com/r6JXHEt.png",
     id: 134
   },
   {
@@ -1205,7 +1205,7 @@ const tools = [
     url: "https://www.adobe.com/gr_en/products/xd.html",
     description:
       "Design, prototype, and share engaging user experiences across platforms, screens, and devices with Adobe XD CC.",
-    image: "https://picsum.photos/200/",
+    image: "https://i.imgur.com/KxieVVY.png",
     id: 137
   },
   {
@@ -1214,7 +1214,7 @@ const tools = [
     url: "https://www.figma.com/",
     description:
       "A better way to design. Design, prototype, and gather feedback all in one place with Figma.",
-    image: "https://picsum.photos/200/",
+    image: "https://i.imgur.com/0pOru2g.png",
     id: 138
   },
   {
@@ -1311,7 +1311,7 @@ const tools = [
     url: "https://www.adobe.com/gr_en/products/aftereffects.html",
     description:
       "With After Effects CC, the industry-standard motion graphics and visual effects software, you can take any idea and make it move.",
-    image: "https://picsum.photos/200/",
+    image: "https://i.imgur.com/YCpztMg.png",
     id: 149
   },
   {

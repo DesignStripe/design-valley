@@ -7,8 +7,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-
-  overflow-y: scroll;
+  ${"" /* overflow-y: scroll; */}
   width: 100%;
   min-height: 308px;
   margin-right: 1rem;

@@ -16,7 +16,7 @@ const Container = styled.header`
     margin: auto 1rem;
     border-radius: 8px;
     padding: 1rem;
-    min-width: 200px;
+    min-width: 250px;
     box-sizing: border-box;
   }
   .title {

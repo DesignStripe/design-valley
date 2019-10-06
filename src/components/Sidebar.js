@@ -6,7 +6,7 @@ import { Menu, Sidebar } from "semantic-ui-react";
 
 const StyledSidebar = styled(Sidebar)`
   height: calc(100% - 2rem);
-  min-width: 200px;
+  min-width: 250px;
   margin: 1rem;
   padding: 1rem;
   border-radius: 8px;
@@ -72,7 +72,7 @@ const VerticalSidebar = ({ items }) => (
           as={Link}
           to={item.isHighlighted ? `/${item.id}` : `/category/${item.id}`}
         >
-          {item.icon}
+          {item.emoji}
           {item.name}
         </Menu.Item>
       )

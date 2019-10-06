@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { rgba } from "polished";
 import { FiHeart } from "react-icons/fi";
-import { Button, Popup } from "semantic-ui-react";
+import { Button } from "semantic-ui-react";
+
 import {
   getFavorites,
   addFavorite,
@@ -17,6 +18,8 @@ const Container = styled.div`
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
   ${"" /* padding: 1rem; */}
   margin: 1rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
 
   width: 100%;
   box-sizing: border-box;
@@ -177,7 +180,8 @@ const Card = ({ image, title, description, id, url, category }) => {
             />
           )}
         </Row>
-        <Description>{description}</Description>
+
+        <Description> {description}</Description>
 
         <Row>
           <Tag color={category.color}>{category.name}</Tag>

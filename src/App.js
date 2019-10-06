@@ -1,6 +1,6 @@
 import { hot } from "react-hot-loader/root";
 import React from "react";
-import { ThemeProvider } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import HomeContainer from "./containers/HomeContainer";
@@ -18,10 +18,17 @@ import Sidebar from "./components/Sidebar";
 import menuItems from "./data/menuItems";
 import theme from "./utils/theme";
 
+const GlobalStyle = createGlobalStyle`
+  body {
+    font-family: 'Work Sans', sans-serif;
+  }
+`;
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
+        <GlobalStyle />
         <Nav />
         <Body>
           <Sidebar items={menuItems} />
