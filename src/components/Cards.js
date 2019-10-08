@@ -10,6 +10,7 @@ const Container = styled.div`
   ${"" /* overflow-y: scroll; */}
   width: 100%;
   min-height: 308px;
+  margin-top: 1rem;
   margin-right: 1rem;
 `;
 
@@ -20,7 +21,7 @@ const Cards = ({ tools }) => {
         <Card
           key={tool.id}
           id={tool.id}
-          image={tool.image + 300 + index}
+          image={tool.image}
           url={tool.url}
           title={tool.name}
           category={tool.category}

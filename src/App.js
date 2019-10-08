@@ -20,7 +20,7 @@ import theme from "./utils/theme";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
   }
 `;
 
