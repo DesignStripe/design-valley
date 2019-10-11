@@ -18,8 +18,6 @@ const ToolContainer = ({ match }) => {
 
   if (!isReady) return <Spinner />;
 
-  console.log(tool);
-
   return <Tool {...tool} />;
 };
 

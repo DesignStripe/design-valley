@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { FiHeart } from "react-icons/fi";
 
 import Tag from "./Tag";
@@ -90,7 +90,7 @@ function getInitialSaveStatus(id) {
   return isSaved;
 }
 
-const Card = ({ image, title, description, id, url, category }) => {
+const Card = ({ history, image, title, description, id, url, category }) => {
   const [isSaved, setIsSaved] = useState(getInitialSaveStatus(id));
 
   function saveTool(id) {
@@ -126,24 +126,16 @@ const Card = ({ image, title, description, id, url, category }) => {
           )}
         </Row>
 
-        <Description> {description}</Description>
+        {/* <Description> {description}</Description> */}
 
         <Row>
           <Tag color={category.color}>{category.name}</Tag>
         </Row>
 
-        <Button
-          onClick={() => {
-            const newTab = window.open(url + "/?ref=designmate", "_blank");
-            newTab.focus();
-          }}
-        >
-          Go to Website
-        </Button>
-        <Link to={`/tool/${id}`}>Go to tool</Link>
+        <Button onClick={() => history.push(`/tool/${id}`)}>Learn More</Button>
       </CardContent>
     </Container>
   );
 };
 
-export default Card;
+export default withRouter(Card);
