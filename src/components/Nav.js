@@ -31,9 +31,13 @@ const findTitleFromPathname = () => {
   if (pathname === "/") return "Home";
 
   const isCategory = pathname.indexOf("/category/") !== -1;
+  const isTool = pathname.indexOf("/tool/") !== -1;
   if (isCategory) {
     const categoryId = pathname.replace("/category/", "");
     const title = categories.find(category => category.id === categoryId).name;
+    return title;
+  } else if (isTool) {
+    const title = "";
     return title;
   } else {
     const title = pathname.replace("/", "");

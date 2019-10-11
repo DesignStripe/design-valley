@@ -25,6 +25,14 @@ function populateCategory(arr) {
   });
 }
 
+function fetchToolById(id) {
+  const selectedTool = tools.find(tool => tool.id.toString() === id);
+
+  return new Promise((resolve, reject) =>
+    resolve(populateCategory([selectedTool])[0])
+  );
+}
+
 function fetchToolByCategory(id) {
   const selectedTools = tools.filter(tool => tool.category === id);
 
@@ -63,4 +71,10 @@ function fetchFavorite() {
   );
 }
 
-export { fetchToolByCategory, fetchFeatured, fetchPopular, fetchFavorite };
+export {
+  fetchToolById,
+  fetchToolByCategory,
+  fetchFeatured,
+  fetchPopular,
+  fetchFavorite
+};

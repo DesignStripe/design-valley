@@ -8,9 +8,9 @@ import CategoryContainer from "./containers/CategoryContainer";
 import PopularContainer from "./containers/PopularContainer";
 import FavoritesContainer from "./containers/FavoritesContainer";
 import FeaturedContainer from "./containers/FeaturedContainer";
+import ToolContainer from "./containers/ToolContainer";
 
 import Nav from "./components/Nav";
-import Card from "./components/Card";
 import Body from "./components/Body";
 import MainSection from "./components/MainSection";
 import Sidebar from "./components/Sidebar";
@@ -35,7 +35,7 @@ function App() {
           <MainSection>
             <Route path="/" exact component={HomeContainer} />
             <Route path="/category/:id" exact component={CategoryContainer} />
-            <Route path="/card/:id" component={Card} />
+            <Route path="/tool/:id" component={ToolContainer} />
             <Route path="/popular" exact component={PopularContainer} />
             <Route path="/featured" exact component={FeaturedContainer} />
             <Route path="/favorites" exact component={FavoritesContainer} />
