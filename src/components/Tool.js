@@ -56,6 +56,7 @@ const CardContent = styled.div`
 const Title = styled.h1`
   color: #212121;
   margin: 0;
+  margin-right: 1rem;
 `;
 
 const Description = styled.p`
@@ -92,7 +93,7 @@ const Card = ({ image, name, description, id, url, category }) => {
     <Col style={{ margin: "1rem" }}>
       <Row
         middle="xs"
-        between="xs"
+        // between="xs"
         style={{ margin: 0, marginBottom: "1rem", maxWidth: "100%" }}
       >
         <Title>{name}</Title>
@@ -112,12 +113,12 @@ const Card = ({ image, name, description, id, url, category }) => {
           />
         )}
       </Row>
-      <Col xl={8}>
-        <Image fitContainer src={image} ratio="16:9" isSharp />
+      <Col xl={8} style={{ padding: 0, paddingBottom: "2rem" }}>
+        <Image fitContainer src={image} ratio="16:9" />
       </Col>
 
       <Col>
-        <Description> {description}</Description>
+        <Description>{description}</Description>
         <Tag color={category.color}>{category.name}</Tag>
       </Col>
       <Col></Col>
@@ -129,7 +130,7 @@ const Card = ({ image, name, description, id, url, category }) => {
           }}
           style={{ width: "100%" }}
         >
-          Go to Website
+          Visit Website
         </Button>
       </Col>
     </Col>
