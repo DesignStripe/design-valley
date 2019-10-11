@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { rgba } from "polished";
 import { FiHeart } from "react-icons/fi";
-import { Button } from "semantic-ui-react";
 
 import {
   getFavorites,
   addFavorite,
   removeFavorite
 } from "../utils/localStorage";
-
+import Tag from "./Tag";
+import Button from "./Button";
 import Image from "./Image";
 
 const Container = styled.div`
@@ -78,59 +77,6 @@ const Description = styled.p`
   margin: 0 0 1rem 0;
 `;
 
-const Tag = styled.span`
-  border: none;
-  vertical-align: baseline;
-  background: ${props => rgba(props.color, 0.1)} none;
-  color: ${props => rgba(props.color, 1)};
-  margin: 0 0.25em 0 0;
-  padding: 4px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  font-size: 10px;
-  font-weight: 700;
-`;
-
-const CustomButton = styled(Button)`
-  cursor: pointer;
-  display: inline-block;
-  min-height: 1em;
-  outline: 0;
-  border: none;
-  vertical-align: baseline;
-  background: #e0e1e2 none;
-  color: rgba(0, 0, 0, 0.6);
-  margin: 0 0.25em 0 0;
-  padding: 0.78571429em 1.5em 0.78571429em;
-  text-transform: none;
-  text-shadow: none;
-  font-weight: 700;
-  line-height: 1em;
-  font-style: normal;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 0.28571429rem;
-
-  box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34, 36, 38, 0.15) inset;
-  user-select: none;
-  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease,
-    background 0.1s ease, -webkit-box-shadow 0.1s ease;
-  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease,
-    box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
-
-  padding: 12px 0;
-  font-size: 14px;
-  font-family: Rubik, "sans-serif";
-
-  &:hover {
-    background-color: #cacbcd;
-    background-image: none;
-    box-shadow: 0 0 0 1px transparent inset,
-      0 0 0 0 rgba(34, 36, 38, 0.15) inset;
-    color: rgba(0, 0, 0, 0.8);
-  }
-`;
-
 const Row = styled.div`
   display: flex;
   flex-direction: row;
@@ -187,14 +133,14 @@ const Card = ({ image, title, description, id, url, category }) => {
           <Tag color={category.color}>{category.name}</Tag>
         </Row>
 
-        <CustomButton
+        <Button
           onClick={() => {
             const newTab = window.open(url, "_blank");
             newTab.focus();
           }}
         >
           Go to Website
-        </CustomButton>
+        </Button>
       </CardContent>
     </Container>
   );
