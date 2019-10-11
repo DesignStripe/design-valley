@@ -72,7 +72,7 @@ const VerticalSidebar = ({ items }) => (
           as={Link}
           to={item.isHighlighted ? `/${item.id}` : `/category/${item.id}`}
         >
-          {item.emoji}
+          {item.icon || item.emoji}
           {item.name}
         </Menu.Item>
       )
