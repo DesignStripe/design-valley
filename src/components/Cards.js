@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "./Card";
+import { Col } from "react-flexbox-grid";
 
 const Container = styled.div`
   display: flex;
@@ -14,21 +15,24 @@ const Container = styled.div`
   margin-right: 1rem;
 `;
 
-const Cards = ({ tools }) => {
+const Cards = ({ title, tools }) => {
   return (
-    <Container>
-      {tools.map((tool, index) => (
-        <Card
-          key={tool.id}
-          id={tool.id}
-          image={tool.image}
-          url={tool.url}
-          title={tool.name}
-          category={tool.category}
-          description={tool.description}
-        />
-      ))}
-    </Container>
+    <Col>
+      {title && <h2 style={{ margin: "1rem 0 2rem 1rem" }}>{title}</h2>}
+      <Container>
+        {tools.map((tool, index) => (
+          <Card
+            key={tool.id}
+            id={tool.id}
+            image={tool.image}
+            url={tool.url}
+            title={tool.name}
+            category={tool.category}
+            description={tool.description}
+          />
+        ))}
+      </Container>
+    </Col>
   );
 };
 

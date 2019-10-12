@@ -10,7 +10,7 @@ const FavoritesContainer = ({ match }) => {
     fetchFavorite().then(res => setFavorites(res));
   }, []);
 
-  return <Cards tools={favorites} />;
+  return <Cards tools={favorites} title="Favorites" />;
 };
 
 export default FavoritesContainer;

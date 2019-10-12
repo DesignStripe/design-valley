@@ -10,7 +10,7 @@ const PopularContainer = ({ match }) => {
     fetchPopular().then(res => setPopular(res));
   }, []);
 
-  return <Cards tools={popular} />;
+  return <Cards tools={popular} title="Popular" />;
 };
 
 export default PopularContainer;

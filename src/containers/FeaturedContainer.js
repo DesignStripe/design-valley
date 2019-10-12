@@ -10,7 +10,7 @@ const FeaturedContainer = ({ match }) => {
     fetchFeatured().then(res => setFeatured(res));
   }, []);
 
-  return <Cards tools={featured} />;
+  return <Cards tools={featured} title="Featured" />;
 };
 
 export default FeaturedContainer;
