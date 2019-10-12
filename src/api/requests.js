@@ -11,9 +11,6 @@ const defaultCategory = {
 
 function findCategory(id) {
   return categories.find(category => {
-    console.log(category.id);
-    console.log(id);
-
     return category.id === id;
   });
 }
@@ -31,6 +28,16 @@ function fetchToolById(id) {
   return new Promise((resolve, reject) =>
     resolve(populateCategory([selectedTool])[0])
   );
+}
+
+function fetchCategoryNameById(id) {
+  return new Promise(resolve => {
+    const category = categories.find(category => {
+      return category.id === id;
+    });
+    const name = category.name || "";
+    resolve(name);
+  });
 }
 
 function fetchToolByCategory(id) {
@@ -76,5 +83,6 @@ export {
   fetchToolByCategory,
   fetchFeatured,
   fetchPopular,
-  fetchFavorite
+  fetchFavorite,
+  fetchCategoryNameById
 };
