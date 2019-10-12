@@ -15,7 +15,7 @@ import Body from "./components/Body";
 import MainSection from "./components/MainSection";
 import Sidebar from "./components/Sidebar";
 
-import menuItems from "./data/menuItems";
+import { fixedItems, menuCategories } from "./data/menuItems";
 import theme from "./utils/theme";
 
 const GlobalStyle = createGlobalStyle`
@@ -29,9 +29,9 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <GlobalStyle />
-        <Nav />
+        {/* <Nav /> */}
         <Body>
-          <Sidebar items={menuItems} />
+          <Sidebar fixedItems={fixedItems} menuCategories={menuCategories} />
           <MainSection>
             <Route path="/" exact component={HomeContainer} />
             <Route path="/category/:id" exact component={CategoryContainer} />
