@@ -18,6 +18,7 @@ import Sidebar from "./components/Sidebar";
 import { fixedItems, menuCategories } from "./data/menuItems";
 import theme from "./utils/theme";
 import PolicyLabel from "./components/PolicyMessage";
+import FloatingHeader from "./components/FloatingHeader";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -30,6 +31,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <GlobalStyle />
+        <FloatingHeader />
         <PolicyLabel />
         {/* <Nav /> */}
         <Body>
