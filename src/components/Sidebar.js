@@ -7,9 +7,10 @@ import { Menu, Sidebar } from "semantic-ui-react";
 const Logo = styled.div`
   height: 32px;
   margin: 1rem auto 2rem auto !important;
+  padding-left: 0 !important;
   border-radius: 8px;
-  padding: 1rem;
-  min-width: 250px;
+  box-sizing: border-box;
+  ${"" /* min-width: 250px; */}
   box-sizing: border-box;
   text-decoration: none;
   color: ${props => props.theme.colors.primary};
@@ -20,6 +21,7 @@ const Logo = styled.div`
   justify-content: start;
   align-items: center;
   cursor: pointer;
+  align-text: center;
 `;
 
 const StyledSidebar = styled(Sidebar)`
