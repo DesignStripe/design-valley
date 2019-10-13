@@ -15,10 +15,15 @@ const Container = styled.div`
   margin-right: 1rem;
 `;
 
+const Title = styled.h2`
+  height: 32px;
+  margin: 1rem 0 1.5rem 1rem;
+`;
+
 const Cards = ({ title, tools }) => {
   return (
     <Col>
-      {title && <h2 style={{ margin: "1rem 0 2rem 1rem" }}>{title}</h2>}
+      {title && <Title>{title}</Title>}
       <Container>
         {tools.map((tool, index) => (
           <Card
