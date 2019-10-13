@@ -16,7 +16,8 @@
     "react-scripts": "3.1.1",
     "react-tooltip": "^3.11.1",
     "semantic-ui-react": "^0.88.0",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "universal-cookie": "^4.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
