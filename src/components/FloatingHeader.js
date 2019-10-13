@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import Cookies from "universal-cookie";
-import { FiX, FiSettings, FiInfo, FiLifeBuoy } from "react-icons/fi";
-
-const cookies = new Cookies();
+import { FiSettings, FiInfo, FiLifeBuoy } from "react-icons/fi";
+import me from "../assets/me.jpeg";
+import Avatar from "./Avatar";
 
 const Container = styled.div`
   display: flex;
@@ -65,6 +64,11 @@ const Container = styled.div`
 const FloatingHeader = () => {
   return (
     <Container>
+      <Avatar
+        src={me}
+        onClick={() => window.open("https://twitter.com/d__raptis", "_blank")}
+      />
+
       <Link>
         <FiSettings /> Settings
       </Link>
