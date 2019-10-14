@@ -76,6 +76,36 @@ const Description = styled.p`
   margin: 0 0 1rem 0;
 `;
 
+const ImageWrapper = styled.div`
+  position: relative;
+`;
+
+const IconWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  borderr-rdius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  zindex: 10;
+  display: flex;
+  justify-cntent: center;
+  align-items: center;
+`;
+
+const ImageWithLike = ({ src }) => {
+  return (
+    <ImageWrapper>
+      <IconWrapper>
+        <FiHeart size={20} stroke="#333" />
+      </IconWrapper>
+      <Image fitContainer src={src} ratio="16:9" isSharp />
+    </ImageWrapper>
+  );
+};
+
 const Row = styled.div`
   display: flex;
   flex-direction: row;
@@ -105,7 +135,9 @@ const Card = ({ history, image, title, description, id, url, category }) => {
 
   return (
     <Container>
+      {/* <ImageWithLike src={image} /> */}
       <Image fitContainer src={image} ratio="16:9" isSharp />
+
       <CardContent>
         <Row>
           <Title>{title}</Title>

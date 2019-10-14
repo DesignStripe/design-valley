@@ -28,11 +28,20 @@ const ImageDiv = styled.div`
   border-radius: 8px;
   width: 100%;
   height: 100%;
-  background-image: url(${props => props.src});
+  ${
+    "" /* background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url(${props => props.src}); */
+  }
+  background-image:  url(${props => props.src});
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
   border: 0;
+
   border-radius: ${props => props.theme.borderRadius};
   ${props =>
     props.isSharp &&
