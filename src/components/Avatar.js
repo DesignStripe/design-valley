@@ -9,8 +9,8 @@ const Image = styled.img`
 `;
 
 const Wrapper = styled.div`
-  width: 34px;
-  height: 34px;
+  width: 38px;
+  height: 38px;
 
   display: flex;
   flex-direction: row;
@@ -18,15 +18,15 @@ const Wrapper = styled.div`
   align-items: center;
 
   border-radius: 50%;
-  background-color: #f1f1f1;
+  background-color: none;
   &:hover {
-    background-color: #ddd;
+    background-color: #f0f0f0;
   }
 `;
 
-const Avatar = ({ src }) => {
+const Avatar = ({ onClick, src }) => {
   return (
-    <Wrapper>
+    <Wrapper onClick={onClick}>
       <Image src={src} alt="Avatar" class="avatar" />
     </Wrapper>
   );

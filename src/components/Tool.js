@@ -53,7 +53,7 @@ const CardContent = styled.div`
   }
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
   color: #212121;
   margin: 0;
   margin-right: 1rem;
