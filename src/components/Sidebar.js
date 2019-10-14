@@ -30,7 +30,7 @@ const StyledSidebar = styled(Sidebar)`
   margin: 1rem;
   padding: 1rem;
   border-radius: 8px;
-  background-color: #f5f5f5;
+  background-color: ${p => p.theme.colors.neutrals[200]};
 
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@ const StyledSidebar = styled(Sidebar)`
     margin-bottom: 0.5rem;
   }
   & > a:hover {
-    background-color: #eee;
+    background-color: ${p => p.theme.colors.neutrals[100]};
     border-radius: 8px;
     cursor: pointer;
   }
@@ -52,7 +52,7 @@ const StyledSidebar = styled(Sidebar)`
 
   & > a {
     text-decoration: none;
-    color: #212121;
+    color: ${p => p.theme.colors.neutrals[900]};
     display: flex;
     align-items: center;
   }
@@ -69,7 +69,7 @@ const Divider = styled.div`
   width: 50%;
   margin: 1rem auto 2rem auto;
   margin-bottom: 1rem;
-  border-top: 1px solid #dfdfdf;
+  border-top: 1px solid ${p => p.theme.colors.neutrals[300]};
 `;
 
 const ScrollableSection = styled.div`
@@ -80,13 +80,12 @@ const ScrollableSection = styled.div`
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  ${"" /* float: left; */}
   & > * {
     padding: 0.5rem;
     margin-bottom: 0.5rem;
   }
   & > a:hover {
-    background-color: #eee;
+    background-color: ${p => p.theme.colors.neutrals[100]};
     border-radius: 8px;
     cursor: pointer;
   }
@@ -96,7 +95,7 @@ const ScrollableSection = styled.div`
 
   & > a {
     text-decoration: none;
-    color: #212121;
+    color: ${p => p.theme.colors.neutrals[900]};
     display: flex;
     align-items: center;
   }

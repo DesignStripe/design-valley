@@ -8,8 +8,8 @@ const Button = styled(SemanticButton)`
   outline: 0;
   border: none;
   vertical-align: baseline;
-  background: #e0e1e2 none;
-  color: rgba(0, 0, 0, 0.6);
+  background: ${props => props.theme.colors.neutrals[200]}; none;
+  color: ${props => props.theme.colors.neutrals[800]};
   margin: 0 0.25em 0 0;
   padding: 0.78571429em 1.5em 0.78571429em;
   text-transform: none;
@@ -30,14 +30,14 @@ const Button = styled(SemanticButton)`
 
   padding: 12px 0;
   font-size: 14px;
-  font-family: Rubik, "sans-serif";
+  font-family: Lato, "sans-serif";
 
   &:hover {
-    background-color: #cacbcd;
+    background-color: ${props => props.theme.colors.neutrals[300]};
     background-image: none;
     box-shadow: 0 0 0 1px transparent inset,
       0 0 0 0 rgba(34, 36, 38, 0.15) inset;
-    color: rgba(0, 0, 0, 0.8);
+    color: ${props => props.theme.colors.neutrals[900]};
   }
 `;
 export default Button;

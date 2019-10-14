@@ -18,33 +18,30 @@ const Container = styled.div`
 
   border-radius: 0;
   border-top-left-radius: 8px;
-  border: 1px solid #ddd;
-  ${"" /* margin: 1rem; */}
+  border: 1px solid ${p => p.theme.colors.neutrals[300]};
   padding: 0.5rem 1rem;
-  ${"" /* min-width: 300px; */}
   height: 32px;
   z-index: 1000;
 
-  ${"" /* box-shadow: 0px 7px 25px 0px rgba(22, 53, 76, 0.3); */}
-  background-color: ${p => p.theme.colors.neutrals[900]};
+  background-color: ${p => p.theme.colors.neutrals[100]};
 
   & > a {
     & > svg {
       margin-right: 0.5rem;
-      color: #888;
+      color: ${p => p.theme.colors.neutrals[600]};
     }
     cursor: "pointer";
     text-decoration: none;
-    color: #888;
+    color: ${p => p.theme.colors.neutrals[600]};
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
   }
   & > a:hover {
-    color: #212121;
+    color: ${p => p.theme.colors.neutrals[900]};
     & > svg {
-      color: #212121;
+      color: ${p => p.theme.colors.neutrals[900]};
     }
   }
   & > * {
@@ -56,7 +53,7 @@ const Container = styled.div`
     margin-right: 0;
     color: salmon;
     & > svg {
-      color: salmon
+      color: salmon;
     }
   }
 `;
