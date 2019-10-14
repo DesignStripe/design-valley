@@ -5,52 +5,20 @@ import { FiHeart } from "react-icons/fi";
 import Tag from "./Tag";
 import Button from "./Button";
 import Image from "./Image";
-import { Row, Col, Grid } from "react-flexbox-grid";
+import { Row, Col } from "react-flexbox-grid";
 import {
   getFavorites,
   addFavorite,
   removeFavorite
 } from "../utils/localStorage";
 
-const Container = styled.div`
+const Container = styled(Col)`
   border-radius: 8px;
   background-color: #fff;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
-  ${"" /* padding: 1rem; */}
+  border: solid 2px #f4f4f4;
+
+  padding: 1rem !important;
   margin: 1rem;
-  margin-top: 0;
-  margin-bottom: 2rem;
-
-  width: 100%;
-  box-sizing: border-box;
-  @media (min-width: 40rem) {
-    width: calc(50% - 2rem);
-  }
-  @media (min-width: 56rem) {
-    width: calc(33.33% - 2rem);
-  }
-  @media (min-width: 64rem) {
-    width: calc(25% - 2rem);
-  }
-
-  &:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    transform: translateY(-1px);
-  }
-`;
-
-const CardContent = styled.div`
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-  padding: 1rem;
-
-  & > * {
-    margin-bottom: 1rem;
-  }
-  & > *:last-child {
-    margin-bottom: 0;
-  }
 `;
 
 const Title = styled.h2`
@@ -65,7 +33,7 @@ const Description = styled.p`
   -webkit-box-orient: vertical;
   overflow: hidden; */}
 
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.9);
 
   margin: 0 0 1rem 0;
 `;
@@ -90,7 +58,7 @@ const Card = ({ image, name, description, id, url, category }) => {
   }
 
   return (
-    <Col style={{ margin: "1rem" }}>
+    <Container lg={8}>
       <Row
         middle="xs"
         // between="xs"
@@ -113,7 +81,7 @@ const Card = ({ image, name, description, id, url, category }) => {
           />
         )}
       </Row>
-      <Col xl={8} style={{ padding: 0, paddingBottom: "2rem" }}>
+      <Col style={{ padding: 0, paddingBottom: "2rem" }}>
         <Image fitContainer src={image} ratio="16:9" />
       </Col>
 
@@ -133,7 +101,7 @@ const Card = ({ image, name, description, id, url, category }) => {
           Visit Website
         </Button>
       </Col>
-    </Col>
+    </Container>
   );
 };
 
