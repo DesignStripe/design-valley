@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## TODO list
 
-- [ ] Add Image component
+- [x] Add Image component
 - [ ] Handle app's Typography
 - [x] Make main content container scrollable
 - [x] Add real data
