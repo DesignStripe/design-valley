@@ -62,7 +62,7 @@ const Card = ({ image, name, description, id, url, category }) => {
       <Row
         middle="xs"
         // between="xs"
-        style={{ margin: 0, marginBottom: "1rem", maxWidth: "100%" }}
+        style={{ margin: 0, marginBottom: "2rem", maxWidth: "100%" }}
       >
         <Title>{name}</Title>
         {isSaved ? (

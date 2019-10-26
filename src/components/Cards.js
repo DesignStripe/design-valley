@@ -29,7 +29,7 @@ const Cards = ({ title, tools }) => {
           <Card
             key={tool.id}
             id={tool.id}
-            image={tool.image}
+            image={tool.thumb}
             url={tool.url}
             title={tool.name}
             category={tool.category}

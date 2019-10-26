@@ -11,12 +11,20 @@ const defaultCategory = {
 
 const GOOGLE_BUCKET_URL = "https://storage.cloud.google.com/resources-images/";
 
-function getFilenameFromName(name) {
+function getImageFilename(name) {
   const filename = name
     .toLowerCase()
     .split(" ")
     .join("-");
-  return GOOGLE_BUCKET_URL + filename + ".png";
+  return GOOGLE_BUCKET_URL + "original/" + filename + ".png";
+}
+
+function getThumbFilename(name) {
+  const filename = name
+    .toLowerCase()
+    .split(" ")
+    .join("-");
+  return GOOGLE_BUCKET_URL + "thumbs/" + filename + ".png";
 }
 
 function findCategory(id) {
@@ -31,7 +39,8 @@ function populateCategory(arr) {
     return {
       ...item,
       category: findCategory(categoryId),
-      image: getFilenameFromName(item.name)
+      image: getImageFilename(item.name),
+      thumb: getThumbFilename(item.name)
     };
   });
 }

@@ -22,7 +22,7 @@ const Container = styled.div`
   border: 1px solid #f4f4f4;
   padding: 0.5rem 1rem;
   box-shadow: 0px 7px 25px 0px rgba(22, 53, 76, 0.3);
-  background-color: ${p => p.theme.colors.neutrals[900]};
+  background-color: ${p => p.theme.colors.neutrals[100]};
   z-index: 1000;
   min-width: 300px;
   & > *:first-child {

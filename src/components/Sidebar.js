@@ -13,7 +13,7 @@ const Logo = styled.div`
   ${"" /* min-width: 250px; */}
   box-sizing: border-box;
   text-decoration: none;
-  color: ${props => props.theme.colors.primary};
+  color: ${props => props.theme.colors.neutrals[100]};
   font-size: 1.5rem;
   font-weight: bold;
   display: flex;
@@ -31,6 +31,7 @@ const StyledSidebar = styled(Sidebar)`
   padding: 1rem;
   border-radius: 8px;
   background-color: ${p => p.theme.colors.neutrals[200]};
+  background-color: #03132b;
 
   display: flex;
   flex-direction: column;
@@ -52,7 +53,7 @@ const StyledSidebar = styled(Sidebar)`
 
   & > a {
     text-decoration: none;
-    color: ${p => p.theme.colors.neutrals[900]};
+    color: ${p => p.theme.colors.neutrals[100]};
     display: flex;
     align-items: center;
   }
@@ -70,6 +71,7 @@ const Divider = styled.div`
   margin: 1rem auto 2rem auto;
   margin-bottom: 1rem;
   border-top: 1px solid ${p => p.theme.colors.neutrals[300]};
+  padding: 0 !important;
 `;
 
 const ScrollableSection = styled.div`
@@ -95,7 +97,7 @@ const ScrollableSection = styled.div`
 
   & > a {
     text-decoration: none;
-    color: ${p => p.theme.colors.neutrals[900]};
+    color: ${p => p.theme.colors.neutrals[100]};
     display: flex;
     align-items: center;
   }

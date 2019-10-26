@@ -61,12 +61,14 @@ const Container = styled.div`
 const FloatingHeader = () => {
   return (
     <Container>
+      <p style={{ marginRight: "0.5rem" }}>
+        Built by <b>Jim Raptis</b>
+      </p>
       <Avatar
         src={me}
         onClick={() => window.open("https://twitter.com/d__raptis", "_blank")}
       />
-
-      <Link>
+      {/* <Link>
         <FiSettings /> Settings
       </Link>
       <Link>
@@ -74,7 +76,7 @@ const FloatingHeader = () => {
       </Link>
       <Link>
         <FiLifeBuoy /> Support
-      </Link>
+      </Link> */}
     </Container>
   );
 };

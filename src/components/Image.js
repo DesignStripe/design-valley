@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
@@ -14,6 +14,8 @@ const ImageWrapper = styled.div`
       height: ${props.size}px;
     `}
   position: relative;
+  background-color: #f4f4f4;
+  border-radius: 10px;
 
   & > div {
     position: absolute;
@@ -31,16 +33,16 @@ const ImageDiv = styled.div`
   ${
     "" /* background-image: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.1)
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0)
     ),
     url(${props => props.src}); */
   }
   background-image:  url(${props => props.src});
-  background-position: 50% 50%;
+  background-position: 50% 0%;
   background-size: cover;
   background-repeat: no-repeat;
-  border: 0;
+  border: 1px #f4f4f4 solid;
 
   border-radius: ${props => props.theme.borderRadius};
   ${props =>
@@ -66,7 +68,7 @@ function getRatioPercent(ratio) {
   }
 }
 
-const Image = ({
+const ImageComponent = ({
   src,
   ratio,
   size,
@@ -75,6 +77,7 @@ const Image = ({
   original,
   isSharp
 }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
   const ratioPercent = getRatioPercent(ratio) * 100;
 
   return (
@@ -113,4 +116,4 @@ Image.defaultProps = {
   isSharp: false
 };
 
-export default Image;
+export default ImageComponent;
