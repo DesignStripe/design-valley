@@ -44,6 +44,7 @@ const StyledSidebar = styled(Sidebar)`
   }
   & > a:hover {
     background-color: ${p => p.theme.colors.neutrals[100]};
+    background-color: #08295f;
     border-radius: 8px;
     cursor: pointer;
   }
@@ -58,7 +59,7 @@ const StyledSidebar = styled(Sidebar)`
     align-items: center;
   }
   & > a:hover {
-    color: ${p => p.theme.colors.primary};
+    ${"" /* color: ${p => p.theme.colors.primary}; */}
   }
 
   & > a > svg {
@@ -88,6 +89,7 @@ const ScrollableSection = styled.div`
   }
   & > a:hover {
     background-color: ${p => p.theme.colors.neutrals[100]};
+    background-color: #08295f;
     border-radius: 8px;
     cursor: pointer;
   }
@@ -102,7 +104,7 @@ const ScrollableSection = styled.div`
     align-items: center;
   }
   & > a:hover {
-    color: ${p => p.theme.colors.primary};
+    ${"" /* color: ${p => p.theme.colors.primary}; */}
   }
 
   & > a > svg {
