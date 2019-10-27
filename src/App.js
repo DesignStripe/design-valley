@@ -18,6 +18,7 @@ import MainSection from "./components/MainSection";
 import theme from "./utils/theme";
 import PolicyLabel from "./components/PolicyMessage";
 import FloatingHeader from "./components/FloatingHeader";
+import Footer from "./components/Footer";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -30,7 +31,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <GlobalStyle />
-        <FloatingHeader />
+        {/* <FloatingHeader /> */}
         <PolicyLabel />
         {/* <Nav /> */}
         <Body>
@@ -42,6 +43,7 @@ function App() {
             <Route path="/popular" exact component={PopularContainer} />
             <Route path="/featured" exact component={FeaturedContainer} />
             <Route path="/favorites" exact component={FavoritesContainer} />
+            <Footer />
           </MainSection>
         </Body>
       </Router>
