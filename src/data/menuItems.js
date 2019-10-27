@@ -1,6 +1,5 @@
 import React from "react";
 import { FiHeart, FiStar, FiTrendingUp } from "react-icons/fi";
-import categories from "./categories.json";
 
 export const fixedItems = [
   {
@@ -22,9 +21,3 @@ export const fixedItems = [
     isHighlighted: true
   }
 ];
-
-export const menuCategories = categories.sort((a, b) =>
-  a.name > b.name ? 1 : -1
-);
-
-// export default [...fixed, { name: "devider" }, ...items];

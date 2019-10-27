@@ -9,13 +9,12 @@ import PopularContainer from "./containers/PopularContainer";
 import FavoritesContainer from "./containers/FavoritesContainer";
 import FeaturedContainer from "./containers/FeaturedContainer";
 import ToolContainer from "./containers/ToolContainer";
+import SidebarContainer from "./containers/SidebarContainer";
 
-import Nav from "./components/Nav";
+// import Nav from "./components/Nav";
 import Body from "./components/Body";
 import MainSection from "./components/MainSection";
-import Sidebar from "./components/Sidebar";
 
-import { fixedItems, menuCategories } from "./data/menuItems";
 import theme from "./utils/theme";
 import PolicyLabel from "./components/PolicyMessage";
 import FloatingHeader from "./components/FloatingHeader";
@@ -35,7 +34,7 @@ function App() {
         <PolicyLabel />
         {/* <Nav /> */}
         <Body>
-          <Sidebar fixedItems={fixedItems} menuCategories={menuCategories} />
+          <SidebarContainer />
           <MainSection>
             <Route path="/" exact component={HomeContainer} />
             <Route path="/category/:id" exact component={CategoryContainer} />

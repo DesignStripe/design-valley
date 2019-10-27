@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Tool from "../components/Tool";
 
-import { fetchToolById } from "../api/requests";
+import { fetchToolById } from "../api";
 import Spinner from "../components/Spinner";
 
 const ToolContainer = ({ match }) => {

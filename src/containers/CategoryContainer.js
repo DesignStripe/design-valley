@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 import Cards from "../components/Cards";
 
-import { fetchToolByCategory, fetchCategoryNameById } from "../api/requests";
+import { fetchToolsByCategory, fetchCategorById } from "../api";
 
 const CategoryContainer = ({ match }) => {
   const { id } = match.params;
   const [tools, setTools] = useState([]);
-  const [title, setTitle] = useState("");
+  const [category, setCategory] = useState({});
 
   useEffect(() => {
-    fetchCategoryNameById(id).then(res => setTitle(res));
-    fetchToolByCategory(id).then(res => setTools(res));
+    fetchCategorById(id).then(res => setCategory(res));
+    fetchToolsByCategory(id).then(res => setTools(res));
   }, [id]);
 
-  return <Cards tools={tools} title={title} />;
+  return <Cards tools={tools} title={category.name} />;
 };
 
 export default CategoryContainer;

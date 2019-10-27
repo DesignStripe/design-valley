@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Cards from "../components/Cards";
-
-import { fetchFavorite } from "../api/requests";
+import { fetchFavorite } from "../api";
 
 const FavoritesContainer = ({ match }) => {
   const [favorites, setFavorites] = useState([]);

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Cards from "../components/Cards";
 
-import { fetchFeatured } from "../api/requests";
+import { fetchFeatured } from "../api";
 
 const FeaturedContainer = ({ match }) => {
   const [featured, setFeatured] = useState([]);

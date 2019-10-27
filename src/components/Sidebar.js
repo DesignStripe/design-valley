@@ -127,10 +127,7 @@ const VerticalSidebar = ({ history, fixedItems, menuCategories }) => (
       <b>Design Valley</b>
     </Logo>
     {fixedItems.map(item => (
-      <Menu.Item
-        as={Link}
-        to={item.isHighlighted ? `/${item.id}` : `/category/${item.id}`}
-      >
+      <Menu.Item as={Link} to={`/${item.id}`}>
         {item.icon || item.emoji}
         {item.name}
       </Menu.Item>
@@ -141,10 +138,7 @@ const VerticalSidebar = ({ history, fixedItems, menuCategories }) => (
         item.name === "devider" ? (
           <Divider />
         ) : (
-          <Menu.Item
-            as={Link}
-            to={item.isHighlighted ? `/${item.id}` : `/category/${item.id}`}
-          >
+          <Menu.Item as={Link} to={`/category/${item._id}`}>
             {item.icon || item.emoji}
             {item.name}
           </Menu.Item>

@@ -27,9 +27,9 @@ const Cards = ({ title, tools }) => {
       <Container>
         {tools.map((tool, index) => (
           <Card
-            key={tool.id}
-            id={tool.id}
-            image={tool.thumb}
+            key={tool._id}
+            id={tool._id}
+            image={tool.thumbnail}
             url={tool.url}
             title={tool.name}
             category={tool.category}
