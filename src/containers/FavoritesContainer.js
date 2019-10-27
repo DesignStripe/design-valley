@@ -9,8 +9,6 @@ const FavoritesContainer = () => {
     fetchFavorite().then(res => setFavorites(res));
   }, []);
 
-  console.log(favorites);
-
   return <Cards tools={favorites} title="Favorites" />;
 };
 

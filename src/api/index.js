@@ -30,11 +30,23 @@ function fetchCategorById(id) {
 async function fetchFavorite() {
   const favoritesIds = getFavorites();
 
-  const promiseArray = favoritesIds.map(id =>
-    axios.get(API_BASE_URL + `tools/${id}`).then(res => res.data)
-  );
+  const promiseArray = favoritesIds.map(id => {
+    return axios.get(API_BASE_URL + `tools/${id}`).then(res => res.data);
+  });
 
   return await Promise.all(promiseArray);
+}
+
+function likeTool(id) {
+  return axios.post(API_BASE_URL + `vote/like/${id}`);
+}
+
+function dislikeTool(id) {
+  return axios.post(API_BASE_URL + `vote/dislike/${id}`);
+}
+
+function fetchVotes() {
+  return axios.get(API_BASE_URL + `vote`).then(res => res.data);
 }
 
 export {
@@ -44,5 +56,8 @@ export {
   fetchPopular,
   fetchFavorite,
   fetchCategories,
-  fetchCategorById
+  fetchCategorById,
+  likeTool,
+  dislikeTool,
+  fetchVotes
 };

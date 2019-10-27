@@ -11,6 +11,7 @@ import {
   addFavorite,
   removeFavorite
 } from "../utils/localStorage";
+import { likeTool, dislikeTool } from "../api";
 
 const Container = styled.div`
   border-radius: 8px;
@@ -120,17 +121,28 @@ function getInitialSaveStatus(id) {
   return isSaved;
 }
 
-const Card = ({ history, image, title, description, id, url, category }) => {
+const Card = ({
+  history,
+  image,
+  title,
+  description,
+  id,
+  url,
+  category,
+  votes
+}) => {
   const [isSaved, setIsSaved] = useState(getInitialSaveStatus(id));
 
   function saveTool(id) {
     addFavorite(id);
     setIsSaved(true);
+    likeTool(id);
   }
 
   function removeTool(id) {
     removeFavorite(id);
     setIsSaved(false);
+    dislikeTool(id);
   }
 
   return (
@@ -156,6 +168,7 @@ const Card = ({ history, image, title, description, id, url, category }) => {
               stroke="rgba(0, 0, 0, 0.4)"
             />
           )}
+          {votes}
         </Row>
 
         {/* <Description> {description}</Description> */}

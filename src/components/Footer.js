@@ -15,6 +15,7 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+  flex-wrap: no-wrap;
 `;
 
 const SubscibeDiv = styled.div`
@@ -23,7 +24,7 @@ const SubscibeDiv = styled.div`
   justify-content: center;
   align-items: flex-start;
 
-  > h3 {
+  > h2 {
     font-weight: bold;
     margin: 0;
     margin-bottom: 0.5rem;
@@ -118,8 +119,8 @@ const Footer = ({}) => {
   return (
     <Container>
       <SubscibeDiv>
-        <h3>Learn the best design tools first</h3>
-        <p>Subscibe to our weekly newsletter</p>
+        <h2>Keep me in the loop</h2>
+        <p>The best design tools in your inbox twice a month</p>
         <Form>
           <Input />
           <Button

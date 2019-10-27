@@ -1,5 +1,5 @@
 import { hot } from "react-hot-loader/root";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -27,6 +27,9 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
+  useEffect(() => {
+    //https://dev.to/molamk/sneaky-fingerprint-and-ip-tracker-2ka7
+  }, []);
   return (
     <ThemeProvider theme={theme}>
       <Router>

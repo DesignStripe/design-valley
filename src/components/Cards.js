@@ -34,6 +34,7 @@ const Cards = ({ title, tools }) => {
             title={tool.name}
             category={tool.category}
             description={tool.description}
+            votes={tool.votes}
           />
         ))}
       </Container>
