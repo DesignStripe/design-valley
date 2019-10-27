@@ -29,7 +29,7 @@ const Wrapper = styled.div`
 const Avatar = ({ onClick, src }) => {
   return (
     <Wrapper onClick={onClick}>
-      <Image src={src} alt="Avatar" class="avatar" />
+      <Image src={src} alt="Avatar" />
     </Wrapper>
   );
 };

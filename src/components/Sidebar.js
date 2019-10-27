@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
 import { Menu, Sidebar } from "semantic-ui-react";
+import { FiHeart, FiStar, FiTrendingUp } from "react-icons/fi";
 
 const Logo = styled.div`
   height: 32px;
@@ -112,7 +113,28 @@ const ScrollableSection = styled.div`
   }
 `;
 
-const VerticalSidebar = ({ history, fixedItems, menuCategories }) => (
+const fixedItems = [
+  {
+    icon: <FiHeart fill="red" color="red" />,
+    name: "Favorites",
+    id: "favorites",
+    isHighlighted: true
+  },
+  {
+    icon: <FiStar fill="#FBC02D" color="#FBC02D" />,
+    name: "Featured",
+    id: "featured",
+    isHighlighted: true
+  },
+  {
+    icon: <FiTrendingUp color="#10a55a" />,
+    name: "Popular",
+    id: "popular",
+    isHighlighted: true
+  }
+];
+
+const VerticalSidebar = ({ history, categories }) => (
   <StyledSidebar
     as={Menu}
     animation="slide-out"
@@ -127,16 +149,16 @@ const VerticalSidebar = ({ history, fixedItems, menuCategories }) => (
       <b>Design Valley</b>
     </Logo>
     {fixedItems.map(item => (
-      <Menu.Item as={Link} to={`/${item.id}`}>
+      <Menu.Item as={Link} to={`/${item.id}`} key={item.id}>
         {item.icon || item.emoji}
         {item.name}
       </Menu.Item>
     ))}
     <Divider />
     <ScrollableSection>
-      {menuCategories.map(item =>
+      {categories.map((item, index) =>
         item.name === "devider" ? (
-          <Divider />
+          <Divider key={`devider-${index}`} />
         ) : (
           <Menu.Item as={Link} to={`/category/${item._id}`}>
             {item.icon || item.emoji}

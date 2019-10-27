@@ -31,12 +31,10 @@ async function fetchFavorite() {
   const favoritesIds = getFavorites();
 
   const promiseArray = favoritesIds.map(id =>
-    axios.get(API_BASE_URL + `tools/${id}`)
+    axios.get(API_BASE_URL + `tools/${id}`).then(res => res.data)
   );
 
-  return Promise.all(promiseArray).then(responses =>
-    responses.map(res => res.data)
-  );
+  return await Promise.all(promiseArray);
 }
 
 export {

@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
-
-import { fixedItems } from "../data/menuItems";
-
-import Sidebar from "../components/Sidebar";
-
 import { fetchCategories } from "../api";
+import Sidebar from "../components/Sidebar";
 import Spinner from "../components/Spinner";
 
 const SidebarContainer = ({ match }) => {
@@ -20,7 +16,7 @@ const SidebarContainer = ({ match }) => {
 
   if (!isReady) return <Spinner />;
 
-  return <Sidebar fixedItems={fixedItems} menuCategories={categories} />;
+  return <Sidebar categories={categories} />;
 };
 
 export default SidebarContainer;
