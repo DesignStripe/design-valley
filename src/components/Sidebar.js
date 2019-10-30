@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
 import { Menu, Sidebar } from "semantic-ui-react";
@@ -142,7 +141,7 @@ const VerticalSidebar = ({ history, categories }) => (
     icon="labeled"
     inverted
     vertical
-    visible={true}
+    visible="true"
     width="wide"
   >
     <Logo onClick={() => history.push(`/`)}>
@@ -160,7 +159,7 @@ const VerticalSidebar = ({ history, categories }) => (
         item.name === "devider" ? (
           <Divider key={`devider-${index}`} />
         ) : (
-          <Menu.Item as={Link} to={`/category/${item._id}`}>
+          <Menu.Item as={Link} to={`/category/${item._id}`} key={item._id}>
             {item.icon || item.emoji}
             {item.name}
           </Menu.Item>
@@ -169,11 +168,5 @@ const VerticalSidebar = ({ history, categories }) => (
     </ScrollableSection>
   </StyledSidebar>
 );
-
-VerticalSidebar.propTypes = {
-  animation: PropTypes.string,
-  direction: PropTypes.string,
-  visible: PropTypes.bool
-};
 
 export default withRouter(VerticalSidebar);
