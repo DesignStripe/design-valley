@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
+    "fingerprintjs2": "^2.1.0",
     "framer-motion": "^1.6.12",
     "js-cookie": "^2.2.1",
     "open-graph-scraper": "^3.6.2",

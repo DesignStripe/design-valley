@@ -16,6 +16,7 @@ import Body from "./components/Body";
 import MainSection from "./components/MainSection";
 
 import theme from "./utils/theme";
+import { getFingerprint, getIp } from "./utils/fingerprint";
 import PolicyLabel from "./components/PolicyMessage";
 import FloatingHeader from "./components/FloatingHeader";
 import Footer from "./components/Footer";
@@ -27,9 +28,16 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
+  const [fingerprint, setFingerprint] = useState("");
+  const [ip, setIp] = useState("");
+
   useEffect(() => {
-    //https://dev.to/molamk/sneaky-fingerprint-and-ip-tracker-2ka7
+    setTimeout(() => {
+      getFingerprint().then(hash => setFingerprint(hash));
+      getIp().then(hash => setIp(hash));
+    }, 500);
   }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <Router>
