@@ -8,25 +8,26 @@ const FeaturedContainer = ({ match }) => {
   const [featured, setFeatured] = useState([]);
   const [votes, setVotes] = useState(null);
 
-  useEffect(() => {
-    const tools = featured.map(tool => ({
-      ...tool,
-      votes: votes.find(vote => vote.tool === tool._id).votes
-    }));
-    console.log(tools);
+  // TODO: socket.io testing here
+  // useEffect(() => {
+  //   const tools = featured.map(tool => ({
+  //     ...tool,
+  //     votes: votes.find(vote => vote.tool === tool._id).votes
+  //   }));
+  //   console.log(tools);
 
-    setFeatured(tools);
-  }, [votes]);
+  //   setFeatured(tools);
+  // }, [votes]);
+  //
+  // useEffect(() => {
+  //   const socket = socketIOClient("http://localhost:8000/");
+  //   socket.on("updateVotes", data => setVotes(data));
 
-  useEffect(() => {
-    const socket = socketIOClient("http://localhost:8000/");
-    socket.on("updateVotes", data => setVotes(data));
-
-    fetchFeatured().then(data => {
-      setFeatured(data);
-      fetchVotes().then(data => setVotes(data));
-    });
-  }, []);
+  //   fetchFeatured().then(data => {
+  //     setFeatured(data);
+  //     fetchVotes().then(data => setVotes(data));
+  //   });
+  // }, []);
 
   return <Cards tools={featured} title="Featured" />;
 };
