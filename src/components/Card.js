@@ -33,6 +33,9 @@ const Container = styled.div`
   @media (min-width: 64rem) {
     width: calc(25% - 2rem);
   }
+  @media (min-width: 82rem) {
+    width: calc(20% - 2rem);
+  }
 
   &:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
