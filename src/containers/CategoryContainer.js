@@ -3,8 +3,9 @@ import Cards from "../components/Cards";
 
 import { fetchToolsByCategory, fetchCategorById } from "../api";
 
-const CategoryContainer = ({ match }) => {
+const CategoryContainer = ({ match, location }) => {
   const { id } = match.params;
+
   const [tools, setTools] = useState([]);
   const [category, setCategory] = useState({});
 

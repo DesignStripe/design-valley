@@ -133,6 +133,25 @@ const fixedItems = [
   }
 ];
 
+function getNext(arr, index) {
+  let nextIndex = 0;
+  if (index !== arr.length - 1) {
+    nextIndex = index + 1;
+  }
+  const item = arr[nextIndex];
+  return `/category/${item._id}`;
+}
+
+function getPrevious(arr, index) {
+  let previousIndex = arr.length - 1;
+  if (index !== 0) {
+    previousIndex = index - 1;
+  }
+  const item = arr[previousIndex];
+
+  return `/category/${item._id}`;
+}
+
 const VerticalSidebar = ({ history, categories }) => (
   <StyledSidebar
     as={Menu}
