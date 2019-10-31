@@ -2,6 +2,7 @@ import { hot } from "react-hot-loader/root";
 import React, { useState, useEffect } from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Provider as ReduxProvider } from "react-redux";
 
 import HomeContainer from "./containers/HomeContainer";
 import CategoryContainer from "./containers/CategoryContainer";
@@ -16,6 +17,7 @@ import Body from "./components/Body";
 import MainSection from "./components/MainSection";
 
 import theme from "./utils/theme";
+import store from "./redux/store";
 import { getFingerprint, getIp } from "./utils/fingerprint";
 import PolicyLabel from "./components/PolicyMessage";
 import FloatingHeader from "./components/FloatingHeader";
@@ -39,26 +41,28 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider theme={theme}>
-      <Router>
-        <GlobalStyle />
-        {/* <FloatingHeader /> */}
-        <PolicyLabel />
-        {/* <Nav /> */}
-        <Body>
-          <SidebarContainer />
-          <MainSection>
-            <Route path="/" exact component={HomeContainer} />
-            <Route path="/category/:id" exact component={CategoryContainer} />
-            <Route path="/tool/:id" component={ToolContainer} />
-            <Route path="/popular" exact component={PopularContainer} />
-            <Route path="/featured" exact component={FeaturedContainer} />
-            <Route path="/favorites" exact component={FavoritesContainer} />
-            <Footer />
-          </MainSection>
-        </Body>
-      </Router>
-    </ThemeProvider>
+    <ReduxProvider store={store}>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <GlobalStyle />
+          {/* <FloatingHeader /> */}
+          <PolicyLabel />
+          {/* <Nav /> */}
+          <Body>
+            <SidebarContainer />
+            <MainSection>
+              <Route path="/" exact component={HomeContainer} />
+              <Route path="/category/:id" exact component={CategoryContainer} />
+              <Route path="/tool/:id" component={ToolContainer} />
+              <Route path="/popular" exact component={PopularContainer} />
+              <Route path="/featured" exact component={FeaturedContainer} />
+              <Route path="/favorites" exact component={FavoritesContainer} />
+              <Footer />
+            </MainSection>
+          </Body>
+        </Router>
+      </ThemeProvider>
+    </ReduxProvider>
   );
 }
 

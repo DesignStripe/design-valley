@@ -3,6 +3,8 @@ import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
 import { Menu, Sidebar } from "semantic-ui-react";
 import { FiHeart, FiStar, FiTrendingUp } from "react-icons/fi";
+import { useDispatch } from "react-redux";
+import { SET_CURRENT_CATEGORY } from "../redux/reducers/categoriesReducer";
 
 const Logo = styled.div`
   height: 32px;
@@ -152,40 +154,51 @@ function getPrevious(arr, index) {
   return `/category/${item._id}`;
 }
 
-const VerticalSidebar = ({ history, categories }) => (
-  <StyledSidebar
-    as={Menu}
-    animation="slide-out"
-    direction="left"
-    icon="labeled"
-    inverted
-    vertical
-    visible="true"
-    width="wide"
-  >
-    <Logo onClick={() => history.push(`/`)}>
-      <b>Design Valley</b>
-    </Logo>
-    {fixedItems.map(item => (
-      <Menu.Item as={Link} to={`/${item.id}`} key={item.id}>
-        {item.icon || item.emoji}
-        {item.name}
-      </Menu.Item>
-    ))}
-    <Divider />
-    <ScrollableSection>
-      {categories.map((item, index) =>
-        item.name === "devider" ? (
-          <Divider key={`devider-${index}`} />
-        ) : (
-          <Menu.Item as={Link} to={`/category/${item._id}`} key={item._id}>
-            {item.icon || item.emoji}
-            {item.name}
-          </Menu.Item>
-        )
-      )}
-    </ScrollableSection>
-  </StyledSidebar>
-);
+const VerticalSidebar = ({ history, categories }) => {
+  const dispatch = useDispatch();
+
+  return (
+    <StyledSidebar
+      as={Menu}
+      animation="slide-out"
+      direction="left"
+      icon="labeled"
+      inverted
+      vertical
+      visible="true"
+      width="wide"
+    >
+      <Logo onClick={() => history.push(`/`)}>
+        <b>Design Valley</b>
+      </Logo>
+      {fixedItems.map(item => (
+        <Menu.Item as={Link} to={`/${item.id}`} key={item.id}>
+          {item.icon || item.emoji}
+          {item.name}
+        </Menu.Item>
+      ))}
+      <Divider />
+      <ScrollableSection>
+        {categories.map((item, index) =>
+          item.name === "devider" ? (
+            <Divider key={`devider-${index}`} />
+          ) : (
+            <Menu.Item
+              as={Link}
+              to={`/category/${item._id}`}
+              key={item._id}
+              onClick={() =>
+                dispatch({ type: SET_CURRENT_CATEGORY, payload: index })
+              }
+            >
+              {item.icon || item.emoji}
+              {item.name}
+            </Menu.Item>
+          )
+        )}
+      </ScrollableSection>
+    </StyledSidebar>
+  );
+};
 
 export default withRouter(VerticalSidebar);
