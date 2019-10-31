@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import Card from "./Card";
 import { Col } from "react-flexbox-grid";
 
@@ -13,6 +14,11 @@ const Container = styled.div`
   min-height: 308px;
   margin-top: 1rem;
   margin-right: 1rem;
+
+  &:after {
+    content: "";
+    flex: auto;
+  }
 `;
 
 const Title = styled.h2`
@@ -20,7 +26,7 @@ const Title = styled.h2`
   margin: 1rem 0 1.5rem 1rem;
 `;
 
-const Cards = ({ title, tools }) => {
+const Cards = ({ title, tools, next, previous }) => {
   return (
     <Col>
       {title && <Title>{title}</Title>}
@@ -38,6 +44,12 @@ const Cards = ({ title, tools }) => {
           />
         ))}
       </Container>
+      {next && previous && (
+        <div>
+          <Link to={previous}>Previous</Link>
+          <Link to={next}>Next</Link>
+        </div>
+      )}
     </Col>
   );
 };
