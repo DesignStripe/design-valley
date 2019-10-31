@@ -3,6 +3,7 @@ import styled from "styled-components";
 import me from "../assets/me.jpeg";
 import Avatar from "./Avatar";
 import Button from "./Button";
+import { postEmail } from "../api";
 
 const Container = styled.div`
   background-color: #f4f4f4;
@@ -105,6 +106,9 @@ const INTERVAL = 1000;
 
 const Footer = ({}) => {
   const [emoji, setEmoji] = useState("🌯");
+  const [email, setEmail] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     emojiInterval();
@@ -116,13 +120,25 @@ const Footer = ({}) => {
       setTimeout(() => setEmoji(item), index * INTERVAL);
     });
   };
+
+  const subscibeUser = e => {
+    e.preventDefault();
+    postEmail(email)
+      .then(res => setSuccess(true))
+      .catch(err => setError(true));
+  };
+
   return (
     <Container>
       <SubscibeDiv>
         <h2>Keep me in the loop</h2>
         <p>The best design tools in your inbox twice a month</p>
-        <Form>
-          <Input />
+        <Form onSubmit={subscibeUser}>
+          <Input
+            onChange={event => setEmail(event.target.value)}
+            value={email}
+            type="email"
+          />
           <Button
             variant="primary"
             style={{
@@ -136,10 +152,21 @@ const Footer = ({}) => {
               backgroundColor: "#03132B",
               color: "#fff"
             }}
+            onClick={subscibeUser}
           >
             Subscribe
           </Button>
         </Form>
+        {success && (
+          <p style={{ marginTop: "0.5rem" }}>
+            👍 You've subscribed successfully!
+          </p>
+        )}
+        {error && (
+          <p style={{ marginTop: "0.5rem" }}>
+            👎 Something went wrong! Please try again in a while.
+          </p>
+        )}
       </SubscibeDiv>
 
       <Credits>

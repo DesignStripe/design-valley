@@ -37,6 +37,10 @@ async function fetchFavorite() {
   return await Promise.all(promiseArray);
 }
 
+function postEmail(email) {
+  return axios.post(API_BASE_URL + `newsletter/email/${email}`);
+}
+
 function likeTool(id) {
   return axios.post(API_BASE_URL + `vote/like/${id}`);
 }
@@ -59,5 +63,6 @@ export {
   fetchCategorById,
   likeTool,
   dislikeTool,
-  fetchVotes
+  fetchVotes,
+  postEmail
 };
