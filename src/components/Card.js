@@ -33,7 +33,7 @@ const Container = styled.div`
   @media (min-width: 64rem) {
     width: calc(25% - 2rem);
   }
-  @media (min-width: 82rem) {
+  @media (min-width: 128rem) {
     width: calc(20% - 2rem);
   }
 

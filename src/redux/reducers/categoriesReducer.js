@@ -31,3 +31,31 @@ export default (state = initialState, action) => {
 export const setCurrentCategory = selected => dispatch => {
   dispatch({ type: SET_CURRENT_CATEGORY, payload: selected });
 };
+
+export const setCategories = categories => dispatch => {
+  dispatch({ type: SET_CATEGORIES, payload: categories });
+};
+
+export const nextCategorySelector = state =>
+  getNext(state.categories.array, state.categories.selected);
+
+function getNext(arr, index) {
+  if (!Array.isArray(arr) || arr.length < 1) return null;
+
+  let nextIndex = 0;
+  if (index !== arr.length - 1) {
+    nextIndex = index + 1;
+  }
+  const item = arr[nextIndex];
+  return `/category/${item._id}`;
+}
+
+function getPrevious(arr, index) {
+  let previousIndex = arr.length - 1;
+  if (index !== 0) {
+    previousIndex = index - 1;
+  }
+  const item = arr[previousIndex];
+
+  return `/category/${item._id}`;
+}
