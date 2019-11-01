@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Menu, Sidebar } from "semantic-ui-react";
 import { FiHeart, FiStar, FiTrendingUp } from "react-icons/fi";
 import { useDispatch } from "react-redux";
-import { SET_CURRENT_CATEGORY } from "../redux/reducers/categoriesReducer";
+import { setCurrentCategory } from "../redux/reducers/categoriesReducer";
 
 const Logo = styled.div`
   height: 32px;
@@ -168,9 +168,7 @@ const VerticalSidebar = ({ history, categories }) => {
               as={Link}
               to={`/category/${item._id}`}
               key={item._id}
-              onClick={() =>
-                dispatch({ type: SET_CURRENT_CATEGORY, payload: index })
-              }
+              onClick={() => dispatch(setCurrentCategory(index))}
             >
               {item.icon || item.emoji}
               {item.name}
