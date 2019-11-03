@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link, withRouter } from "react-router-dom";
 import { FiHeart } from "react-icons/fi";
+import { useSelector } from "react-redux";
 
 import Tag from "./Tag";
 import Button from "./Button";
@@ -134,18 +135,27 @@ const Card = ({
   category,
   votes
 }) => {
+  const { socket, ip, fingerprint } = useSelector(state => state.userSession);
   const [isSaved, setIsSaved] = useState(getInitialSaveStatus(id));
 
   function saveTool(id) {
     addFavorite(id);
     setIsSaved(true);
-    likeTool(id);
+    // likeTool(id);
+    socket.emit("like", {
+      toolId: id,
+      userSession: { ip, fingerprint }
+    });
   }
 
   function removeTool(id) {
     removeFavorite(id);
     setIsSaved(false);
-    dislikeTool(id);
+    // dislikeTool(id);
+    socket.emit("unlike", {
+      toolId: id,
+      userSession: { ip, fingerprint }
+    });
   }
 
   return (
