@@ -1,9 +1,11 @@
 export const SET_FINGERPRINT = "SET_FINGERPRINT";
 export const SET_IP = "SET_IP";
+export const SET_SOCKET = "SET_SOCKET";
 
 const initialState = {
   fingerprint: "",
-  ip: ""
+  ip: "",
+  socket: null
 };
 
 export default (state = initialState, action) => {
@@ -22,6 +24,13 @@ export default (state = initialState, action) => {
       };
     }
 
+    case SET_SOCKET: {
+      return {
+        ...state,
+        socket: action.payload
+      };
+    }
+
     default: {
       return { ...state };
     }
@@ -34,4 +43,8 @@ export const setFingerprint = fingerprint => dispatch => {
 
 export const setIp = ip => dispatch => {
   dispatch({ type: SET_IP, payload: ip });
+};
+
+export const setSocket = socket => dispatch => {
+  dispatch({ type: SET_SOCKET, payload: socket });
 };

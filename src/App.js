@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import socketIOClient from "socket.io-client";
 
 import HomeContainer from "./containers/HomeContainer";
 import CategoryContainer from "./containers/CategoryContainer";
@@ -21,7 +22,11 @@ import { getFingerprint, getIp } from "./utils/fingerprint";
 import PolicyLabel from "./components/PolicyMessage";
 import FloatingHeader from "./components/FloatingHeader";
 import Footer from "./components/Footer";
-import { setFingerprint, setIp } from "./redux/reducers/userSessionReducer";
+import {
+  setFingerprint,
+  setIp,
+  setSocket
+} from "./redux/reducers/userSessionReducer";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -33,6 +38,9 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    const socket = socketIOClient(process.env.REACT_APP_API_HOST);
+    dispatch(setSocket(socket));
+
     setTimeout(() => {
       getFingerprint().then(hash => dispatch(setFingerprint(hash)));
       getIp().then(hash => dispatch(setIp(hash)));
