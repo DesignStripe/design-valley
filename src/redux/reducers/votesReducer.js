@@ -8,15 +8,11 @@ export default (state = [], action) => {
       const newVote = action.payload;
       const hasVotes = state.length > 0;
 
-      console.log(newVote);
-
       const isUnique = state.every(
         currentVote => currentVote.id !== newVote.id
       );
 
       if (!hasVotes) {
-        console.log(1);
-
         return [newVote];
       } else if (isUnique) {
         return [...state, newVote];

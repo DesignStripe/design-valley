@@ -136,7 +136,14 @@ const Card = ({
   votes
 }) => {
   const { socket, ip, fingerprint } = useSelector(state => state.userSession);
-  // const newVotes  = useSelector(state => state.votesfind(vote => vote.id === id));
+  const reduxVotes = useSelector(
+    state => state.votes.find(vote => vote.id === id) || null
+  );
+
+  const newVotes = reduxVotes ? reduxVotes.newVotes : votes;
+  console.log(reduxVotes);
+  console.log(newVotes);
+
   const [isSaved, setIsSaved] = useState(getInitialSaveStatus(id));
 
   function saveTool(id) {
@@ -182,7 +189,7 @@ const Card = ({
               stroke="rgba(0, 0, 0, 0.4)"
             />
           )}
-          {votes}
+          {newVotes}
         </Row>
 
         {/* <Description> {description}</Description> */}
