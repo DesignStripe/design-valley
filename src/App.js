@@ -27,6 +27,7 @@ import {
   setIp,
   setSocket
 } from "./redux/reducers/userSessionReducer";
+import { addVote } from "./redux/reducers/votesReducer";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -40,6 +41,8 @@ function App() {
   useEffect(() => {
     const socket = socketIOClient(process.env.REACT_APP_API_HOST);
     dispatch(setSocket(socket));
+    socket.on("getInitialVotes", data => console.log(data));
+    socket.on("updateVotes", newVote => dispatch(addVote(newVote)));
 
     setTimeout(() => {
       getFingerprint().then(hash => dispatch(setFingerprint(hash)));
