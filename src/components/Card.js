@@ -136,6 +136,7 @@ const Card = ({
   votes
 }) => {
   const { socket, ip, fingerprint } = useSelector(state => state.userSession);
+  // const newVotes  = useSelector(state => state.votesfind(vote => vote.id === id));
   const [isSaved, setIsSaved] = useState(getInitialSaveStatus(id));
 
   function saveTool(id) {

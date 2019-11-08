@@ -1,27 +1,46 @@
 export const ADD_VOTE = "ADD_VOTE";
+export const UPDATE_VOTE = "UPDATE_VOTE";
 export const REMOVE_VOTE = "REMOVE_VOTE";
 
-const initialState = {
-  votes: []
-};
-
-export default (state = initialState, action) => {
+export default (state = [], action) => {
   switch (action.type) {
     case ADD_VOTE: {
-      return {
-        ...state,
-        votes: [...state.votes, action.payload]
-      };
+      const newVote = action.payload;
+      const hasVotes = state.length > 0;
+
+      console.log(newVote);
+
+      const isUnique = state.every(
+        currentVote => currentVote.id !== newVote.id
+      );
+
+      if (!hasVotes) {
+        console.log(1);
+
+        return [newVote];
+      } else if (isUnique) {
+        return [...state, newVote];
+      } else {
+        return state.map(currentVote =>
+          currentVote.id === newVote.id ? newVote : currentVote
+        );
+      }
+    }
+
+    case UPDATE_VOTE: {
+      const newVote = action.payload;
+
+      return state.votes.map(currentVote =>
+        currentVote.tool === newVote.tool ? newVote : currentVote
+      );
     }
 
     case REMOVE_VOTE: {
-      return {
-        ...state
-      };
+      return state;
     }
 
     default: {
-      return { ...state };
+      return state;
     }
   }
 };
