@@ -111,6 +111,16 @@ const ImageWithLike = ({ src }) => {
   );
 };
 
+const LikeWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  svg {
+    margin-left: 0.5rem;
+  }
+`;
+
 const Row = styled.div`
   display: flex;
   flex-direction: row;
@@ -174,22 +184,25 @@ const Card = ({
       <CardContent>
         <Row>
           <Title>{title}</Title>
-          {isSaved ? (
-            <FiHeart
-              size={20}
-              onClick={() => removeTool(id)}
-              // fill="#ed2939"
-              fill="#ea3c53"
-              stroke="none"
-            />
-          ) : (
-            <FiHeart
-              size={20}
-              onClick={() => saveTool(id)}
-              stroke="rgba(0, 0, 0, 0.4)"
-            />
-          )}
-          {newVotes}
+
+          <LikeWrapper>
+            {newVotes}
+            {isSaved ? (
+              <FiHeart
+                size={20}
+                onClick={() => removeTool(id)}
+                // fill="#ed2939"
+                fill="#ea3c53"
+                stroke="none"
+              />
+            ) : (
+              <FiHeart
+                size={20}
+                onClick={() => saveTool(id)}
+                stroke="rgba(0, 0, 0, 0.4)"
+              />
+            )}
+          </LikeWrapper>
         </Row>
 
         {/* <Description> {description}</Description> */}

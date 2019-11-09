@@ -42,7 +42,9 @@ function App() {
     const socket = socketIOClient(process.env.REACT_APP_API_HOST);
     dispatch(setSocket(socket));
     socket.on("getInitialVotes", data => console.log(data));
-    socket.on("updateVotes", newVote => dispatch(addVote(newVote)));
+    socket.on("updateVotes", newVote => {
+      dispatch(addVote(newVote));
+    });
 
     setTimeout(() => {
       getFingerprint().then(hash => dispatch(setFingerprint(hash)));
