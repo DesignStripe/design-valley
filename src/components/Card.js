@@ -12,7 +12,6 @@ import {
   addFavorite,
   removeFavorite
 } from "../utils/localStorage";
-import { likeTool, dislikeTool } from "../api";
 
 const Container = styled.div`
   border-radius: 8px;
@@ -145,21 +144,17 @@ const Card = ({
   category,
   votes
 }) => {
+  const [isSaved, setIsSaved] = useState(getInitialSaveStatus(id));
   const { socket, ip, fingerprint } = useSelector(state => state.userSession);
   const reduxVotes = useSelector(
     state => state.votes.find(vote => vote.id === id) || null
   );
 
   const newVotes = reduxVotes ? reduxVotes.newVotes : votes;
-  console.log(reduxVotes);
-  console.log(newVotes);
-
-  const [isSaved, setIsSaved] = useState(getInitialSaveStatus(id));
 
   function saveTool(id) {
     addFavorite(id);
     setIsSaved(true);
-    // likeTool(id);
     socket.emit("like", {
       toolId: id,
       userSession: { ip, fingerprint }
@@ -169,7 +164,6 @@ const Card = ({
   function removeTool(id) {
     removeFavorite(id);
     setIsSaved(false);
-    // dislikeTool(id);
     socket.emit("unlike", {
       toolId: id,
       userSession: { ip, fingerprint }

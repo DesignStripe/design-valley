@@ -18,7 +18,7 @@ const ToolContainer = ({ match }) => {
 
   if (!isReady) return <Spinner />;
 
-  return <Tool {...tool} />;
+  return <Tool {...tool} id={tool._id} />;
 };
 
 export default ToolContainer;

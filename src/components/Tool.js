@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FiHeart } from "react-icons/fi";
+import { useSelector } from "react-redux";
 
 import Tag from "./Tag";
 import Button from "./Button";
@@ -44,42 +45,66 @@ function getInitialSaveStatus(id) {
   return isSaved;
 }
 
-const Card = ({ image, name, description, id, url, category }) => {
+const Tool = ({ image, name, description, id, url, category, votes }) => {
   const [isSaved, setIsSaved] = useState(getInitialSaveStatus(id));
+
+  const { socket, ip, fingerprint } = useSelector(state => state.userSession);
+  const reduxVotes = useSelector(
+    state => state.votes.find(vote => vote.id === id) || null
+  );
+
+  const newVotes = reduxVotes ? reduxVotes.newVotes : votes.length;
 
   function saveTool(id) {
     addFavorite(id);
     setIsSaved(true);
+    socket.emit("like", {
+      toolId: id,
+      userSession: { ip, fingerprint }
+    });
   }
 
   function removeTool(id) {
     removeFavorite(id);
     setIsSaved(false);
+    socket.emit("unlike", {
+      toolId: id,
+      userSession: { ip, fingerprint }
+    });
   }
 
   return (
     <Container lg={8}>
       <Row
         middle="xs"
-        // between="xs"
+        between="xs"
         style={{ margin: 0, marginBottom: "2rem", maxWidth: "100%" }}
       >
         <Title>{name}</Title>
-        {isSaved ? (
-          <FiHeart
-            size={28}
-            onClick={() => removeTool(id)}
-            // fill="#ed2939"
-            fill="#ea3c53"
-            stroke="none"
-          />
-        ) : (
-          <FiHeart
-            size={28}
-            onClick={() => saveTool(id)}
-            stroke="rgba(0, 0, 0, 0.4)"
-          />
-        )}
+
+        <Row
+          middle="xs"
+          // between="xs"
+        >
+          {newVotes}
+          {isSaved ? (
+            <FiHeart
+              size={28}
+              onClick={() => removeTool(id)}
+              // fill="#ed2939"
+              fill="#ea3c53"
+              stroke="none"
+              style={{ marginLeft: "1rem" }}
+            />
+          ) : (
+            <FiHeart
+              size={28}
+              onClick={() => saveTool(id)}
+              stroke="rgba(0, 0, 0, 0.4)"
+              style={{ marginLeft: "1rem" }}
+            />
+          )}
+        </Row>
       </Row>
       <Col style={{ padding: 0, paddingBottom: "2rem" }}>
         <Image fitContainer src={image} ratio="16:9" />
@@ -105,4 +130,4 @@ const Card = ({ image, name, description, id, url, category }) => {
   );
 };
 
-export default Card;
+export default Tool;
