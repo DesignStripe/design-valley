@@ -27,7 +27,7 @@ function fetchCategorById(id) {
   return axios.get(API_BASE_URL + `categories/${id}`).then(res => res.data);
 }
 
-async function fetchFavorite() {
+async function fetchFavorites() {
   const favoritesIds = getFavorites();
 
   const promiseArray = favoritesIds.map(id => {
@@ -58,7 +58,7 @@ export {
   fetchToolsByCategory,
   fetchFeatured,
   fetchPopular,
-  fetchFavorite,
+  fetchFavorites,
   fetchCategories,
   fetchCategorById,
   likeTool,
