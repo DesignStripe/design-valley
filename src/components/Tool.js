@@ -12,6 +12,7 @@ import {
   addFavorite,
   removeFavorite
 } from "../utils/localStorage";
+import Link from "./Link";
 
 const Container = styled(Col)`
   border-radius: 8px;
@@ -112,7 +113,9 @@ const Tool = ({ image, name, description, id, url, category, votes }) => {
 
       <Col>
         <Description>{description}</Description>
-        <Tag color={category.color}>{category.name}</Tag>
+        <Link to={`/category/${category._id}`}>
+          <Tag color={category.color}>{category.name}</Tag>
+        </Link>
       </Col>
       <Col></Col>
       <Col style={{ marginTop: "2rem" }}>

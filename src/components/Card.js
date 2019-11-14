@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { FiHeart } from "react-icons/fi";
 import { useSelector } from "react-redux";
 
+import Link from "./Link";
 import Tag from "./Tag";
 import Button from "./Button";
 import Image from "./Image";
@@ -202,7 +203,9 @@ const Card = ({
         {/* <Description> {description}</Description> */}
 
         <Row>
-          <Tag color={category.color}>{category.name}</Tag>
+          <Link to={`/category/${category._id}`}>
+            <Tag color={category.color}>{category.name}</Tag>
+          </Link>
         </Row>
 
         <Button onClick={() => history.push(`/tool/${id}`)}>Learn More</Button>
