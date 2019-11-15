@@ -19,7 +19,7 @@ const Container = styled(Col)`
   background-color: #fff;
   border: solid 2px #f4f4f4;
 
-  padding: 1rem !important;
+  padding: 2rem !important;
   margin: 1rem;
 `;
 

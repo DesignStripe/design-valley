@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Tool from "../components/Tool";
+import Cards from "../components/Cards";
+import { Row, Col } from "react-flexbox-grid";
 
-import { fetchToolById } from "../api";
+import { fetchToolById, fetchRelated } from "../api";
 import Spinner from "../components/Spinner";
 
 const ToolContainer = ({ match }) => {
   const { id } = match.params;
   const [tool, setTool] = useState(null);
+  const [relatedTools, setRelatedTools] = useState([]);
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
@@ -14,11 +17,18 @@ const ToolContainer = ({ match }) => {
       setTool(res);
       setIsReady(true);
     });
+    fetchRelated(id).then(data => setRelatedTools(data));
   }, [id]);
 
   if (!isReady) return <Spinner />;
 
-  return <Tool {...tool} id={tool._id} />;
+  return (
+    <Col>
+      <Tool {...tool} id={tool._id} />
+      <div style={{ marginTop: "4rem" }} />
+      <Cards tools={relatedTools} title={"Related Tools:"} />
+    </Col>
+  );
 };
 
 export default ToolContainer;

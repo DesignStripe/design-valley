@@ -1,5 +1,6 @@
 import axios from "axios";
 import { getFavorites } from "../utils/localStorage";
+import shuffle from "../utils/shuffle";
 
 const API_BASE_URL = process.env.REACT_APP_API_HOST;
 
@@ -17,6 +18,12 @@ function fetchToolsByCategory(id) {
 
 function fetchFeatured() {
   return axios.get(API_BASE_URL + "featured").then(res => res.data);
+}
+
+function fetchRelated(id) {
+  return axios
+    .get(API_BASE_URL + `related/${id}`)
+    .then(res => shuffle(res.data).slice(0, 4));
 }
 
 function fetchPopular() {
@@ -61,6 +68,7 @@ export {
   fetchFavorites,
   fetchCategories,
   fetchCategorById,
+  fetchRelated,
   likeTool,
   dislikeTool,
   fetchVotes,

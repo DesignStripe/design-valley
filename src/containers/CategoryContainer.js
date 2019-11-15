@@ -8,7 +8,6 @@ import { fetchToolsByCategory, fetchCategorById } from "../api";
 const CategoryContainer = ({ match, location }) => {
   const { id } = match.params;
   const next = useSelector(nextCategorySelector);
-  console.log(next);
 
   const [tools, setTools] = useState([]);
   const [category, setCategory] = useState({});
