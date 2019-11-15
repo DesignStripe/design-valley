@@ -137,7 +137,7 @@ const Footer = ({}) => {
           <Input
             onChange={event => setEmail(event.target.value)}
             value={email}
-            placeholder="clark@invisionapp.com"
+            placeholder="jim@design.valley"
             type="email"
           />
           <Button
