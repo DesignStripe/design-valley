@@ -8,7 +8,7 @@ const Button = styled(SemanticButton)`
   outline: 0;
   border: none;
   vertical-align: baseline;
-  background: ${props => props.theme.colors.neutrals[200]}; none;
+  background: ${props => props.theme.colors.neutrals[200]};
   color: ${props => props.theme.colors.neutrals[800]};
   margin: 0 0.25em 0 0;
   padding: 0.78571429em 1.5em 0.78571429em;

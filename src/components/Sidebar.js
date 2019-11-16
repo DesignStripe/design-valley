@@ -16,6 +16,7 @@ const Logo = styled.div`
   box-sizing: border-box;
   text-decoration: none;
   color: ${props => props.theme.colors.neutrals[100]};
+  color: #ffdfdf;
   font-size: 1.5rem;
   font-weight: bold;
   display: flex;
@@ -33,7 +34,7 @@ const StyledSidebar = styled(Sidebar)`
   padding: 1rem;
   border-radius: 8px;
   background-color: ${p => p.theme.colors.neutrals[200]};
-  background-color: #03132b;
+  background-color: ${p => p.theme.colors.primary};
 
   display: flex;
   flex-direction: column;

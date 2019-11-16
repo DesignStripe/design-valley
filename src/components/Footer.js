@@ -7,7 +7,7 @@ import CallToAction from "./CallToAction";
 
 const Container = styled.div`
   background-color: #f4f4f4;
-  color: #08295e;
+  color: ${props => props.theme.colors.primary};
   border-radius: 8px;
   padding: 2rem;
   margin: 1rem;
@@ -26,7 +26,7 @@ const Credits = styled.div`
   align-items: flex-start;
 
   & > p {
-    color: #212121;
+    color: ${props => props.theme.colors.primary};
     margin: 0;
     margin-bottom: 1rem;
   }
@@ -36,7 +36,7 @@ const Credits = styled.div`
   & > p > b > a:link,
   & > p > b > a:focus,
   & > p > b > a:visited {
-    color: #08295e;
+    color: ${props => props.theme.colors.primary};
     font-weight: bold;
     text-decoration: none !important;
   }

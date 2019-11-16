@@ -93,7 +93,7 @@ const CallToAction = ({}) => {
             margin: 0,
             height: "auto",
             position: "absolute",
-            backgroundColor: "#03132B",
+            backgroundColor: "#03132b",
             color: "#fff"
           }}
           onClick={subscibeUser}
