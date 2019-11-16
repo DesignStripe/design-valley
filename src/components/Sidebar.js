@@ -12,8 +12,6 @@ const Logo = styled.div`
   padding-left: 0 !important;
   border-radius: 8px;
   box-sizing: border-box;
-  ${"" /* min-width: 250px; */}
-  box-sizing: border-box;
   text-decoration: none;
   color: ${props => props.theme.colors.neutrals[100]};
   color: #ffdfdf;
