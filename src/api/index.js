@@ -45,7 +45,7 @@ async function fetchFavorites() {
 }
 
 function postEmail(email) {
-  return axios.post(API_BASE_URL + `newsletter/email/${email}`);
+  return axios.post(API_BASE_URL + `newsletter/subscribe/${email}`);
 }
 
 function likeTool(id) {
