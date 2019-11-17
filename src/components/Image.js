@@ -50,6 +50,8 @@ const ImageDiv = styled.div`
     `
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+    border: none;
+    border-bottom: 1px #f4f4f4 solid;
   `};
   ${props =>
     props.grayscale && "-webkit-filter: grayscale(100%); filter: gray;"}
