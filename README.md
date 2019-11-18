@@ -16,5 +16,6 @@ The ultimate design resources to help you build your dream app!
 - [ ] 💄Handle app's Typography
 - [ ] 💄Add night mode
 - [ ] 💄Create color palette and implement it as theme.js
-- [ ] 💄Branding 
-- [ ] 👔Find channela to distribute beta version
+- [ ] 💄Branding
+- [ ] 💄UI design 
+- [ ] 👔Find channels to distribute beta version
