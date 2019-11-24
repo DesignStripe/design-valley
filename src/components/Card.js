@@ -1,27 +1,31 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { withRouter } from "react-router-dom";
-import { FiHeart } from "react-icons/fi";
+import { FiHeart, FiStar } from "react-icons/fi";
 import { useSelector } from "react-redux";
 
 import Link from "./Link";
 import Tag from "./Tag";
 import Button from "./Button";
 import Image from "./Image";
+import theme from "../utils/theme";
 import {
   getFavorites,
   addFavorite,
   removeFavorite
 } from "../utils/localStorage";
+import { rgba } from "polished";
+import Likes from "./Likes";
 
 const Container = styled.div`
   border-radius: 8px;
   background-color: #fff;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  ${"" /* box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px ${props => props.theme.colors.primary[500]}11; */}
+
   ${"" /* padding: 1rem; */}
-  margin: 1rem;
-  margin-top: 0;
-  margin-bottom: 2rem;
+  margin: 0.5rem;
+  display: inline-block;
 
   width: 100%;
   box-sizing: border-box;
@@ -39,7 +43,9 @@ const Container = styled.div`
   }
 
   &:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px ${props => props.theme.colors.primary[500]}22;
+
     transform: translateY(-1px);
   }
 `;
@@ -53,18 +59,24 @@ const CardContent = styled.div`
   & > * {
     margin-bottom: 1rem;
   }
+  & > *:nth-child(1) {
+    cursor: pointer;
+  }
+  & > *:nth-child(2) {
+    margin-bottom: 0.5rem;
+  }
   & > *:last-child {
     margin-bottom: 0;
   }
 `;
 
-const Title = styled.h2`
+const Title = styled.h3`
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 
-  color: rgba(0, 0, 0, 0.6);
+  color: ${props => props.theme.colors.primary[500]};
 
   margin: 0;
   margin-right: 1rem;
@@ -89,35 +101,19 @@ const IconWrapper = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  margin: 1rem;
-  borderr-rdius: 50%;
+  margin: 0.5rem;
+  border-radius: 50%;
   width: 30px;
   height: 30px;
-  background-color: rgba(255, 255, 255, 0.3);
-  zindex: 10;
+  background-color: #fccb82aa;
+  z-index: 10;
   display: flex;
-  justify-cntent: center;
-  align-items: center;
-`;
-
-const ImageWithLike = ({ src }) => {
-  return (
-    <ImageWrapper>
-      <IconWrapper>
-        <FiHeart size={20} stroke="#333" />
-      </IconWrapper>
-      <Image fitContainer src={src} ratio="16:9" isSharp />
-    </ImageWrapper>
-  );
-};
-
-const LikeWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
 
-  svg {
-    margin-left: 0.5rem;
+  & > svg {
+    fill: #f99a0b;
+    stroke: #f99a0b;
   }
 `;
 
@@ -135,6 +131,19 @@ function getInitialSaveStatus(id) {
   return isSaved;
 }
 
+const ImageWithLike = ({ onClick, src, isFeatured }) => {
+  return (
+    <ImageWrapper onClick={onClick}>
+      {isFeatured && (
+        <IconWrapper>
+          <FiStar size={20} />
+        </IconWrapper>
+      )}
+      <Image fitContainer src={src} ratio="16:9" isSharp />
+    </ImageWrapper>
+  );
+};
+
 const Card = ({
   history,
   image,
@@ -143,7 +152,8 @@ const Card = ({
   id,
   url,
   category,
-  votes
+  votes,
+  isFeatured
 }) => {
   const [isSaved, setIsSaved] = useState(getInitialSaveStatus(id));
   const { socket, ip, fingerprint } = useSelector(state => state.userSession);
@@ -174,41 +184,39 @@ const Card = ({
   return (
     <Container>
       {/* <ImageWithLike src={image} /> */}
-      <Image fitContainer src={image} ratio="16:9" isSharp />
-
       <CardContent>
+        <ImageWithLike
+          isFeatured={isFeatured}
+          src={image}
+          onClick={() => history.push(`/tool/${id}`)}
+        />
+        {/* <Image
+          fitContainer
+          src={image}
+          ratio="16:9"
+          isSharp
+          onClick={() => history.push(`/tool/${id}`)}
+        /> */}
+
         <Row>
           <Title>{title}</Title>
 
-          <LikeWrapper>
-            {newVotes}
-            {isSaved ? (
-              <FiHeart
-                size={20}
-                onClick={() => removeTool(id)}
-                // fill="#ed2939"
-                fill="#ea3c53"
-                stroke="none"
-              />
-            ) : (
-              <FiHeart
-                size={20}
-                onClick={() => saveTool(id)}
-                stroke="rgba(0, 0, 0, 0.4)"
-              />
-            )}
-          </LikeWrapper>
+          <Likes
+            isLiked={isSaved}
+            onClick={isSaved ? () => removeTool(id) : () => saveTool(id)}
+            votes={newVotes}
+          />
         </Row>
 
         {/* <Description> {description}</Description> */}
-
+        {/* 
         <Row>
           <Link to={`/category/${category._id}`}>
             <Tag color={category.color}>{category.name}</Tag>
           </Link>
-        </Row>
+        </Row> */}
 
-        <Button onClick={() => history.push(`/tool/${id}`)}>Learn More</Button>
+        {/* <Button onClick={() => history.push(`/tool/${id}`)}>Learn More</Button> */}
       </CardContent>
     </Container>
   );
