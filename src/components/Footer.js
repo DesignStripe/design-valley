@@ -6,8 +6,9 @@ import CallToAction from "./CallToAction";
 // import me from "../assets/me.jpeg";
 
 const Container = styled.div`
-  background-color: #f4f4f4;
-  color: ${props => props.theme.colors.primary};
+  ${"" /* background-color: ${props => props.theme.colors.primary[500]}; */}
+  border: ${props => props.theme.colors.primary[500]} 2px solid;
+  color: #fff;
   border-radius: 8px;
   padding: 2rem;
   margin: 1rem;
@@ -26,7 +27,7 @@ const Credits = styled.div`
   align-items: flex-start;
 
   & > p {
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.primary[500]};
     margin: 0;
     margin-bottom: 1rem;
   }
@@ -36,12 +37,12 @@ const Credits = styled.div`
   & > p > b > a:link,
   & > p > b > a:focus,
   & > p > b > a:visited {
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.primary[500]};
     font-weight: bold;
     text-decoration: none !important;
   }
   & > small {
-    color: #aaa;
+    color: ${props => props.theme.colors.primary[200]};
   }
 `;
 

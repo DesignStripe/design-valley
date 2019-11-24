@@ -14,11 +14,13 @@ const Container = styled.div`
     font-weight: bold;
     margin: 0;
     margin-bottom: 0.5rem;
+    color: ${props => props.theme.colors.primary[900]};
   }
   > p {
     margin: 0;
     margin-bottom: 1rem;
     color: #666;
+    color: ${props => props.theme.colors.primary[500]};
   }
 `;
 
@@ -30,6 +32,10 @@ const Form = styled.form`
 
   position: relative;
   width: 400px;
+
+  & > button {
+    background-color: ${props => props.theme.colors.primary[500]};
+  }
 `;
 
 const Input = styled.input`
@@ -40,7 +46,7 @@ const Input = styled.input`
   margin: 0;
   font-family: inherit;
   line-height: 1.5;
-  color: #3d3d3d;
+  color: ${props => props.theme.colors.primary[500]};
   background-image: none;
   box-shadow: none;
   -webkit-appearance: none !important;
@@ -56,7 +62,7 @@ const Input = styled.input`
 
   &:focus {
     outline: none;
-    border: 1px solid #aaa;
+    border: 1px solid ${props => props.theme.colors.primary[500]};
   }
 `;
 
@@ -93,7 +99,6 @@ const CallToAction = ({}) => {
             margin: 0,
             height: "auto",
             position: "absolute",
-            backgroundColor: "#03132b",
             color: "#fff"
           }}
           onClick={subscibeUser}
