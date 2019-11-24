@@ -27,7 +27,7 @@ const Container = styled.div`
   margin: 0.5rem;
   display: inline-block;
 
-  width: 100%;
+  width: calc(100% - 1rem);
   box-sizing: border-box;
   @media (min-width: 40rem) {
     width: calc(50% - 2rem);

@@ -5,6 +5,10 @@ const MainSection = styled.div`
   height: 100%;
   float: right;
   overflow-y: scroll;
+
+  @media (max-width: 800px) {
+    width: calc(100vw - 1rem);
+  }
 `;
 
 export default MainSection;

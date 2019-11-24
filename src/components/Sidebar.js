@@ -67,6 +67,10 @@ const StyledSidebar = styled(Sidebar)`
   & > a > svg {
     margin-right: 0.5rem;
   }
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 const Divider = styled.div`

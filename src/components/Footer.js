@@ -11,13 +11,23 @@ const Container = styled.div`
   color: #fff;
   border-radius: 8px;
   padding: 2rem;
-  margin: 1rem;
+  margin: 1rem 0.5rem;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: no-wrap;
+
+  @media (max-width: 1001px) {
+    flex-direction: column;
+    align-items: center;
+
+    & > div:first-child {
+      margin-bottom: 2rem;
+    }
+
+  }
 `;
 
 const Credits = styled.div`

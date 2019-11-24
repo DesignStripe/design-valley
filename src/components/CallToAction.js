@@ -10,6 +10,10 @@ const Container = styled.div`
   justify-content: center;
   align-items: flex-start;
 
+  @media (max-width: 1001px) {
+    align-items: center;
+  }
+
   > h2 {
     font-weight: bold;
     margin: 0;
@@ -35,6 +39,10 @@ const Form = styled.form`
 
   & > button {
     background-color: ${props => props.theme.colors.primary[500]};
+  }
+
+  @media (max-width: 1001px) {
+    width: 100%;
   }
 `;
 
