@@ -6,6 +6,8 @@ const Tag = styled.span`
   vertical-align: baseline;
   background: ${props => rgba(props.color, 0.1)} none;
   color: ${props => rgba(props.color, 1)};
+  background: ${props => props.theme.colors.primary[500]}11 none;
+  color: ${props => props.theme.colors.primary[500]};
   margin: 0 0.25em 0 0;
   padding: 4px;
   text-transform: uppercase;
