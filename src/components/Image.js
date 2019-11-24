@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { rgba } from "polished";
 
 const ImageWrapper = styled.div`
   ${props =>
@@ -30,29 +31,27 @@ const ImageDiv = styled.div`
   border-radius: 8px;
   width: 100%;
   height: 100%;
-  ${
-    "" /* background-image: linear-gradient(
+  background-image: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.1),
-      rgba(0, 0, 0, 0)
+      ${props => rgba(props.theme.colors.primary[500], 0.2)},
+      ${props => rgba(props.theme.colors.primary[500], 0.1)}
     ),
-    url(${props => props.src}); */
-  }
-  background-image:  url(${props => props.src});
+    url(${props => props.src});
+  ${"" /* background-image:  url(${props => props.src}); */}
   background-position: 50% 0%;
   background-size: cover;
   background-repeat: no-repeat;
   border: 1px #f4f4f4 solid;
 
   border-radius: ${props => props.theme.borderRadius};
-  ${props =>
+  ${"" /* ${props =>
     props.isSharp &&
     `
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     border: none;
     border-bottom: 1px #f4f4f4 solid;
-  `};
+  `}; */}
   ${props =>
     props.grayscale && "-webkit-filter: grayscale(100%); filter: gray;"}
 `;
@@ -77,7 +76,8 @@ const ImageComponent = ({
   fitContainer,
   grayscale,
   original,
-  isSharp
+  isSharp,
+  onClick
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const ratioPercent = getRatioPercent(ratio) * 100;
@@ -87,6 +87,7 @@ const ImageComponent = ({
       ratioPercent={ratioPercent}
       size={size}
       fitContainer={fitContainer}
+      onClick={onClick}
     >
       <ImageDiv
         src={src}

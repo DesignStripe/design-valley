@@ -31,7 +31,8 @@ import { addVote } from "./redux/reducers/votesReducer";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    background-color: ${props => props.theme.colors.primary[500]}11;
   }
 `;
 

@@ -1,41 +1,44 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { FiHeart } from "react-icons/fi";
 import { useSelector } from "react-redux";
+import { Row, Col } from "react-flexbox-grid";
 
 import Tag from "./Tag";
 import Button from "./Button";
 import Image from "./Image";
-import { Row, Col } from "react-flexbox-grid";
+import Link from "./Link";
+import Likes from "./Likes";
 import {
   getFavorites,
   addFavorite,
   removeFavorite
 } from "../utils/localStorage";
-import Link from "./Link";
+import { FiGlobe } from "react-icons/fi";
 
 const Container = styled(Col)`
   border-radius: 8px;
   background-color: #fff;
-  border: solid 2px #f4f4f4;
 
   padding: 2rem !important;
   margin: 1rem;
 `;
 
 const Title = styled.h2`
-  color: #212121;
+  color: ${props => props.theme.colors.primary[900]};
   margin: 0;
   margin-right: 1rem;
 `;
 
 const Description = styled.p`
   display: -webkit-box;
-  ${"" /* -webkit-line-clamp: 2;
+  ${
+    "" /* -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  overflow: hidden; */}
+  overflow: hidden; */
+  }
 
-  color: rgba(0, 0, 0, 0.9);
+  color: ${props => props.theme.colors.primary[700]};
+
 
   margin: 0 0 1rem 0;
 `;
@@ -83,29 +86,11 @@ const Tool = ({ image, name, description, id, url, category, votes }) => {
       >
         <Title>{name}</Title>
 
-        <Row
-          middle="xs"
-          // between="xs"
-        >
-          {newVotes}
-          {isSaved ? (
-            <FiHeart
-              size={28}
-              onClick={() => removeTool(id)}
-              // fill="#ed2939"
-              fill="#ea3c53"
-              stroke="none"
-              style={{ marginLeft: "1rem" }}
-            />
-          ) : (
-            <FiHeart
-              size={28}
-              onClick={() => saveTool(id)}
-              stroke="rgba(0, 0, 0, 0.4)"
-              style={{ marginLeft: "1rem" }}
-            />
-          )}
-        </Row>
+        <Likes
+          isLiked={isSaved}
+          onClick={isSaved ? () => removeTool(id) : () => saveTool(id)}
+          votes={newVotes}
+        />
       </Row>
       <Col style={{ padding: 0, paddingBottom: "2rem" }}>
         <Image fitContainer src={image} ratio="16:9" />
@@ -121,11 +106,15 @@ const Tool = ({ image, name, description, id, url, category, votes }) => {
       <Col style={{ marginTop: "2rem" }}>
         <Button
           onClick={() => {
-            const newTab = window.open(url + "/?ref=designmate", "_blank");
+            const newTab = window.open(url + "/?ref=designvalley", "_blank");
             newTab.focus();
           }}
-          style={{ width: "100%" }}
+          style={{
+            width: "100%",
+            color: "white"
+          }}
         >
+          <FiGlobe style={{ marginRight: ".5rem" }} />
           Visit Website
         </Button>
       </Col>

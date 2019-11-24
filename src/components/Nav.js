@@ -18,7 +18,7 @@ const Container = styled.header`
     min-width: 250px;
     box-sizing: border-box;
     text-decoration: none;
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.primary[500]};
     font-size: 1.5rem;
     font-weight: bold;
     display: flex;

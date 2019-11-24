@@ -13,7 +13,7 @@ const Logo = styled.div`
   border-radius: 8px;
   box-sizing: border-box;
   text-decoration: none;
-  color: ${props => props.theme.colors.neutrals[100]};
+  color: ${p => p.theme.colors.primary[100]};
   color: #ffdfdf;
   font-size: 1.5rem;
   font-weight: bold;
@@ -31,8 +31,7 @@ const StyledSidebar = styled(Sidebar)`
   margin: 1rem;
   padding: 1rem;
   border-radius: 8px;
-  background-color: ${p => p.theme.colors.neutrals[200]};
-  background-color: ${p => p.theme.colors.primary};
+  background-color: ${p => p.theme.colors.primary[900]};
 
   display: flex;
   flex-direction: column;
@@ -46,6 +45,8 @@ const StyledSidebar = styled(Sidebar)`
   & > a:hover {
     background-color: ${p => p.theme.colors.neutrals[100]};
     background-color: #08295f;
+    background-color: ${p => p.theme.colors.primary[800]};
+
     border-radius: 8px;
     cursor: pointer;
   }
@@ -60,7 +61,7 @@ const StyledSidebar = styled(Sidebar)`
     align-items: center;
   }
   & > a:hover {
-    ${"" /* color: ${p => p.theme.colors.primary}; */}
+    ${"" /* color: ${p => p.theme.colors.primary[500]}; */}
   }
 
   & > a > svg {
@@ -91,6 +92,8 @@ const ScrollableSection = styled.div`
   & > a:hover {
     background-color: ${p => p.theme.colors.neutrals[100]};
     background-color: #08295f;
+    background-color: ${p => p.theme.colors.primary[800]};
+
     border-radius: 8px;
     cursor: pointer;
   }
@@ -105,7 +108,7 @@ const ScrollableSection = styled.div`
     align-items: center;
   }
   & > a:hover {
-    ${"" /* color: ${p => p.theme.colors.primary}; */}
+    ${"" /* color: ${p => p.theme.colors.primary[500]}; */}
   }
 
   & > a > svg {
@@ -153,7 +156,7 @@ const VerticalSidebar = ({ history, categories }) => {
       </Logo>
       {fixedItems.map(item => (
         <Menu.Item as={Link} to={`/${item.id}`} key={item.id}>
-          {item.icon || item.emoji}
+          {/* {item.icon || item.emoji} */}
           {item.name}
         </Menu.Item>
       ))}
@@ -169,7 +172,7 @@ const VerticalSidebar = ({ history, categories }) => {
               key={item._id}
               onClick={() => dispatch(setCurrentCategory(index))}
             >
-              {item.icon || item.emoji}
+              {/* {item.icon || item.emoji} */}
               {item.name}
             </Menu.Item>
           )
