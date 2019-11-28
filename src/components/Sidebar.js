@@ -2,7 +2,7 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
 import { Menu, Sidebar } from "semantic-ui-react";
-import { FiHeart, FiStar, FiTrendingUp } from "react-icons/fi";
+import { FiHeart, FiStar, FiTrendingUp, FiZap } from "react-icons/fi";
 import { useDispatch } from "react-redux";
 import { setCurrentCategory } from "../redux/reducers/categoriesReducer";
 
@@ -13,8 +13,7 @@ const Logo = styled.div`
   border-radius: 8px;
   box-sizing: border-box;
   text-decoration: none;
-  color: ${p => p.theme.colors.primary[100]};
-  color: #ffdfdf;
+  color: ${p => p.theme.colors.neutrals[100]};
   font-size: 1.5rem;
   font-weight: bold;
   display: flex;
@@ -31,7 +30,7 @@ const StyledSidebar = styled(Sidebar)`
   margin: 1rem;
   padding: 1rem;
   border-radius: 8px;
-  background-color: ${p => p.theme.colors.primary[900]};
+  background-color: ${p => p.theme.colors.primary[500]};
 
   display: flex;
   flex-direction: column;
@@ -45,7 +44,7 @@ const StyledSidebar = styled(Sidebar)`
   & > a:hover {
     background-color: ${p => p.theme.colors.neutrals[100]};
     background-color: #08295f;
-    background-color: ${p => p.theme.colors.primary[800]};
+    background-color: ${p => p.theme.colors.primary[400]};
 
     border-radius: 8px;
     cursor: pointer;
@@ -57,6 +56,7 @@ const StyledSidebar = styled(Sidebar)`
   & > a {
     text-decoration: none;
     color: ${p => p.theme.colors.neutrals[100]};
+    color: ${p => p.theme.colors.primary[100]};
     display: flex;
     align-items: center;
   }
@@ -96,8 +96,7 @@ const ScrollableSection = styled.div`
   & > a:hover {
     background-color: ${p => p.theme.colors.neutrals[100]};
     background-color: #08295f;
-    background-color: ${p => p.theme.colors.primary[800]};
-
+    background-color: ${p => p.theme.colors.primary[400]};
     border-radius: 8px;
     cursor: pointer;
   }
@@ -108,6 +107,8 @@ const ScrollableSection = styled.div`
   & > a {
     text-decoration: none;
     color: ${p => p.theme.colors.neutrals[100]};
+    color: ${p => p.theme.colors.primary[100]};
+
     display: flex;
     align-items: center;
   }
@@ -122,19 +123,19 @@ const ScrollableSection = styled.div`
 
 const fixedItems = [
   {
-    icon: <FiHeart fill="red" color="red" />,
+    icon: <FiHeart fill="none" color="#fff" />,
     name: "Favorites",
     id: "favorites",
     isHighlighted: true
   },
   {
-    icon: <FiStar fill="#FBC02D" color="#FBC02D" />,
+    icon: <FiStar fill="none" color="#fff" />,
     name: "Featured",
     id: "featured",
     isHighlighted: true
   },
   {
-    icon: <FiTrendingUp color="#10a55a" />,
+    icon: <FiZap color="#fff" />,
     name: "Popular",
     id: "popular",
     isHighlighted: true
@@ -160,27 +161,23 @@ const VerticalSidebar = ({ history, categories }) => {
       </Logo>
       {fixedItems.map(item => (
         <Menu.Item as={Link} to={`/${item.id}`} key={item.id}>
-          {/* {item.icon || item.emoji} */}
+          {item.icon || item.emoji}
           {item.name}
         </Menu.Item>
       ))}
       <Divider />
       <ScrollableSection>
-        {categories.map((item, index) =>
-          item.name === "devider" ? (
-            <Divider key={`devider-${index}`} />
-          ) : (
-            <Menu.Item
-              as={Link}
-              to={`/category/${item._id}`}
-              key={item._id}
-              onClick={() => dispatch(setCurrentCategory(index))}
-            >
-              {/* {item.icon || item.emoji} */}
-              {item.name}
-            </Menu.Item>
-          )
-        )}
+        {categories.map((item, index) => (
+          <Menu.Item
+            as={Link}
+            to={`/category/${item._id}`}
+            key={item._id}
+            onClick={() => dispatch(setCurrentCategory(index))}
+          >
+            {/* {item.icon || item.emoji} */}
+            {item.name}
+          </Menu.Item>
+        ))}
       </ScrollableSection>
     </StyledSidebar>
   );
