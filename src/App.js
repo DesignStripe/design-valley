@@ -11,23 +11,26 @@ import PopularContainer from "./containers/PopularContainer";
 import FavoritesContainer from "./containers/FavoritesContainer";
 import FeaturedContainer from "./containers/FeaturedContainer";
 import ToolContainer from "./containers/ToolContainer";
-import SidebarContainer from "./containers/SidebarContainer";
+import NavContainer from "./containers/NavContainer";
 
 // import Nav from "./components/Nav";
 import Body from "./components/Body";
 import MainSection from "./components/MainSection";
-
-import theme from "./utils/theme";
-import { getFingerprint, getIp } from "./utils/fingerprint";
 import PolicyLabel from "./components/PolicyMessage";
 import FloatingHeader from "./components/FloatingHeader";
 import Footer from "./components/Footer";
+
+import theme from "./utils/theme";
+import { getFingerprint, getIp } from "./utils/fingerprint";
+import useWindowSize from "./hooks/useWindowSize";
+
 import {
   setFingerprint,
   setIp,
   setSocket
 } from "./redux/reducers/userSessionReducer";
 import { addVote } from "./redux/reducers/votesReducer";
+import HamburgerMenu from "./components/HamburgerMenu";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -61,7 +64,7 @@ function App() {
         <PolicyLabel />
         {/* <Nav /> */}
         <Body>
-          <SidebarContainer />
+          <NavContainer />
           <MainSection>
             <Route path="/" exact component={HomeContainer} />
             <Route path="/category/:id" exact component={CategoryContainer} />
