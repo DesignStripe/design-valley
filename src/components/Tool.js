@@ -20,7 +20,6 @@ const Container = styled(Col)`
   background-color: #fff;
 
   padding: 2rem !important;
-  margin: 1rem;
 `;
 
 const Title = styled.h2`

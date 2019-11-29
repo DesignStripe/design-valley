@@ -8,7 +8,7 @@ const MainSection = styled.div`
   margin: 1rem;
 
   @media (max-width: 800px) {
-    width: calc(100vw - 1rem);
+    width: calc(100vw - 2rem);
   }
 `;
 

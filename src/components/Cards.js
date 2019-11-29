@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import Card from "./Card";
 import { Col } from "react-flexbox-grid";
 
-const Container = styled.div`
+const Container = styled(Col)`
   margin-bottom: 2rem;
 `;
+
+const CardContainer = styled.div``;
 
 const Title = styled.h2`
   height: 32px;
@@ -18,9 +20,9 @@ const Title = styled.h2`
 
 const Cards = ({ title, tools, next, previous, isFeatured }) => {
   return (
-    <Col>
+    <Container>
       {title && <Title>{title}</Title>}
-      <Container>
+      <CardContainer>
         {tools.map((tool, index) => (
           <Card
             key={tool._id}
@@ -40,14 +42,14 @@ const Cards = ({ title, tools, next, previous, isFeatured }) => {
             }
           />
         ))}
-      </Container>
+      </CardContainer>
       {next && previous && (
         <div>
           <Link to={previous}>Previous</Link>
           <Link to={next}>Next</Link>
         </div>
       )}
-    </Col>
+    </Container>
   );
 };
 

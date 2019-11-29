@@ -8,6 +8,11 @@ const Body = styled.div`
 
   display: flex;
   flex-direction: row;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    display: block;
+  }
 `;
 
 export default Body;
