@@ -33,6 +33,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Rubik', sans-serif;
     background-color: ${props => props.theme.colors.primary[500]}11;
+    margin: 0;
   }
 `;
 

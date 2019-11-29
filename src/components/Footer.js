@@ -11,7 +11,7 @@ const Container = styled.div`
   color: #fff;
   border-radius: 8px;
   padding: 2rem;
-  margin: 1rem 0.5rem;
+  margin-top: 1rem;
 
   display: flex;
   flex-direction: row;

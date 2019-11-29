@@ -5,25 +5,14 @@ import Card from "./Card";
 import { Col } from "react-flexbox-grid";
 
 const Container = styled.div`
-  ${"" /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; */}
-  ${"" /* overflow-y: scroll; */}
-  ${"" /* width: 100%; */}
-  ${"" /* min-height: 308px; */}
-  margin-top: 1rem;
-  margin-right: 1rem;
-  margin: 1rem auto;
-
-  ${"" /* &:after {
-    content: "";
-    flex: auto;
-  } */}
+  margin-bottom: 2rem;
 `;
 
 const Title = styled.h2`
   height: 32px;
-  margin: 1rem 0 1.5rem 1rem;
+  ${"" /* margin: 1rem 0 1.5rem 1rem; */}
+  margin: 0;
+  margin-bottom: 1rem;
   color: ${props => props.theme.colors.primary[900]};
 `;
 
