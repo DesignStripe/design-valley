@@ -61,36 +61,31 @@
 }
 
 .loader-line-wrap:nth-child(1) .loader-line {
-  border-color: hsl(0, 80%, 60%);
-  border-color: #cd16da;
+  border-color: #d6cffd;
   height: 90px;
   width: 90px;
   top: 7px;
 }
 .loader-line-wrap:nth-child(2) .loader-line {
-  border-color: hsl(60, 80%, 60%);
-  border-color: #96109f;
+  border-color: #9583f9;
   height: 76px;
   width: 76px;
   top: 14px;
 }
 .loader-line-wrap:nth-child(3) .loader-line {
-  border-color: hsl(120, 80%, 60%);
-  border-color: #6d0c74;
+  border-color: #5f44f7;
   height: 62px;
   width: 62px;
   top: 21px;
 }
 .loader-line-wrap:nth-child(4) .loader-line {
-  border-color: hsl(180, 80%, 60%);
-  border-color: #4b0850;
+  border-color: #2e0bf5;
   height: 48px;
   width: 48px;
   top: 28px;
 }
 .loader-line-wrap:nth-child(5) .loader-line {
-  border-color: hsl(240, 80%, 60%);
-  border-color: #330637;
+  border-color: #2508c7;
   height: 34px;
   width: 34px;
   top: 35px;
