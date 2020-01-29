@@ -19,6 +19,8 @@ const Title = styled.h2`
 `;
 
 const Cards = ({ title, tools, next, previous, isFeatured }) => {
+  if (tools.length === 0) return null;
+
   return (
     <Container>
       {title && <Title>{title}</Title>}
@@ -32,7 +34,7 @@ const Cards = ({ title, tools, next, previous, isFeatured }) => {
             title={tool.name}
             category={tool.category}
             description={tool.description}
-            votes={tool.votes.length}
+            votes={tool.votes ? tool.votes.length : 0}
             isFeatured={
               tool.isFeatured ||
               tool.name === "CopyPalette" ||
