@@ -11,13 +11,19 @@ const CategoryContainer = ({ match, location }) => {
 
   const [tools, setTools] = useState([]);
   const [category, setCategory] = useState({});
+  const [isReady, setIsReady] = useState(false);
+  const [isErrors, setIsError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     fetchCategorById(id).then(res => setCategory(res));
-    fetchToolsByCategory(id).then(res => setTools(res));
+    fetchToolsByCategory(id).then(res => {
+      setTools(res);
+      setIsReady(true);
+    });
   }, [id]);
 
-  return <Cards tools={tools} title={category.name} />;
+  return <Cards tools={tools} title={category.name} isReady={isReady} />;
 };
 
 export default CategoryContainer;

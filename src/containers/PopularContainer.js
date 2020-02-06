@@ -5,12 +5,16 @@ import { fetchPopular } from "../api";
 
 const PopularContainer = ({ match }) => {
   const [popular, setPopular] = useState([]);
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    fetchPopular().then(res => setPopular(res));
+    fetchPopular().then(res => {
+      setPopular(res);
+      setIsReady(true);
+    });
   }, []);
 
-  return <Cards tools={popular} title="Popular" />;
+  return <Cards tools={popular} title="Popular" isReady={isReady} />;
 };
 
 export default PopularContainer;

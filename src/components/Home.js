@@ -8,12 +8,19 @@ const Container = styled.div`
   width: 100%;
 `;
 
-const Home = ({ featured, popular, favorite }) => {
+const Home = ({
+  featured,
+  popular,
+  favorites,
+  isFeaturedReady,
+  isPopularReady,
+  isFavoritesReady
+}) => {
   return (
     <Container>
-      <Cards tools={featured} title="Featured" />
-      <Cards tools={popular} title="Popular" />
-      <Cards tools={favorite} title="Favorites" />
+      <Cards tools={featured} title="Featured" isReady={isFeaturedReady} />
+      <Cards tools={popular} title="Popular" isReady={isPopularReady} />
+      <Cards tools={favorites} title="Favorites" isReady={isFavoritesReady} />
     </Container>
   );
 };

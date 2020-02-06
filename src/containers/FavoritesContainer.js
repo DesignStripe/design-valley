@@ -4,12 +4,23 @@ import { fetchFavorites } from "../api";
 
 const FavoritesContainer = () => {
   const [favorites, setFavorites] = useState([]);
+  const [isReady, setIsReady] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
-    fetchFavorites().then(res => setFavorites(res));
+    fetchFavorites()
+      .then(data => {
+        setFavorites(data);
+        setIsReady(true);
+      })
+      .catch(error => {
+        setIsError(true);
+        setErrorMessage(error.message);
+      });
   }, []);
 
-  return <Cards tools={favorites} title="Favorites" />;
+  return <Cards tools={favorites} title="Favorites" isReady={isReady} />;
 };
 
 export default FavoritesContainer;

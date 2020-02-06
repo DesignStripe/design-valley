@@ -41,7 +41,9 @@ async function fetchFavorites() {
     return axios.get(API_BASE_URL + `tools/${id}`).then(res => res.data);
   });
 
-  return await Promise.all(promiseArray);
+  return await Promise.all(promiseArray).then(data =>
+    data.filter(item => item !== "")
+  );
 }
 
 function postEmail(email) {
