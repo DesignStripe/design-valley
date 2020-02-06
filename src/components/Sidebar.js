@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Menu, Sidebar } from "semantic-ui-react";
 import { FiHeart, FiStar, FiTrendingUp, FiZap } from "react-icons/fi";
 import { useDispatch } from "react-redux";
@@ -22,6 +22,32 @@ const Logo = styled.div`
   align-items: center;
   cursor: pointer;
   align-text: center;
+`;
+
+const gradientMovement = keyframes`
+  0% {
+    background-position:0% 50%
+  }
+  50% {
+    background-position:100% 50%
+  }
+  100% {
+    background-position:0% 50%
+  }
+`;
+
+const EmptyRect = styled.div`
+  height: 1rem;
+  width: ${props => props.seed * 100}%;
+  background-color: ${p => p.theme.colors.primary[400]};
+  border-radius: 4px;
+  animation: ${gradientMovement} 3s ease-in-out infinite;
+  background: linear-gradient(
+    270deg,
+    ${p => p.theme.colors.primary[400]},
+    ${p => p.theme.colors.primary[300]}
+  );
+  background-size: 400% 400%;
 `;
 
 const StyledSidebar = styled(Sidebar)`
@@ -142,7 +168,7 @@ const fixedItems = [
   }
 ];
 
-const VerticalSidebar = ({ history, categories }) => {
+const VerticalSidebar = ({ history, categories, isLoading }) => {
   const dispatch = useDispatch();
 
   return (
@@ -159,26 +185,38 @@ const VerticalSidebar = ({ history, categories }) => {
       <Logo onClick={() => history.push(`/`)}>
         <b>Design Valley</b>
       </Logo>
-      {fixedItems.map(item => (
-        <Menu.Item as={Link} to={`/${item.id}`} key={item.id}>
-          {item.icon || item.emoji}
-          {item.name}
-        </Menu.Item>
-      ))}
-      <Divider />
-      <ScrollableSection>
-        {categories.map((item, index) => (
-          <Menu.Item
-            as={Link}
-            to={`/category/${item._id}`}
-            key={item._id}
-            onClick={() => dispatch(setCurrentCategory(index))}
-          >
-            {/* {item.icon || item.emoji} */}
-            {item.name}
-          </Menu.Item>
-        ))}
-      </ScrollableSection>
+      {isLoading ? (
+        <>
+          {Array.from(Array(10).keys()).map(index => (
+            <Menu.Item>
+              <EmptyRect seed={Math.random()} />
+            </Menu.Item>
+          ))}
+        </>
+      ) : (
+        <>
+          {fixedItems.map(item => (
+            <Menu.Item as={Link} to={`/${item.id}`} key={item.id}>
+              {item.icon || item.emoji}
+              {item.name}
+            </Menu.Item>
+          ))}
+          <Divider />
+          <ScrollableSection>
+            {categories.map((item, index) => (
+              <Menu.Item
+                as={Link}
+                to={`/category/${item._id}`}
+                key={item._id}
+                onClick={() => dispatch(setCurrentCategory(index))}
+              >
+                {/* {item.icon || item.emoji} */}
+                {item.name}
+              </Menu.Item>
+            ))}
+          </ScrollableSection>
+        </>
+      )}
     </StyledSidebar>
   );
 };
