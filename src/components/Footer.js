@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { rgba } from "polished";
 
-// import Avatar from "./Avatar";
 import CallToAction from "./CallToAction";
 // import me from "../assets/me.jpeg";
+
+const Avatar = styled.img`
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 4px solid ${p => rgba(p.theme.colors.primary[100], 0.2)};
+  &:hover {
+    border: 4px solid ${p => rgba(p.theme.colors.primary[100], 0.3)};
+  }
+`;
 
 const Container = styled.div`
   ${"" /* background-color: ${props => props.theme.colors.primary[500]}; */}
@@ -36,23 +46,42 @@ const Credits = styled.div`
   justify-content: flex-end;
   align-items: flex-start;
 
-  & > p {
-    color: ${props => props.theme.colors.primary[500]};
-    margin: 0;
+  @media (max-width: 1001px) {
+    align-items: center;
+    & > a {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  & > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 1rem;
   }
-  & > p > b > a,
-  & > p > b > a:active,
-  & > p > b > a:hover,
-  & > p > b > a:link,
-  & > p > b > a:focus,
-  & > p > b > a:visited {
+
+  & > div > p {
+    color: ${props => props.theme.colors.primary[500]};
+    margin: 0;
+    font-size: 14px;
+  }
+  & > div > b > a,
+  & > div > b > a:active,
+  & > div > b > a:hover,
+  & > div > b > a:link,
+  & > div > b > a:focus,
+  & > div > b > a:visited {
+    margin-left: 0.5rem;
+    ${"" /* margin-right: 0.5rem; */}
     color: ${props => props.theme.colors.primary[500]};
     font-weight: bold;
     text-decoration: none !important;
   }
   & > small {
     color: ${props => props.theme.colors.primary[200]};
+    font-size: 12px;
+    font-weight: thin;
   }
 `;
 
@@ -78,12 +107,15 @@ const Footer = ({}) => {
       <CallToAction />
 
       <Credits>
-        <p>
-          Made with {emoji} by{" "}
+        <a href="https://twitter.com/d__raptis">
+          <Avatar src="https://pbs.twimg.com/profile_images/1212447937789399046/c4-7A8B-_400x400.jpg" />
+        </a>
+        <div>
+          <p>Made with {emoji} by </p>
           <b>
-            <a href="https://twitter.com/d__raptis">Jim Raptis</a>
+            <a href="https://twitter.com/d__raptis"> Jim Raptis </a>
           </b>
-        </p>
+        </div>
         {/* <Avatar src={me} /> */}
         <small>
           © DesignValley {new Date().getFullYear()}. All rights reserved

@@ -89,7 +89,7 @@ const CallToAction = ({}) => {
   return (
     <Container>
       <h2>Keep me in the loop</h2>
-      <p>All the juice news about DesignValley in your inbox! No spam 🙊</p>
+      <p>All the juice news about DesignValley in your inbox! No spam.</p>
       <Form onSubmit={subscibeUser}>
         <Input
           onChange={event => setEmail(event.target.value)}
