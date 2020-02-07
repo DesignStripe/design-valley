@@ -109,7 +109,7 @@ const EmptyCard = ({}) => {
         <ImageWrapper />
         <Row>
           <Title />
-          <Likes isLiked={false} votes={Math.round(Math.random() * 10)} />
+          <Likes isLiked={false} votes={/*Math.round(Math.random() * 10)*/ 0} />
         </Row>
       </EmptyCardContent>
     </Container>

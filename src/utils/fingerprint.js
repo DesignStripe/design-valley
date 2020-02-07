@@ -9,6 +9,13 @@ export function getFingerprint() {
     })
   );
 }
+export function getUserInfo() {
+  return new Promise(resolve =>
+    Fingerprint2.getPromise({}).then(components => {
+      resolve(components);
+    })
+  );
+}
 // https://dev.to/molamk/sneaky-fingerprint-and-ip-tracker-2ka7
 export function getIp() {
   return new Promise(resolve =>

@@ -51,7 +51,9 @@ function getInitialSaveStatus(id) {
 const Tool = ({ image, name, description, id, url, category, votes }) => {
   const [isSaved, setIsSaved] = useState(getInitialSaveStatus(id));
 
-  const { socket, ip, fingerprint } = useSelector(state => state.userSession);
+  const { socket, ip, fingerprint, userInfo } = useSelector(
+    state => state.userSession
+  );
   const reduxVotes = useSelector(
     state => state.votes.find(vote => vote.id === id) || null
   );
@@ -63,7 +65,7 @@ const Tool = ({ image, name, description, id, url, category, votes }) => {
     setIsSaved(true);
     socket.emit("like", {
       toolId: id,
-      userSession: { ip, fingerprint }
+      userSession: { ip, fingerprint, userInfo }
     });
   }
 
@@ -72,7 +74,7 @@ const Tool = ({ image, name, description, id, url, category, votes }) => {
     setIsSaved(false);
     socket.emit("unlike", {
       toolId: id,
-      userSession: { ip, fingerprint }
+      userSession: { ip, fingerprint, userInfo }
     });
   }
 

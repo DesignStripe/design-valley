@@ -156,7 +156,9 @@ const Card = ({
   isFeatured
 }) => {
   const [isSaved, setIsSaved] = useState(getInitialSaveStatus(id));
-  const { socket, ip, fingerprint } = useSelector(state => state.userSession);
+  const { socket, ip, fingerprint, userInfo } = useSelector(
+    state => state.userSession
+  );
   const reduxVotes = useSelector(
     state => state.votes.find(vote => vote.id === id) || null
   );
@@ -168,7 +170,7 @@ const Card = ({
     setIsSaved(true);
     socket.emit("like", {
       toolId: id,
-      userSession: { ip, fingerprint }
+      userSession: { ip, fingerprint, userInfo }
     });
   }
 
@@ -177,7 +179,7 @@ const Card = ({
     setIsSaved(false);
     socket.emit("unlike", {
       toolId: id,
-      userSession: { ip, fingerprint }
+      userSession: { ip, fingerprint, userInfo }
     });
   }
 

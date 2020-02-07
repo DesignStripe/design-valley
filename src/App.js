@@ -21,12 +21,13 @@ import FloatingHeader from "./components/FloatingHeader";
 import Footer from "./components/Footer";
 
 import theme from "./utils/theme";
-import { getFingerprint, getIp } from "./utils/fingerprint";
+import { getFingerprint, getIp, getUserInfo } from "./utils/fingerprint";
 import useWindowSize from "./hooks/useWindowSize";
 
 import {
   setFingerprint,
   setIp,
+  setUserInfo,
   setSocket
 } from "./redux/reducers/userSessionReducer";
 import { addVote } from "./redux/reducers/votesReducer";
@@ -51,6 +52,7 @@ function App() {
     });
 
     setTimeout(() => {
+      getUserInfo().then(object => dispatch(setUserInfo(object)));
       getFingerprint().then(hash => dispatch(setFingerprint(hash)));
       getIp().then(hash => dispatch(setIp(hash)));
     }, 500);

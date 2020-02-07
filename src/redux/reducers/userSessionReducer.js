@@ -1,10 +1,12 @@
 export const SET_FINGERPRINT = "SET_FINGERPRINT";
 export const SET_IP = "SET_IP";
 export const SET_SOCKET = "SET_SOCKET";
+export const SET_USER_INFO = "SET_USER_INFO";
 
 const initialState = {
   fingerprint: "",
   ip: "",
+  userInfo: {},
   socket: null
 };
 
@@ -31,10 +33,21 @@ export default (state = initialState, action) => {
       };
     }
 
+    case SET_USER_INFO: {
+      return {
+        ...state,
+        userInfo: action.payload
+      };
+    }
+
     default: {
       return { ...state };
     }
   }
+};
+
+export const setUserInfo = userInfo => dispatch => {
+  dispatch({ type: SET_USER_INFO, payload: userInfo });
 };
 
 export const setFingerprint = fingerprint => dispatch => {
