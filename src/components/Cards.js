@@ -61,7 +61,7 @@ const EmptyCard = ({ onButtonClick }) => {
         }}
         onClick={onButtonClick}
       >
-        Discover Tools
+        Discover More Tools
       </Button>
     </EmptyContainer>
   );

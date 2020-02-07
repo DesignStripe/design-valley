@@ -38,7 +38,7 @@ const gradientMovement = keyframes`
 
 const EmptyRect = styled.div`
   height: 1rem;
-  width: ${props => props.seed * 100}%;
+  width: ${props => props.widthPercent}%;
   background-color: ${p => p.theme.colors.primary[400]};
   border-radius: 4px;
   animation: ${gradientMovement} 3s ease-in-out infinite;
@@ -168,6 +168,10 @@ const fixedItems = [
   }
 ];
 
+function getRandomIntBetween(min, max) {
+  return Math.round(Math.random() * (max - min) + min);
+}
+
 const VerticalSidebar = ({ history, categories, isLoading }) => {
   const dispatch = useDispatch();
 
@@ -189,7 +193,7 @@ const VerticalSidebar = ({ history, categories, isLoading }) => {
         <>
           {Array.from(Array(10).keys()).map(index => (
             <Menu.Item>
-              <EmptyRect seed={Math.random()} />
+              <EmptyRect widthPercent={getRandomIntBetween(30, 100)} />
             </Menu.Item>
           ))}
         </>

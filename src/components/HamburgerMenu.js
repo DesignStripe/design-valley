@@ -183,7 +183,7 @@ const fixedItems = [
   }
 ];
 
-const HamburgerMenu = ({ history, categories }) => {
+const HamburgerMenu = ({ history, categories, isLoading }) => {
   const dispatch = useDispatch();
 
   return (
@@ -207,15 +207,19 @@ const HamburgerMenu = ({ history, categories }) => {
         </FixedContainer>
         <Divider />
         <ScrollableSection>
-          {categories.map((item, index) => (
-            <Link
-              to={`/category/${item._id}`}
-              key={item._id}
-              onClick={() => dispatch(setCurrentCategory(index))}
-            >
-              {item.name}
-            </Link>
-          ))}
+          {isLoading ? (
+            <>FethcingCategories...</>
+          ) : (
+            categories.map((item, index) => (
+              <Link
+                to={`/category/${item._id}`}
+                key={item._id}
+                onClick={() => dispatch(setCurrentCategory(index))}
+              >
+                {item.name}
+              </Link>
+            ))
+          )}
         </ScrollableSection>
       </Menu>
     </>

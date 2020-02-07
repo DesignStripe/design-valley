@@ -23,7 +23,7 @@ const SidebarContainer = ({ match }) => {
   const isMobile = size.width < 800;
 
   if (isMobile) {
-    return <HamburgerMenu categories={categories} />;
+    return <HamburgerMenu categories={categories} isLoading={!isReady} />;
   } else {
     return <Sidebar categories={categories} isLoading={!isReady} />;
   }

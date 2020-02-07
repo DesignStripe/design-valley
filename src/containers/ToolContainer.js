@@ -15,9 +15,11 @@ const ToolContainer = ({ match }) => {
   useEffect(() => {
     fetchToolById(id).then(res => {
       setTool(res);
-      setIsReady(true);
     });
-    fetchRelated(id).then(data => setRelatedTools(data));
+    fetchRelated(id).then(data => {
+      setIsReady(true);
+      setRelatedTools(data);
+    });
   }, [id]);
 
   if (!isReady) return <Spinner />;
@@ -26,7 +28,7 @@ const ToolContainer = ({ match }) => {
     <Col>
       <Tool {...tool} id={tool._id} />
       <div style={{ marginTop: "4rem" }} />
-      <Cards tools={relatedTools} title={"Related Tools:"} />
+      <Cards tools={relatedTools} title={"Related Tools:"} isReady={isReady} />
     </Col>
   );
 };
