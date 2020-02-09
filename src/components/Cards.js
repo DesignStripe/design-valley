@@ -67,7 +67,15 @@ const EmptyCard = ({ onButtonClick }) => {
   );
 };
 
-const Cards = ({ title, tools, next, previous, isFeatured, isReady }) => {
+const Cards = ({
+  title,
+  tools,
+  next,
+  previous,
+  isFeatured,
+  isReady,
+  isRelated = false
+}) => {
   const history = useHistory();
 
   function gotToPopular() {
@@ -103,6 +111,7 @@ const Cards = ({ title, tools, next, previous, isFeatured, isReady }) => {
                   tool.name === "Figma" ||
                   tool.name === "Clean Mockups"
                 }
+                isRelated={isRelated}
               />
             ))}
           </>

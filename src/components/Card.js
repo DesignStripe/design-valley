@@ -16,6 +16,7 @@ import {
 } from "../utils/localStorage";
 import { rgba } from "polished";
 import Likes from "./Likes";
+import Logo from "./Logo";
 
 const Container = styled.div`
   border-radius: 8px;
@@ -153,7 +154,8 @@ const Card = ({
   url,
   category,
   votes,
-  isFeatured
+  isFeatured,
+  isRelated = false
 }) => {
   const [isSaved, setIsSaved] = useState(getInitialSaveStatus(id));
   const { socket, ip, fingerprint, userInfo } = useSelector(
@@ -190,7 +192,19 @@ const Card = ({
         <ImageWithLike
           isFeatured={isFeatured}
           src={image}
-          onClick={() => history.push(`/tool/${id}`)}
+          onClick={() => {
+            if (isRelated) {
+              const scrollableDiv = document.getElementById("scrollable-div");
+              console.log(scrollableDiv);
+              scrollableDiv.scrollTop = 0;
+
+              // scrollableDiv.scrollTo({
+              //   bottom: 0,
+              //   behavior: "smooth"
+              // });
+            }
+            history.push(`/tool/${id}`);
+          }}
         />
         {/* <Image
           fitContainer

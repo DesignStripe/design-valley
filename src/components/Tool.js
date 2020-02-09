@@ -112,7 +112,10 @@ const Tool = ({ image, name, description, id, url, category, votes }) => {
           }}
           style={{
             width: "100%",
-            color: "white"
+            color: "white",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center"
           }}
         >
           <FiGlobe style={{ marginRight: ".5rem" }} />

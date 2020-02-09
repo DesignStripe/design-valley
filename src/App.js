@@ -67,7 +67,7 @@ function App() {
         {/* <Nav /> */}
         <Body>
           <NavContainer />
-          <MainSection>
+          <MainSection id="scrollable-div">
             <Route path="/" exact component={HomeContainer} />
             <Route path="/category/:id" exact component={CategoryContainer} />
             <Route path="/tool/:id" component={ToolContainer} />

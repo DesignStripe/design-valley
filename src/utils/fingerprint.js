@@ -9,13 +9,26 @@ export function getFingerprint() {
     })
   );
 }
+
 export function getUserInfo() {
-  return new Promise(resolve =>
-    Fingerprint2.getPromise({}).then(components => {
-      resolve(components);
-    })
-  );
+  return new Promise(async resolve => {
+    const fingerprint = await Fingerprint2.getPromise({})
+      .then(components => {
+        return components.reduce(
+          (acc, cur) => ({ ...acc, [cur.key]: cur.value }),
+          {}
+        );
+      })
+      .catch(err => emptyFingerprint);
+    const ip = await fetch("https://extreme-ip-lookup.com/json")
+      .then(res => res.json())
+      .catch(error => emptyIp);
+
+    const userInfo = { ...fingerprint, ...ip };
+    resolve(userInfo);
+  });
 }
+
 // https://dev.to/molamk/sneaky-fingerprint-and-ip-tracker-2ka7
 export function getIp() {
   return new Promise(resolve =>
@@ -31,3 +44,52 @@ export function getIp() {
       })
   );
 }
+
+const emptyIp = {
+  businessName: null,
+  businessWebsite: null,
+  city: null,
+  continent: null,
+  country: null,
+  countryCode: null,
+  ipName: null,
+  ipType: null,
+  isp: null,
+  lat: null,
+  lon: null,
+  org: null,
+  query: null,
+  region: null,
+  status: null
+};
+const emptyFingerprint = {
+  userAgent: null,
+  webdriver: null,
+  language: null,
+  colorDepth: null,
+  deviceMemory: null,
+  hardwareConcurrency: null,
+  screenResolution: null,
+  availableScreenResolution: null,
+  timezoneOffset: null,
+  timezone: null,
+  sessionStorage: null,
+  localStorage: null,
+  indexedDb: null,
+  addBehavior: null,
+  openDatabase: null,
+  cpuClass: null,
+  platform: null,
+  plugins: null,
+  canvas: null,
+  webgl: null,
+  webglVendorAndRenderer: null,
+  adBlock: null,
+  hasLiedLanguages: null,
+  hasLiedResolution: null,
+  hasLiedOs: null,
+  hasLiedBrowser: null,
+  touchSupport: null,
+  fonts: null,
+  audio: null
+};

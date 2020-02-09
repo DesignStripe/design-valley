@@ -5,8 +5,21 @@ import { Menu, Sidebar } from "semantic-ui-react";
 import { FiHeart, FiStar, FiTrendingUp, FiZap } from "react-icons/fi";
 import { useDispatch } from "react-redux";
 import { setCurrentCategory } from "../redux/reducers/categoriesReducer";
+import Logo from "./Logo";
 
-const Logo = styled.div`
+const BetaBadge = styled.div`
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0.125rem 0.25rem;
+  transform: translate(50%, -100%);
+`;
+
+const LogoWrapper = styled.div`
   height: 32px;
   margin: 1rem auto 2rem auto !important;
   padding-left: 0 !important;
@@ -22,6 +35,8 @@ const Logo = styled.div`
   align-items: center;
   cursor: pointer;
   align-text: center;
+
+  position: relative;
 `;
 
 const gradientMovement = keyframes`
@@ -186,9 +201,12 @@ const VerticalSidebar = ({ history, categories, isLoading }) => {
       visible="true"
       width="wide"
     >
-      <Logo onClick={() => history.push(`/`)}>
-        <b>Design Valley</b>
-      </Logo>
+      <LogoWrapper onClick={() => history.push(`/`)}>
+        <Logo width={170} />
+        <BetaBadge>Beta</BetaBadge>
+
+        {/* <b>Design Valley</b> */}
+      </LogoWrapper>
       {isLoading ? (
         <>
           {Array.from(Array(10).keys()).map(index => (

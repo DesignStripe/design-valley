@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
+import { rgba } from "polished";
 import {
   FiHeart,
   FiStar,
@@ -13,24 +14,33 @@ import { useDispatch } from "react-redux";
 import { setCurrentCategory } from "../redux/reducers/categoriesReducer";
 import { bubble as Menu } from "react-burger-menu";
 import theme from "../utils/theme";
+import Logo from "./Logo";
 
-const Logo = styled.div`
-  height: 32px;
-  margin: 2rem auto !important;
-  padding-left: 0 !important;
-  border-radius: 8px;
-  box-sizing: border-box;
-  text-decoration: none;
-  color: ${p => p.theme.colors.primary[500]};
-  font-size: 2rem;
-  font-weight: bold;
+const LogoWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  cursor: pointer;
-  width: 100vw;
+  margin: 2rem 0 2rem 1rem;
 `;
+
+// const Logo = styled.div`
+//   height: 32px;
+//   margin: 2rem auto !important;
+//   padding-left: 0 !important;
+//   border-radius: 8px;
+//   box-sizing: border-box;
+//   text-decoration: none;
+//   color: ${p => p.theme.colors.primary[500]};
+//   font-size: 2rem;
+//   font-weight: bold;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: center;
+//   cursor: pointer;
+//   width: 100vw;
+// `;
 
 const StyledMenu = styled(Menu)`
   height: calc(100% - 2rem);
@@ -188,7 +198,15 @@ const HamburgerMenu = ({ history, categories, isLoading }) => {
 
   return (
     <>
-      <Logo>Design Valley</Logo>
+      <LogoWrapper>
+        <Logo
+          width={200}
+          theme={{
+            hiddenColor: "#F4F1FE",
+            primaryColor: theme.colors.primary[500]
+          }}
+        />
+      </LogoWrapper>
       <Menu
         styles={styles}
         right

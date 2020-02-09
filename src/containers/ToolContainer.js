@@ -28,7 +28,12 @@ const ToolContainer = ({ match }) => {
     <Col>
       <Tool {...tool} id={tool._id} />
       <div style={{ marginTop: "4rem" }} />
-      <Cards tools={relatedTools} title={"Related Tools:"} isReady={isReady} />
+      <Cards
+        tools={relatedTools}
+        title={"Related Tools:"}
+        isReady={isReady}
+        isRelated
+      />
     </Col>
   );
 };

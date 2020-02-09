@@ -33,7 +33,7 @@ const Button = styled(SemanticButton)`
   font-family: Rubik, "sans-serif";
 
   &:hover {
-    background: ${props => props.theme.colors.primary[700]};
+    background: ${props => props.theme.colors.primary[400]};
     background-image: none;
     box-shadow: 0 0 0 1px transparent inset,
       0 0 0 0 rgba(34, 36, 38, 0.15) inset;
