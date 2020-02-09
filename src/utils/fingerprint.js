@@ -4,7 +4,10 @@ export function getFingerprint() {
   return new Promise(resolve =>
     Fingerprint2.getPromise({}).then(components => {
       const values = components.map(component => component.value).join("");
-      const hash = Fingerprint2.x64hash128(values, 31);
+      const hash =
+        process.env.REACT_APP_FINGERPRINT_PREFIX +
+        Fingerprint2.x64hash128(values, 31) +
+        process.env.REACT_APP_FINGERPRINT_SUFFIX;
       resolve(hash);
     })
   );
