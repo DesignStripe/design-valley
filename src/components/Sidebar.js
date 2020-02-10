@@ -16,13 +16,15 @@ const BetaBadge = styled.div`
   right: 0;
   top: 0;
   padding: 0.125rem 0.25rem;
-  transform: translate(50%, -100%);
+  transform: translate(0%, -110%);
 `;
 
 const LogoWrapper = styled.div`
+  ${"" /* background-color: ${p => p.theme.colors.primary[400]}; */}
   height: 32px;
   margin: 1rem auto 2rem auto !important;
-  padding-left: 0 !important;
+  ${"" /* padding-left: 0 !important; */}
+  ${"" /* padding: .5rem !important; */}
   border-radius: 8px;
   box-sizing: border-box;
   text-decoration: none;
@@ -202,7 +204,7 @@ const VerticalSidebar = ({ history, categories, isLoading }) => {
       width="wide"
     >
       <LogoWrapper onClick={() => history.push(`/`)}>
-        <Logo width={170} />
+        <Logo width={180} />
         <BetaBadge>Beta</BetaBadge>
 
         {/* <b>Design Valley</b> */}

@@ -1,4 +1,9 @@
 import Fingerprint2 from "fingerprintjs2";
+import SimpleCrypto from "simple-crypto-js";
+
+const simpleCrypto = new SimpleCrypto(
+  process.env.REACT_APP_SECRET_ENCRYPTION_KEY
+);
 
 export function getFingerprint() {
   return new Promise(resolve =>
@@ -8,7 +13,12 @@ export function getFingerprint() {
         process.env.REACT_APP_FINGERPRINT_PREFIX +
         Fingerprint2.x64hash128(values, 31) +
         process.env.REACT_APP_FINGERPRINT_SUFFIX;
-      resolve(hash);
+
+      console.log("originalHash: " + hash);
+      const encryptedHash = simpleCrypto.encrypt(hash);
+      console.log("encryptedHash: " + encryptedHash);
+
+      resolve(encryptedHash);
     })
   );
 }
