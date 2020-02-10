@@ -13,10 +13,7 @@ export function getFingerprint() {
         process.env.REACT_APP_FINGERPRINT_PREFIX +
         Fingerprint2.x64hash128(values, 31) +
         process.env.REACT_APP_FINGERPRINT_SUFFIX;
-
-      console.log("originalHash: " + hash);
       const encryptedHash = simpleCrypto.encrypt(hash);
-      console.log("encryptedHash: " + encryptedHash);
 
       resolve(encryptedHash);
     })
