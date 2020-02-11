@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
 import { Row, Col } from "react-flexbox-grid";
@@ -50,6 +50,10 @@ function getInitialSaveStatus(id) {
 
 const Tool = ({ image, name, description, id, url, category, votes }) => {
   const [isSaved, setIsSaved] = useState(getInitialSaveStatus(id));
+
+  useEffect(() => {
+    setIsSaved(getInitialSaveStatus(id));
+  }, [id]);
 
   const { socket, ip, fingerprint, userInfo } = useSelector(
     state => state.userSession
