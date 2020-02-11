@@ -109,7 +109,7 @@ const Cards = ({
                   tool.name === "CopyPalette" ||
                   tool.name === "Khroma" ||
                   tool.name === "Figma" ||
-                  tool.name === "Clean Mockups"
+                  tool.name === "Cleanmock"
                 }
                 isRelated={isRelated}
               />
