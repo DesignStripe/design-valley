@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import { Col } from "react-flexbox-grid";
+
 import Tool from "../components/Tool";
 import Cards from "../components/Cards";
-import { Row, Col } from "react-flexbox-grid";
+import Spinner from "../components/Spinner";
+import BackButton from "../components/BackButton";
 
 import { fetchToolById, fetchRelated } from "../api";
-import Spinner from "../components/Spinner";
 
 const ToolContainer = ({ match }) => {
   const { id } = match.params;
@@ -26,6 +29,7 @@ const ToolContainer = ({ match }) => {
 
   return (
     <Col>
+      <BackButton />
       <Tool {...tool} id={tool._id} />
       <div style={{ marginTop: "4rem" }} />
       <Cards
