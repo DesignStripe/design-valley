@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
 import { Row, Col } from "react-flexbox-grid";
+import { rgba } from "polished";
 
 import Tag from "./Tag";
 import Button from "./Button";
@@ -13,7 +14,7 @@ import {
   addFavorite,
   removeFavorite
 } from "../utils/localStorage";
-import { FiGlobe } from "react-icons/fi";
+import { FiGlobe, FiTwitter } from "react-icons/fi";
 
 const Container = styled(Col)`
   border-radius: 8px;
@@ -41,6 +42,45 @@ const Description = styled.p`
 
   margin: 0 0 1rem 0;
 `;
+
+const ShareWrapper = styled.a`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem;
+  color: ${p => p.theme.colors.primary[500]};
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0;
+  margin-right: 1rem;
+
+  svg {
+    margin-right: 0.5rem;
+  }
+
+  &:hover {
+    background-color: ${p => rgba(p.theme.colors.primary[500], 0.05)};
+  }
+  text-decoration: none;
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
+`;
+
+function tweet(message) {
+  return (
+    "https://twitter.com/intent/tweet?text=" +
+    message
+      .split(" ")
+      .join("%20")
+      .split("\n")
+      .join("%0A")
+  );
+}
 
 function getInitialSaveStatus(id) {
   const favorites = getFavorites();
@@ -85,17 +125,28 @@ const Tool = ({ image, name, description, id, url, category, votes }) => {
   return (
     <Container lg={8}>
       <Row
-        middle="xs"
+        top="xs"
         between="xs"
         style={{ margin: 0, marginBottom: "2rem", maxWidth: "100%" }}
       >
         <Title>{name}</Title>
 
-        <Likes
-          isLiked={isSaved}
-          onClick={isSaved ? () => removeTool(id) : () => saveTool(id)}
-          votes={newVotes}
-        />
+        <Row middle="xs">
+          <ShareWrapper
+            target="_blank"
+            href={tweet(
+              `${name} - ${description}\nvia designvalley.club\n\n${url}/?ref=designvalley`
+            )}
+          >
+            <FiTwitter /> Share
+          </ShareWrapper>
+
+          <Likes
+            isLiked={isSaved}
+            onClick={isSaved ? () => removeTool(id) : () => saveTool(id)}
+            votes={newVotes}
+          />
+        </Row>
       </Row>
       <Col style={{ padding: 0, paddingBottom: "2rem" }}>
         <Image fitContainer src={image} ratio="16:9" />
