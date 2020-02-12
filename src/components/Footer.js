@@ -3,26 +3,11 @@ import styled from "styled-components";
 import { rgba } from "polished";
 
 import CallToAction from "./CallToAction";
-// import me from "../assets/me.jpeg";
+import Link from "./Link";
+import Avatar from "./Avatar";
 
-const Avatar = styled.img`
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  border: 4px solid ${p => rgba(p.theme.colors.primary[100], 0.2)};
-  &:hover {
-    border: 4px solid ${p => rgba(p.theme.colors.primary[100], 0.3)};
-  }
-`;
-
-const Container = styled.div`
-  ${"" /* background-color: ${props => props.theme.colors.primary[500]}; */}
-  border: ${props => props.theme.colors.primary[500]} 2px solid;
-  color: #fff;
-  border-radius: 8px;
-  padding: 2rem;
-  margin-top: 1rem;
-
+const TopRow = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -36,8 +21,44 @@ const Container = styled.div`
     & > div:first-child {
       margin-bottom: 2rem;
     }
-
   }
+`;
+
+const PageLinks = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  cursor: pointer;
+
+  & > a {
+    font-size: 0.8rem;
+    margin: 0 1rem;
+    color: ${props => props.theme.colors.primary[300]};
+    text-decoration: none;
+    &:focus,
+    &:hover,
+    &:visited,
+    &:link,
+    &:active {
+      text-decoration: none;
+    }
+    &:hover {
+      color: ${props => props.theme.colors.primary[500]};
+    }
+  }
+`;
+
+const Container = styled.div`
+  ${"" /* background-color: ${props => props.theme.colors.primary[500]}; */}
+  border: ${props => props.theme.colors.primary[500]} 2px solid;
+  color: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-top: 1rem;
+  
 `;
 
 const Credits = styled.div`
@@ -104,23 +125,36 @@ const Footer = ({}) => {
 
   return (
     <Container>
-      <CallToAction />
+      <TopRow>
+        <CallToAction />
 
-      <Credits>
-        <a href="https://twitter.com/d__raptis">
-          <Avatar src="https://pbs.twimg.com/profile_images/1212447937789399046/c4-7A8B-_400x400.jpg" />
+        <Credits>
+          <Avatar />
+          <div>
+            <p>Made with {emoji} by </p>
+            <b>
+              <a href="https://twitter.com/d__raptis"> Jim Raptis </a>
+            </b>
+          </div>
+          {/* <Avatar src={me} /> */}
+          <small>
+            © DesignValley {new Date().getFullYear()}. All rights reserved
+          </small>
+        </Credits>
+      </TopRow>
+
+      <PageLinks>
+        {/* <a>About</a> */}
+        <Link to="/about">About</Link>
+        <a
+          href="https://spectrum.chat/designvalley?tab=posts"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Join Community
         </a>
-        <div>
-          <p>Made with {emoji} by </p>
-          <b>
-            <a href="https://twitter.com/d__raptis"> Jim Raptis </a>
-          </b>
-        </div>
-        {/* <Avatar src={me} /> */}
-        <small>
-          © DesignValley {new Date().getFullYear()}. All rights reserved
-        </small>
-      </Credits>
+        {/* <a>Policy</a> */}
+      </PageLinks>
     </Container>
   );
 };

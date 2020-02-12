@@ -1,36 +1,30 @@
 import React from "react";
 import styled from "styled-components";
+import { rgba } from "polished";
 
-const Image = styled.img`
-  vertical-align: middle;
-  width: 28px;
-  height: 28px;
+const CircleImage = styled.img`
+  width: ${props => props.size / 16}rem;
+  height: ${props => props.size / 16}rem;
   border-radius: 50%;
-`;
-
-const Wrapper = styled.div`
-  width: 38px;
-  height: 38px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  cursor: pointer;
-
-  border-radius: 50%;
-  background-color: none;
+  border: 4px solid ${p => rgba(p.theme.colors.primary[100], 0.2)};
   &:hover {
-    background-color: #f0f0f0;
+    border: 4px solid ${p => rgba(p.theme.colors.primary[100], 0.3)};
   }
 `;
 
-const Avatar = ({ onClick, src }) => {
+const Avatar = ({ size = 32, style }) => {
   return (
-    <Wrapper onClick={onClick}>
-      <Image src={src} alt="Avatar" />
-    </Wrapper>
+    <a
+      href="https://twitter.com/d__raptis"
+      rel="noreferrer noopener"
+      target="_blank"
+      style={{ ...style }}
+    >
+      <CircleImage
+        size={size}
+        src="https://pbs.twimg.com/profile_images/1212447937789399046/c4-7A8B-_400x400.jpg"
+      />
+    </a>
   );
 };
 

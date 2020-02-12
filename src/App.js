@@ -14,6 +14,7 @@ import ToolContainer from "./containers/ToolContainer";
 import NavContainer from "./containers/NavContainer";
 
 // import Nav from "./components/Nav";
+import About from "./components/About";
 import Body from "./components/Body";
 import MainSection from "./components/MainSection";
 import PolicyLabel from "./components/PolicyMessage";
@@ -74,6 +75,7 @@ function App() {
             <Route path="/popular" exact component={PopularContainer} />
             <Route path="/featured" exact component={FeaturedContainer} />
             <Route path="/favorites" exact component={FavoritesContainer} />
+            <Route path="/about" exact component={About} />
             <Footer />
           </MainSection>
         </Body>

@@ -10,7 +10,7 @@ const cookies = new Cookies();
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 
   position: fixed;
@@ -24,10 +24,10 @@ const Container = styled.div`
   box-shadow: 0px 7px 25px 0px rgba(22, 53, 76, 0.3);
   background-color: ${p => p.theme.colors.neutrals[100]};
   z-index: 1000;
-  min-width: 300px;
-  & > *:first-child {
-    margin: 0;
-    margin-right: 1rem;
+  ${"" /* min-width: 400px;
+  max-width: 80%; */}
+  & > p {
+    margin: 0 1rem 0 0.5rem;
   }
 `;
 
@@ -52,7 +52,8 @@ const PolicyLabel = () => {
 
   return (
     <Container>
-      <p>By using this site, DesignValley bakes some tasty 🍪</p>
+      <span>🍪</span>{" "}
+      <p>By using this site, DesignValley bakes some tasty cookies</p>
       <FiX onClick={setCookie} color="#aaa" style={{ cursor: "pointer" }} />
     </Container>
   );
