@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Link, useHistory } from "react-router-dom";
 import Card from "./Card";
@@ -103,6 +103,12 @@ const Anchor = ({ href, children }) => (
 );
 
 const About = ({}) => {
+  useEffect(() => {
+    const scrollableDiv = document.getElementById("scrollable-div");
+    console.log(scrollableDiv);
+    scrollableDiv.scrollTop = 0;
+  }, []);
+
   return (
     <Container>
       <PageTitle>About </PageTitle>
