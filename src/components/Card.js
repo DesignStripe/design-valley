@@ -77,7 +77,10 @@ const Title = styled.h3`
   -webkit-box-orient: vertical;
   overflow: hidden;
 
-  color: ${props => props.theme.colors.primary[500]};
+  ${props =>
+    props.isFeatured
+      ? `color: ${props.theme.colors.featured}`
+      : `color: ${props.theme.colors.primary[500]};`}
 
   margin: 0;
   margin-right: 1rem;
@@ -106,15 +109,15 @@ const IconWrapper = styled.div`
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  background-color: #fccb82aa;
+  background-color: ${p => rgba(p.theme.colors.featured, 0.2)};
   z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
 
   & > svg {
-    fill: #f99a0b;
-    stroke: #f99a0b;
+    fill: ${p => p.theme.colors.featured};
+    stroke: ${p => p.theme.colors.featured};
   }
 `;
 
@@ -140,7 +143,13 @@ const ImageWithLike = ({ onClick, src, isFeatured }) => {
           <FiStar size={20} />
         </IconWrapper>
       )}
-      <Image fitContainer src={src} ratio="16:9" isSharp />
+      <Image
+        isFeatured={isFeatured}
+        fitContainer
+        src={src}
+        ratio="16:9"
+        isSharp
+      />
     </ImageWrapper>
   );
 };
@@ -215,9 +224,10 @@ const Card = ({
         /> */}
 
         <Row>
-          <Title>{title}</Title>
+          <Title isFeatured={isFeatured}>{title}</Title>
 
           <Likes
+            isFeatured={isFeatured}
             isLiked={isSaved}
             onClick={isSaved ? () => removeTool(id) : () => saveTool(id)}
             votes={newVotes}

@@ -33,6 +33,7 @@ import {
 } from "./redux/reducers/userSessionReducer";
 import { addVote } from "./redux/reducers/votesReducer";
 import HamburgerMenu from "./components/HamburgerMenu";
+import Terms from "./components/Terms";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -76,6 +77,7 @@ function App() {
             <Route path="/featured" exact component={FeaturedContainer} />
             <Route path="/favorites" exact component={FavoritesContainer} />
             <Route path="/about" exact component={About} />
+            <Route path="/terms" exact component={Terms} />
             <Footer />
           </MainSection>
         </Body>

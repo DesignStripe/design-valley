@@ -9,9 +9,13 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: ${rgba(theme.colors.primary[500], 0.05)};
+  background-color: ${props =>
+    props.isFeatured
+      ? rgba(theme.colors.featured, 0.05)
+      : rgba(theme.colors.primary[500], 0.05)};
   padding: 0.5rem;
-  color: ${theme.colors.primary[500]};
+  color: ${props =>
+    props.isFeatured ? theme.colors.featured : theme.colors.primary[500]};
   border-radius: 8px;
   cursor: pointer;
 
@@ -20,14 +24,25 @@ const Container = styled.div`
   }
 `;
 
-const Likes = ({ isLiked, onClick, votes }) => {
+const Likes = ({ isLiked, onClick, votes, isFeatured }) => {
   return (
-    <Container onClick={onClick}>
+    <Container onClick={onClick} isFeatured={isFeatured}>
       {votes}
       {isLiked ? (
-        <FiHeart size={20} fill={theme.colors.primary[500]} stroke="none" />
+        <FiHeart
+          size={20}
+          fill={isFeatured ? theme.colors.featured : theme.colors.primary[500]}
+          stroke="none"
+        />
       ) : (
-        <FiHeart size={20} stroke={rgba(theme.colors.primary[500], 0.5)} />
+        <FiHeart
+          size={20}
+          stroke={
+            isFeatured
+              ? rgba(theme.colors.featured, 0.5)
+              : rgba(theme.colors.primary[500], 0.5)
+          }
+        />
       )}
     </Container>
   );

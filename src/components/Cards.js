@@ -107,9 +107,9 @@ const Cards = ({
                 isFeatured={
                   tool.isFeatured ||
                   tool.name === "CopyPalette" ||
-                  tool.name === "Khroma" ||
+                  tool.name === "Wireframer" ||
                   tool.name === "Figma" ||
-                  tool.name === "Cleanmock"
+                  tool.name === "VisualEyes"
                 }
                 isRelated={isRelated}
               />

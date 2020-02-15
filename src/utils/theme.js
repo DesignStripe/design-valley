@@ -1,5 +1,6 @@
 const theme = {
   colors: {
+    featured: "#f7a325",
     neutrals: {
       100: "#fff",
       200: "#f4f4f4",

@@ -31,12 +31,23 @@ const ImageDiv = styled.div`
   border-radius: 8px;
   width: 100%;
   height: 100%;
+  ${props =>
+    props.isFeatured
+      ? `
   background-image: linear-gradient(
       to top,
-      ${props => rgba(props.theme.colors.primary[500], 0.2)},
-      ${props => rgba(props.theme.colors.primary[500], 0.1)}
+      ${rgba(props.theme.colors.featured, 0.1)},
+      ${rgba(props.theme.colors.featured, 0.05)}
     ),
-    url(${props => props.src});
+    url(${props.src});
+  `
+      : `background-image: linear-gradient(
+      to top,
+      ${rgba(props.theme.colors.primary[500], 0.2)},
+      ${rgba(props.theme.colors.primary[500], 0.1)}
+    ),
+    url(${props.src});`}
+
   ${"" /* background-image:  url(${props => props.src}); */}
   background-position: 50% 0%;
   background-size: cover;
@@ -77,7 +88,8 @@ const ImageComponent = ({
   grayscale,
   original,
   isSharp,
-  onClick
+  onClick,
+  isFeatured
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const ratioPercent = getRatioPercent(ratio) * 100;
@@ -90,6 +102,7 @@ const ImageComponent = ({
       onClick={onClick}
     >
       <ImageDiv
+        isFeatured={isFeatured}
         src={src}
         size={size}
         grayscale={grayscale}
