@@ -4,11 +4,11 @@ import { useSelector } from "react-redux";
 import { Row, Col } from "react-flexbox-grid";
 import { rgba } from "polished";
 
-import Tag from "./Tag";
-import Button from "./Button";
-import Image from "./Image";
-import Link from "./Link";
-import Likes from "./Likes";
+import Tag from "../components/Tag";
+import Button from "../components/Button";
+import Image from "../components/Image";
+import Link from "../components/Link";
+import Likes from "../components/Likes";
 import {
   getFavorites,
   addFavorite,

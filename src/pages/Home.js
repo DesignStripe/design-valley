@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Cards from "./Cards";
-import LogoIcon from "./LogoIcon";
 import { FiTwitter } from "react-icons/fi";
-import Button from "./Button";
+
+import Button from "../components/Button";
+import Cards from "../components/Cards";
+import LogoIcon from "../components/LogoIcon";
 
 const Container = styled.div`
   display: flex;

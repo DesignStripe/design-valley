@@ -1,7 +1,7 @@
 import { hot } from "react-hot-loader/root";
 import React, { useState, useEffect } from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import socketIOClient from "socket.io-client";
 
@@ -14,7 +14,8 @@ import ToolContainer from "./containers/ToolContainer";
 import NavContainer from "./containers/NavContainer";
 
 // import Nav from "./components/Nav";
-import About from "./components/About";
+import About from "./pages/About";
+
 import Body from "./components/Body";
 import MainSection from "./components/MainSection";
 import PolicyLabel from "./components/PolicyMessage";
@@ -33,7 +34,6 @@ import {
 } from "./redux/reducers/userSessionReducer";
 import { addVote } from "./redux/reducers/votesReducer";
 import HamburgerMenu from "./components/HamburgerMenu";
-import Terms from "./components/Terms";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -70,14 +70,16 @@ function App() {
         <Body>
           <NavContainer />
           <MainSection id="scrollable-div">
-            <Route path="/" exact component={HomeContainer} />
-            <Route path="/category/:id" exact component={CategoryContainer} />
-            <Route path="/tool/:id" component={ToolContainer} />
-            <Route path="/popular" exact component={PopularContainer} />
-            <Route path="/featured" exact component={FeaturedContainer} />
-            <Route path="/favorites" exact component={FavoritesContainer} />
-            <Route path="/about" exact component={About} />
-            <Route path="/terms" exact component={Terms} />
+            <Switch>
+              <Route path="/" exact component={HomeContainer} />
+              <Route path="/category/:id" exact component={CategoryContainer} />
+              <Route path="/tool/:id" exact component={ToolContainer} />
+              <Route path="/popular" exact component={PopularContainer} />
+              <Route path="/featured" exact component={FeaturedContainer} />
+              <Route path="/favorites" exact component={FavoritesContainer} />
+              <Route path="/about" exact component={About} />
+              <Route component={HomeContainer} />
+            </Switch>
             <Footer />
           </MainSection>
         </Body>

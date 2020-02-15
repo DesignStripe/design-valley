@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { Link, useHistory } from "react-router-dom";
-import Card from "./Card";
+import { useHistory } from "react-router-dom";
+import Card from "../components/Card";
 import { Col } from "react-flexbox-grid";
-import LoadingCard from "./LoadingCard";
+import LoadingCard from "../components/LoadingCard";
 import { rgba } from "polished";
-import Button from "./Button";
-import Avatar from "./Avatar";
+import Button from "../components/Button";
+import Avatar from "../components/Avatar";
 
 const Container = styled(Col)`
   margin-bottom: 2rem;
@@ -35,7 +35,10 @@ const Text = styled.p`
   color: ${props => props.theme.colors.primary[900]};
 `;
 
-const SectionContainer = styled.div`
+const SectionContainer = styled.div``;
+
+const Content = styled.div`
+  margin-left: 0.5rem;
   & > * {
     margin-bottom: 1rem;
   }
@@ -48,11 +51,13 @@ const Section = ({ title, paragraphs, before, after }) => {
   return (
     <SectionContainer>
       <Title>{title}</Title>
-      {before}
-      {paragraphs.map(paragraph => (
-        <Text>{paragraph}</Text>
-      ))}
-      {after}
+      <Content>
+        {before}
+        {paragraphs.map(paragraph => (
+          <Text>{paragraph}</Text>
+        ))}
+        {after}
+      </Content>
     </SectionContainer>
   );
 };
@@ -103,6 +108,8 @@ const Anchor = ({ href, children }) => (
 );
 
 const About = ({}) => {
+  const history = useHistory();
+
   useEffect(() => {
     const scrollableDiv = document.getElementById("scrollable-div");
     console.log(scrollableDiv);
@@ -165,6 +172,23 @@ const About = ({}) => {
             and learn more information.
           </>,
           "Payment can be made by bank transfer, Revolut, or PayPal."
+        ]}
+      />
+      <Section
+        title="Do you keep any data?"
+        paragraphs={[
+          "Your privacy is important to us.",
+          <>
+            All data such as favorites are stored locally on the browser. The
+            only external services are{" "}
+            <Anchor href="https://analytics.google.com/analytics/web/">
+              Google Analytics
+            </Anchor>{" "}
+            and <Anchor href="https://www.hotjar.com/">Hotjar</Anchor> for usage
+            analytics to help us offer a better user experience and identify
+            possible bugs.
+          </>,
+          "Meanwhile, a random, unique, and anonymous string is used to verify identity and secure voting process objectivity. It's not anything related to your personal information."
         ]}
       />
     </Container>

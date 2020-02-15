@@ -153,7 +153,6 @@ const Footer = ({}) => {
         >
           Join Community
         </a>
-        <Link to="/terms">Terms</Link>
         {/* <a>Policy</a> */}
       </PageLinks>
     </Container>

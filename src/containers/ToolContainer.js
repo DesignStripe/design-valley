@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { Col } from "react-flexbox-grid";
 
-import Tool from "../components/Tool";
+import Tool from "../pages/Tool";
+
 import Cards from "../components/Cards";
 import Spinner from "../components/Spinner";
 import BackButton from "../components/BackButton";
