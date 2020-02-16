@@ -37,6 +37,10 @@ function fetchCategorById(id) {
 async function fetchFavorites() {
   const favoritesIds = getFavorites();
 
+  return axios
+    .get(API_BASE_URL + `tools/favorites/${favoritesIds.join(",")}`)
+    .then(res => res.data);
+
   const promiseArray = favoritesIds.map(id => {
     return axios.get(API_BASE_URL + `tools/${id}`).then(res => res.data);
   });
