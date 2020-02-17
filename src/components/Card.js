@@ -143,6 +143,7 @@ const ImageWithLike = ({ onClick, src, isFeatured }) => {
           <FiStar size={20} />
         </IconWrapper>
       )}
+
       <Image
         isFeatured={isFeatured}
         fitContainer
@@ -215,13 +216,6 @@ const Card = ({
             history.push(`/tool/${id}`);
           }}
         />
-        {/* <Image
-          fitContainer
-          src={image}
-          ratio="16:9"
-          isSharp
-          onClick={() => history.push(`/tool/${id}`)}
-        /> */}
 
         <Row>
           <Title isFeatured={isFeatured}>{title}</Title>

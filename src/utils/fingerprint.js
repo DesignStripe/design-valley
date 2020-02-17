@@ -34,7 +34,16 @@ export function getUserInfo() {
       .then(res => res.json())
       .catch(error => emptyIp);
 
-    const userInfo = { ...fingerprint, ...ip };
+    const userInfo = {
+      userAgent: fingerprint.userAgent,
+      webdriver: fingerprint.webdriver,
+      language: fingerprint.language,
+      colorDepth: fingerprint.colorDepth,
+      deviceMemory: fingerprint.deviceMemory,
+      hardwareConcurrency: fingerprint.hardwareConcurrency,
+      ...ip
+    };
+
     resolve(userInfo);
   });
 }
