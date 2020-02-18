@@ -4,6 +4,7 @@ import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import socketIOClient from "socket.io-client";
+import ReactTooltip from "react-tooltip";
 
 import HomeContainer from "./containers/HomeContainer";
 import CategoryContainer from "./containers/CategoryContainer";
@@ -68,6 +69,7 @@ function App() {
         <PolicyLabel />
         {/* <Nav /> */}
         <Body>
+          <ReactTooltip id="global" />
           <NavContainer />
           <MainSection id="scrollable-div">
             <Switch>

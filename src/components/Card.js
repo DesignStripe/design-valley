@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { withRouter } from "react-router-dom";
 import { FiHeart, FiStar } from "react-icons/fi";
 import { useSelector } from "react-redux";
+import ReactTooltip from "react-tooltip";
 
 import Link from "./Link";
 import Tag from "./Tag";
@@ -115,7 +116,7 @@ const IconWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  & > svg {
+  & > div > svg {
     fill: ${p => p.theme.colors.featured};
     stroke: ${p => p.theme.colors.featured};
   }
@@ -140,7 +141,9 @@ const ImageWithLike = ({ onClick, src, isFeatured }) => {
     <ImageWrapper onClick={onClick}>
       {isFeatured && (
         <IconWrapper>
-          <FiStar size={20} />
+          <div data-tip="Sponsored Product" data-for="global">
+            <FiStar size={20} />
+          </div>
         </IconWrapper>
       )}
 
