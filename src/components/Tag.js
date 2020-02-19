@@ -4,8 +4,6 @@ import { rgba } from "polished";
 const Tag = styled.span`
   border: none;
   vertical-align: baseline;
-  background: ${props => rgba(props.color, 0.1)} none;
-  color: ${props => rgba(props.color, 1)};
   background: ${props => props.theme.colors.primary[500]}11 none;
   color: ${props => props.theme.colors.primary[500]};
   margin: 0 0.25em 0 0;
