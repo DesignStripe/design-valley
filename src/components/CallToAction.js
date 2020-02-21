@@ -94,7 +94,7 @@ const CallToAction = ({}) => {
         <Input
           onChange={event => setEmail(event.target.value)}
           value={email}
-          placeholder="jim@design.valley"
+          placeholder="jim@designvalley.club"
           type="email"
         />
         <Button
