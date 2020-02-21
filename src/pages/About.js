@@ -151,8 +151,8 @@ const About = ({}) => {
         paragraphs={[
           <>
             You're able to contribute to DesignValley by contacting me at{" "}
-            <Anchor href="mailto:dimitrisraptis96@gmail.com">
-              dimitrisraptis96@gmail.com
+            <Anchor href="mailto:jim@designvalley.club">
+              jim@designvalley.club
             </Anchor>{" "}
             or <Anchor href="https://twitter.com/d__raptis">DM me</Anchor> at
             Twitter.
@@ -166,8 +166,8 @@ const About = ({}) => {
             For companies wanting to advertise high quality, relevant products
             to designers, I have spots open either on the homepage or at the
             sides of each product page. Drop me an email to{" "}
-            <Anchor href="mailto:dimitrisraptis96@gmail.com">
-              dimitrisraptis96@gmail.com
+            <Anchor href="mailto:jim@designvalley.club">
+              jim@designvalley.club
             </Anchor>{" "}
             and learn more information.
           </>,
