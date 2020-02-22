@@ -101,7 +101,7 @@ const Home = ({
                 )
               }
             >
-              <FiTwitter style={{ marginRight: ".25rem" }} /> Share with your
+              <FiTwitter style={{ marginRight: ".5rem" }} /> Share with your
               friends
             </Button>
           </div>

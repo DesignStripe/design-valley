@@ -17,12 +17,14 @@ const ToolContainer = ({ match }) => {
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    fetchToolById(id).then(res => {
+    const toolPromise = fetchToolById(id).then(res => {
       setTool(res);
     });
-    fetchRelated(id).then(data => {
-      setIsReady(true);
+    const relatedPromise = fetchRelated(id).then(data => {
       setRelatedTools(data);
+    });
+    Promise.all([toolPromise, relatedPromise]).then(() => {
+      setIsReady(true);
     });
   }, [id]);
 

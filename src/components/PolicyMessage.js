@@ -10,7 +10,7 @@ const cookies = new Cookies();
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   position: fixed;
@@ -26,8 +26,13 @@ const Container = styled.div`
   z-index: 1000;
   ${"" /* min-width: 400px;
   max-width: 80%; */}
+
   & > p {
     margin: 0 1rem 0 0.5rem;
+  }
+
+  @media (max-width: 700px) {
+    min-width: 80%;
   }
 `;
 
@@ -54,7 +59,12 @@ const PolicyLabel = () => {
     <Container>
       <span>🍪</span>{" "}
       <p>By using this site, DesignValley bakes some tasty cookies</p>
-      <FiX onClick={setCookie} color="#aaa" style={{ cursor: "pointer" }} />
+      <FiX
+        size={16}
+        onClick={setCookie}
+        color="#aaa"
+        style={{ cursor: "pointer" }}
+      />
     </Container>
   );
 };
