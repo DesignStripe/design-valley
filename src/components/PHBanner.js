@@ -34,7 +34,8 @@ const PHBanner = ({}) => {
   return (
     <Container
       color={"#DA5631"}
-      href="https://www.designvalley.club"
+      href="https://www.producthunt.com/posts/designvalley"
+      rel="noreferrer"
       target="_blank"
     >
       <PHLogo />

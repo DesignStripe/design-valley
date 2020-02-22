@@ -116,7 +116,7 @@ const IconWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  & > div > svg {
+  & > svg {
     fill: ${p => p.theme.colors.featured};
     stroke: ${p => p.theme.colors.featured};
   }
@@ -140,10 +140,8 @@ const ImageWithLike = ({ onClick, src, isFeatured }) => {
   return (
     <ImageWrapper onClick={onClick}>
       {isFeatured && (
-        <IconWrapper>
-          <div data-tip="Sponsored Product" data-for="global">
-            <FiStar size={20} />
-          </div>
+        <IconWrapper data-tip="Sponsored Product" data-for="global">
+          <FiStar size={20} />
         </IconWrapper>
       )}
 
