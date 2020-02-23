@@ -17,7 +17,7 @@ import NavContainer from "./containers/NavContainer";
 // import Nav from "./components/Nav";
 import About from "./pages/About";
 
-import PHBanner from "./components/PHBanner";
+import PHBanner from "./components/SponsorsCTA";
 import Body from "./components/Body";
 import MainSection from "./components/MainSection";
 import PolicyLabel from "./components/PolicyMessage";
