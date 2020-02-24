@@ -16,6 +16,7 @@ import NavContainer from "./containers/NavContainer";
 
 // import Nav from "./components/Nav";
 import About from "./pages/About";
+import Sponsor from "./pages/Sponsor";
 
 import PHBanner from "./components/SponsorsCTA";
 import Body from "./components/Body";
@@ -82,6 +83,7 @@ function App() {
               <Route path="/featured" exact component={FeaturedContainer} />
               <Route path="/favorites" exact component={FavoritesContainer} />
               <Route path="/about" exact component={About} />
+              <Route path="/sponsor" exact component={Sponsor} />
               <Route component={HomeContainer} />
             </Switch>
             <Footer />
