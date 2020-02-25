@@ -1,15 +1,22 @@
 import React, { useState, useEffect } from "react";
 import Home from "../pages/Home";
 
-import { fetchPopular, fetchFavorites, fetchFeatured } from "../api";
+import {
+  fetchPopular,
+  fetchFavorites,
+  fetchFeatured,
+  fetchLatest
+} from "../api";
 
 const HomeContainer = ({ match }) => {
   const [isFeaturedReady, setIsFeaturedReady] = useState(false);
   const [isPopularReady, setIsPopularReady] = useState(false);
   const [isFavoritesReady, setIsFavoritesReady] = useState(false);
+  const [isLatestReady, setIsLatestReady] = useState(false);
   const [featured, setFeatures] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [popular, setPopular] = useState([]);
+  const [latest, setLatest] = useState([]);
 
   useEffect(() => {
     fetchPopular().then(res => {
@@ -24,6 +31,10 @@ const HomeContainer = ({ match }) => {
       setFeatures(res);
       setIsFeaturedReady(true);
     });
+    fetchLatest().then(res => {
+      setLatest(res);
+      setIsLatestReady(true);
+    });
   }, []);
 
   return (
@@ -31,9 +42,11 @@ const HomeContainer = ({ match }) => {
       featured={featured}
       popular={popular}
       favorites={favorites}
+      latest={latest}
       isFeaturedReady={isFeaturedReady}
       isPopularReady={isPopularReady}
       isFavoritesReady={isFavoritesReady}
+      isLatestReady={isLatestReady}
     />
   );
 };

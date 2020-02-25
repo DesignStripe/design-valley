@@ -63,9 +63,11 @@ const Home = ({
   featured,
   popular,
   favorites,
+  latest,
   isFeaturedReady,
   isPopularReady,
-  isFavoritesReady
+  isFavoritesReady,
+  isLatestReady
 }) => {
   return (
     <Container>
@@ -109,7 +111,8 @@ const Home = ({
       </PromoCard>
       <Cards tools={featured} title="Featured" isReady={isFeaturedReady} />
       <Cards tools={popular} title="Popular" isReady={isPopularReady} />
-      <Cards tools={favorites} title="Favorites" isReady={isFavoritesReady} />
+      {/* <Cards tools={favorites} title="Favorites" isReady={isFavoritesReady} /> */}
+      <Cards tools={latest} title="Latest" isReady={isLatestReady} />
     </Container>
   );
 };

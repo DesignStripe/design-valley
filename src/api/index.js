@@ -30,6 +30,10 @@ function fetchPopular() {
   return axios.get(API_BASE_URL + "popular").then(res => res.data);
 }
 
+function fetchLatest() {
+  return axios.get(API_BASE_URL + "latest").then(res => res.data);
+}
+
 function fetchCategorById(id) {
   return axios.get(API_BASE_URL + `categories/${id}`).then(res => res.data);
 }
@@ -71,6 +75,7 @@ export {
   fetchToolsByCategory,
   fetchFeatured,
   fetchPopular,
+  fetchLatest,
   fetchFavorites,
   fetchCategories,
   fetchCategorById,
