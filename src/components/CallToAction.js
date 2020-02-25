@@ -78,12 +78,17 @@ const CallToAction = ({}) => {
   const [email, setEmail] = useState("");
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const subscibeUser = e => {
     e.preventDefault();
+    setLoading(true);
     postEmail(email)
-      .then(res => setSuccess(true))
-      .catch(err => setError(true));
+      .then(res => {
+        setSuccess(true);
+      })
+      .catch(err => setError(true))
+      .finally(() => setLoading(false));
   };
 
   return (
@@ -109,9 +114,10 @@ const CallToAction = ({}) => {
             position: "absolute",
             color: "#fff"
           }}
+          disabled={success || loading}
           onClick={subscibeUser}
         >
-          Subscribe
+          {success ? "Done" : "Subscribe"}
         </Button>
       </Form>
       {success && (
