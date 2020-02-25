@@ -162,7 +162,11 @@ const Tool = ({ image, name, description, id, url, category, votes }) => {
       <Col style={{ marginTop: "2rem" }}>
         <Button
           onClick={() => {
-            const newTab = window.open(url + "/?ref=designvalley", "_blank");
+            const hasTrailingSlash = url.slice(-1) === "/";
+            const refLink = hasTrailingSlash
+              ? "?ref=designvalley"
+              : "/?ref=designvalley";
+            const newTab = window.open(url + refLink, "_blank");
             newTab.focus();
           }}
           style={{
