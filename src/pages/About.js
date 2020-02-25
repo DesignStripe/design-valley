@@ -170,8 +170,8 @@ const About = ({}) => {
               jim@designvalley.club
             </Anchor>{" "}
             and learn more information.
-          </>,
-          "Payment can be made by bank transfer, Revolut, or PayPal."
+          </>
+          // "Payment can be made by bank transfer, Revolut, or PayPal."
         ]}
       />
       <Section

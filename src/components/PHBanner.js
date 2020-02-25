@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { FiX } from "react-icons/fi";
+import FirstMedal from "./Icons/FirstMedal";
 
 const Container = styled.a`
   padding: 1rem;
@@ -39,7 +40,11 @@ const PHBanner = ({}) => {
       target="_blank"
     >
       <PHLogo />
-      DesignValley is on Product Hunt today!
+      DesignValley was <FirstMedal
+        size={32}
+        style={{ margin: "0 0.5rem" }}
+      />{" "}
+      on Product Hunt!
     </Container>
   );
 };

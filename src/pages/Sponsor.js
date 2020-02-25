@@ -239,8 +239,8 @@ const About = ({}) => {
     <Container>
       <PageTitle>Sponsor DesignValley</PageTitle>
       <Section
-        title="FAQ and Guidelines"
-        paragraphs={["dasfsfsa"]}
+        // title="FAQ and Guidelines"
+        paragraphs={[""]}
         after={
           <PlansWrapper>
             <PricingCard>
@@ -251,17 +251,17 @@ const About = ({}) => {
               </div>
               <ul>
                 <li>
-                  <CheckIcon /> Placed in Sidebar
+                  <CheckIcon /> Placed in Home page
                 </li>
                 <li>
-                  <CheckIcon /> Placed in Preview Mode
+                  <CheckIcon /> Placed in Tool View
                 </li>
                 <li>
-                  <CheckIcon /> Featured in Weekly Update twice
+                  <CheckIcon /> Featured in Weekly Newsletter
                 </li>
               </ul>
 
-              <Button className="cta">Become a Sponsor</Button>
+              <Button className="cta">Contact</Button>
             </PricingCard>
 
             <PricingCard isPrimary>
@@ -272,30 +272,30 @@ const About = ({}) => {
               </div>
               <ul>
                 <li>
-                  <CheckIcon /> Placed in Sidebar
+                  <CheckIcon /> Placed in Home page
                 </li>
                 <li>
-                  <CheckIcon /> Placed in Preview Mode
+                  <CheckIcon /> Placed in Tool View
                 </li>
                 <li>
-                  <CheckIcon /> Featured in Weekly Update twice
+                  <CheckIcon /> Featured in Weekly Newsletter
                 </li>
               </ul>
 
-              <Button className="cta">Become a Sponsor</Button>
+              <Button className="cta">Contact</Button>
             </PricingCard>
           </PlansWrapper>
         }
       />
 
-      <Section
+      {/* <Section
         title="FAQ and Guidelines"
         paragraphs={[
           "1. As a sponsor you can be assured that your link will not fight for position with any other sponsored links since there will be only one sponsored link per issue.",
           "2. Sponsored links should be relevant to Mobbin's design-focused audience and link to high-quality, well-designed content.",
           '3. If you use Google Analytics for tracking your website, visits to your sponsored link or job post can be tracked with the UTM tag "?ref=mobbin" and will show the number of incoming visitors from the sponsored link.'
         ]}
-      />
+      /> */}
     </Container>
   );
 };
