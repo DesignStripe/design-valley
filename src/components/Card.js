@@ -31,13 +31,17 @@ const Container = styled.div`
 
   width: calc(100% - 1rem);
   box-sizing: border-box;
-  @media (min-width: 40rem) {
+
+  @media (min-width: 32rem) {
     width: calc(50% - 2rem);
   }
   @media (min-width: 56rem) {
-    width: calc(33.33% - 2rem);
+    width: calc(50% - 2rem);
   }
   @media (min-width: 64rem) {
+    width: calc(33.33% - 2rem);
+  }
+  @media (min-width: 75rem) {
     width: calc(25% - 2rem);
   }
   @media (min-width: 128rem) {
