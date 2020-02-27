@@ -9,7 +9,9 @@ function fetchToolById(id) {
 }
 
 function fetchCategories(id) {
-  return axios.get(API_BASE_URL + "categories").then(res => res.data);
+  return axios
+    .get(API_BASE_URL + "categories")
+    .then(res => res.data.sort((a, b) => (a.name > b.name ? 1 : -1)));
 }
 
 function fetchToolsByCategory(id) {
