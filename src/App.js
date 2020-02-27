@@ -13,6 +13,7 @@ import FavoritesContainer from "./containers/FavoritesContainer";
 import FeaturedContainer from "./containers/FeaturedContainer";
 import ToolContainer from "./containers/ToolContainer";
 import NavContainer from "./containers/NavContainer";
+import LatestContainer from "./containers/LatestContainer";
 
 // import Nav from "./components/Nav";
 import About from "./pages/About";
@@ -74,13 +75,14 @@ function App() {
         <Body>
           <ReactTooltip id="global" />
           <NavContainer />
-          <PHBanner />
+          {/* <PHBanner /> */}
           <MainSection id="scrollable-div">
             <Switch>
               <Route path="/" exact component={HomeContainer} />
               <Route path="/category/:id" exact component={CategoryContainer} />
               <Route path="/tool/:id" exact component={ToolContainer} />
               <Route path="/popular" exact component={PopularContainer} />
+              <Route path="/latest" exact component={LatestContainer} />
               <Route path="/featured" exact component={FeaturedContainer} />
               <Route path="/favorites" exact component={FavoritesContainer} />
               <Route path="/about" exact component={About} />

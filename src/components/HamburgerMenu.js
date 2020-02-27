@@ -2,14 +2,7 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
 import { rgba } from "polished";
-import {
-  FiHeart,
-  FiStar,
-  FiTrendingUp,
-  FiZap,
-  FiMenu,
-  FiX
-} from "react-icons/fi";
+import { FiHeart, FiStar, FiGlobe, FiZap, FiMenu, FiX } from "react-icons/fi";
 import { useDispatch } from "react-redux";
 import { setCurrentCategory } from "../redux/reducers/categoriesReducer";
 import { bubble as Menu } from "react-burger-menu";
@@ -44,7 +37,7 @@ const LogoWrapper = styled.div`
 
 const StyledMenu = styled(Menu)`
   height: calc(100% - 2rem);
-  min-width: 250px;
+  min-width: 230px;
   margin: 1rem;
   padding: 1rem;
   border-radius: 8px;
@@ -173,6 +166,12 @@ const ScrollableSection = styled.div`
 `;
 
 const fixedItems = [
+  {
+    icon: <FiGlobe fill="none" color="#fff" />,
+    name: "Latest",
+    id: "latest",
+    isHighlighted: true
+  },
   {
     icon: <FiHeart fill="none" color="#fff" />,
     name: "Favorites",

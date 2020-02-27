@@ -6,6 +6,7 @@ import { Col } from "react-flexbox-grid";
 import LoadingCard from "./LoadingCard";
 import { rgba } from "polished";
 import Button from "./Button";
+import NewBadge from "./UI/Badges/NewBadge";
 
 const Container = styled(Col)`
   margin-bottom: 2rem;
@@ -74,7 +75,8 @@ const Cards = ({
   previous,
   isFeatured,
   isReady,
-  isRelated = false
+  isRelated = false,
+  isNew = false
 }) => {
   const history = useHistory();
 

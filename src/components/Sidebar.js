@@ -2,7 +2,7 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import { Menu, Sidebar } from "semantic-ui-react";
-import { FiHeart, FiStar, FiTrendingUp, FiZap } from "react-icons/fi";
+import { FiHeart, FiStar, FiGlobe, FiZap } from "react-icons/fi";
 import { useDispatch } from "react-redux";
 import { setCurrentCategory } from "../redux/reducers/categoriesReducer";
 import Logo from "./Logo";
@@ -69,7 +69,7 @@ const EmptyRect = styled.div`
 
 const StyledSidebar = styled(Sidebar)`
   height: calc(100% - 2rem);
-  min-width: 250px;
+  min-width: 230px;
   margin: 1rem;
   padding: 1rem;
   border-radius: 8px;
@@ -166,6 +166,12 @@ const ScrollableSection = styled.div`
 
 const fixedItems = [
   {
+    icon: <FiGlobe fill="none" color="#fff" />,
+    name: "Latest",
+    id: "latest",
+    isHighlighted: true
+  },
+  {
     icon: <FiHeart fill="none" color="#fff" />,
     name: "Favorites",
     id: "favorites",
@@ -205,7 +211,7 @@ const VerticalSidebar = ({ history, categories, isLoading }) => {
     >
       <LogoWrapper onClick={() => history.push(`/`)}>
         <Logo width={180} />
-        <BetaBadge>Beta</BetaBadge>
+        {/* <BetaBadge>Beta</BetaBadge> */}
 
         {/* <b>Design Valley</b> */}
       </LogoWrapper>

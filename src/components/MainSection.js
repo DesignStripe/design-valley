@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const MainSection = styled.div`
-  width: calc(100vw - 200px);
+  width: calc(100vw - 230px);
   height: calc(100vh; - 2rem);
   float: right;
   overflow-y: scroll;

@@ -1,115 +1,18 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { useHistory } from "react-router-dom";
-import Card from "../components/Card";
 import { Col } from "react-flexbox-grid";
-import LoadingCard from "../components/LoadingCard";
-import { rgba } from "polished";
-import Button from "../components/Button";
+
+import Anchor from "../components/UI/Anchor";
 import Avatar from "../components/Avatar";
+import FaqSection from "../components/UI/FaqSection";
+import { PageTitle } from "../components/UI/Typography";
+import { ProductHunt } from "../components/UI/Testinmonials";
 
 const Container = styled(Col)`
   margin-bottom: 2rem;
 `;
 
-const PageTitle = styled.h1`
-  height: 32px;
-  ${"" /* margin: 1rem 0 1.5rem 1rem; */}
-  margin: 0;
-  margin-bottom: 2rem;
-  color: ${props => props.theme.colors.primary[900]};
-`;
-
-const Title = styled.h2`
-  font-size: 1.4rem;
-  margin: 0;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  color: ${props => props.theme.colors.primary[900]};
-`;
-const Text = styled.p`
-  font-size: 1rem;
-  line-height: 1.7;
-  margin: 0;
-  margin-bottom: 2rem;
-  color: ${props => props.theme.colors.primary[900]};
-`;
-
-const SectionContainer = styled.div``;
-
-const Content = styled.div`
-  margin-left: 0.5rem;
-  & > * {
-    margin-bottom: 1rem;
-  }
-  & > *:last-child {
-    margin-bottom: 3rem;
-  }
-`;
-
-const Section = ({ title, paragraphs, before, after }) => {
-  return (
-    <SectionContainer>
-      <Title>{title}</Title>
-      <Content>
-        {before}
-        {paragraphs.map(paragraph => (
-          <Text>{paragraph}</Text>
-        ))}
-        {after}
-      </Content>
-    </SectionContainer>
-  );
-};
-
-const Centered = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-`;
-
-const StyledA = styled.a`
-  font-weight: 500;
-  color: ${props => props.theme.colors.primary[900]};
-  text-decoration: none;
-
-    background-image: linear-gradient(120deg, 
-      ${props => rgba(props.theme.colors.primary[100], 0.5)}, 
-      ${props => rgba(props.theme.colors.primary[100], 0.5)} 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 0.5em;
-    background-position: 0 100%;
-    transition: background-size 0.25s ease-in;
-    transition: color 0.25s 0.1 ease-in;
-  }
-
-  &:hover {
-    background-image: linear-gradient(120deg, 
-      ${props => rgba(props.theme.colors.primary[100], 1)}, 
-      ${props => rgba(props.theme.colors.primary[100], 1)} 100%);
-    background-size: 100% 88% !important;
-  }
-
-  &:focus,
-  &:hover,
-  &:visited,
-  &:link,
-  &:active {
-    text-decoration: none;
-  }
-`;
-
-const Anchor = ({ href, children }) => (
-  <StyledA href={href} rel="noreferrer noopener" target="_blank">
-    {children}
-  </StyledA>
-);
-
 const About = ({}) => {
-  const history = useHistory();
-
   useEffect(() => {
     const scrollableDiv = document.getElementById("scrollable-div");
     console.log(scrollableDiv);
@@ -118,8 +21,8 @@ const About = ({}) => {
 
   return (
     <Container>
-      <PageTitle>About </PageTitle>
-      <Section
+      <PageTitle>About</PageTitle>
+      <FaqSection
         title="Who runs DesignValley?"
         paragraphs={[
           "Hey, Jim here. I'm the man behind DesignValley. My background is both in design and engineering and I strive to craft usable apps and user interfaces for humans.",
@@ -140,13 +43,14 @@ const About = ({}) => {
           />
         }
       />
-      <Section
+      <FaqSection
         title="What is DesignValley?"
         paragraphs={[
+          <ProductHunt />,
           "DesignValley is a curated collection of remarkable design apps and resources. The whole project started as a Github README.md file that stored some useful design tools. Slowly, but steadily, this list was getting richer and richer. That's when I decided to create a community-based and interactive application to showcase it and let people participate by voting and sharing these goodies."
         ]}
       />
-      <Section
+      <FaqSection
         title="How can I suggest a resource?"
         paragraphs={[
           <>
@@ -159,7 +63,7 @@ const About = ({}) => {
           </>
         ]}
       />
-      <Section
+      <FaqSection
         title="How to become a sponsor?"
         paragraphs={[
           <>
@@ -174,7 +78,7 @@ const About = ({}) => {
           // "Payment can be made by bank transfer, Revolut, or PayPal."
         ]}
       />
-      <Section
+      <FaqSection
         title="Do you keep any data?"
         paragraphs={[
           "Your privacy is important to us.",

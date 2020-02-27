@@ -15,7 +15,7 @@ const Container = styled.header`
     margin: auto 1rem;
     border-radius: 8px;
     padding: 1rem;
-    min-width: 250px;
+    min-width: 200px;
     box-sizing: border-box;
     text-decoration: none;
     color: ${props => props.theme.colors.primary[500]};

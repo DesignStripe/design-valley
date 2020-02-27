@@ -1,0 +1,44 @@
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import { FiX } from "react-icons/fi";
+import FirstMedal from "../Icons/FirstMedal";
+
+const Container = styled.a`
+  padding: 1rem;
+  margin-left: 0;
+  background-color: ${props => props.color};
+  color: #212121;
+  z-index: 10000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 300px;
+
+  &,
+  &:focus,
+  &:hover,
+  &:active {
+    box-shadow: none;
+    outline: none;
+    text-decoration: none;
+  }
+`;
+
+export const ProductHunt = ({}) => {
+  return (
+    <Container
+      color={"gold"}
+      href="https://www.producthunt.com/posts/designvalley"
+      rel="noreferrer"
+      target="_blank"
+    >
+      DesignValley was{" "}
+      <FirstMedal color="#212121" size={32} style={{ margin: "0 0.5rem" }} /> on
+      Product Hunt!
+    </Container>
+  );
+};

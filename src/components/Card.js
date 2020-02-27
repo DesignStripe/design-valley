@@ -136,7 +136,7 @@ function getInitialSaveStatus(id) {
   return isSaved;
 }
 
-const ImageWithLike = ({ onClick, src, isFeatured }) => {
+const ImageWithStar = ({ onClick, src, isFeatured }) => {
   return (
     <ImageWrapper onClick={onClick}>
       {isFeatured && (
@@ -198,28 +198,25 @@ const Card = ({
 
   return (
     <Container>
-      {/* <ImageWithLike src={image} /> */}
       <CardContent>
-        <ImageWithLike
-          isFeatured={isFeatured}
-          src={image}
-          onClick={() => {
-            if (isRelated) {
-              const scrollableDiv = document.getElementById("scrollable-div");
-              console.log(scrollableDiv);
-              scrollableDiv.scrollTop = 0;
-
-              // scrollableDiv.scrollTo({
-              //   bottom: 0,
-              //   behavior: "smooth"
-              // });
-            }
-            history.push(`/tool/${id}`);
-          }}
-        />
+        <Link to={`/tool/${id}`}>
+          <ImageWithStar
+            isFeatured={isFeatured}
+            src={image}
+            onClick={() => {
+              if (isRelated) {
+                const scrollableDiv = document.getElementById("scrollable-div");
+                console.log(scrollableDiv);
+                scrollableDiv.scrollTop = 0;
+              }
+            }}
+          />
+        </Link>
 
         <Row>
-          <Title isFeatured={isFeatured}>{title}</Title>
+          <Link to={`/tool/${id}`}>
+            <Title isFeatured={isFeatured}>{title}</Title>
+          </Link>
 
           <Likes
             isFeatured={isFeatured}

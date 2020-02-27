@@ -6,6 +6,7 @@ import theme from "../utils/theme";
 import { rgba } from "polished";
 
 const Container = styled.div`
+  z-index: 20;
   display: flex;
   flex-direction: row;
   align-items: center;

@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import Category from "../pages/Category";
-import { fetchFeatured } from "../api";
+import { fetchLatest } from "../api";
 
-const FeaturedContainer = ({}) => {
-  const [featured, setFeatured] = useState([]);
+const LatestContainer = ({}) => {
+  const [latest, setLatest] = useState([]);
   const [isReady, setIsReady] = useState(false);
   const [isError, setIsError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
-    fetchFeatured()
+    fetchLatest()
       .then(data => {
-        setFeatured(data);
+        setLatest(data);
         setIsReady(true);
       })
       .catch(error => {
@@ -20,7 +20,7 @@ const FeaturedContainer = ({}) => {
       });
   }, []);
 
-  return <Category tools={featured} title="Featured" isReady={isReady} />;
+  return <Category tools={latest} title="Latest" isReady={isReady} />;
 };
 
-export default FeaturedContainer;
+export default LatestContainer;

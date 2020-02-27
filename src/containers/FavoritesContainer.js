@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Cards from "../components/Cards";
+import Category from "../pages/Category";
 import { fetchFavorites } from "../api";
 
 const FavoritesContainer = () => {
@@ -20,7 +20,7 @@ const FavoritesContainer = () => {
       });
   }, []);
 
-  return <Cards tools={favorites} title="Favorites" isReady={isReady} />;
+  return <Category tools={favorites} title="Favorites" isReady={isReady} />;
 };
 
 export default FavoritesContainer;
