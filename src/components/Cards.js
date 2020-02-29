@@ -108,7 +108,7 @@ const Cards = ({
                 votes={tool.votes ? tool.votes.length : 0}
                 isFeatured={
                   tool.isFeatured ||
-                  tool.name === "CopyPalette" ||
+                  tool.name === "Vectary" ||
                   tool.name === "Wireframer" ||
                   tool.name === "Figma" ||
                   tool.name === "VisualEyes"

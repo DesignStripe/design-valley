@@ -112,7 +112,8 @@ const CallToAction = ({}) => {
             margin: 0,
             height: "auto",
             position: "absolute",
-            color: "#fff"
+            color: "#fff",
+            cursor: success || loading ? "not-allowed" : "pointer"
           }}
           disabled={success || loading}
           onClick={subscibeUser}
