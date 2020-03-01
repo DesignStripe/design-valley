@@ -153,6 +153,7 @@ const Footer = ({}) => {
         >
           Join Community
         </a>
+        <Link to="/sponsor">Sponsor</Link>
         {/* <a>Policy</a> */}
       </PageLinks>
     </Container>

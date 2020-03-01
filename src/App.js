@@ -19,17 +19,12 @@ import LatestContainer from "./containers/LatestContainer";
 import About from "./pages/About";
 import Sponsor from "./pages/Sponsor";
 
-import SponsorsCTA from "./components/SponsorsCTA";
-import PHBanner from "./components/PHBanner";
 import Body from "./components/Body";
 import MainSection from "./components/MainSection";
-import PolicyLabel from "./components/PolicyMessage";
-import FloatingHeader from "./components/FloatingHeader";
 import Footer from "./components/Footer";
 
 import theme from "./utils/theme";
 import { getFingerprint, getIp, getUserInfo } from "./utils/fingerprint";
-import useWindowSize from "./hooks/useWindowSize";
 
 import {
   setFingerprint,
@@ -38,7 +33,6 @@ import {
   setSocket
 } from "./redux/reducers/userSessionReducer";
 import { addVote } from "./redux/reducers/votesReducer";
-import HamburgerMenu from "./components/HamburgerMenu";
 
 const GlobalStyle = createGlobalStyle`
   body {
