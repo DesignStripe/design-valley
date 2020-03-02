@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { Col } from "react-flexbox-grid";
+import { Col, Row } from "react-flexbox-grid";
 
 import Anchor from "../components/UI/Anchor";
 import Avatar from "../components/Avatar";
 import FaqSection from "../components/UI/FaqSection";
 import { PageTitle } from "../components/UI/Typography";
-import { ProductHunt } from "../components/UI/Testinmonials";
+import { ProductHunt, Prototypr } from "../components/UI/Testinmonials";
 
 const Container = styled(Col)`
   margin-bottom: 2rem;
@@ -46,8 +46,12 @@ const About = ({}) => {
       <FaqSection
         title="What is DesignValley?"
         paragraphs={[
-          <ProductHunt />,
-          "DesignValley is a curated collection of remarkable design apps and resources. The whole project started as a Github README.md file that stored some useful design tools. Slowly, but steadily, this list was getting richer and richer. That's when I decided to create a community-based and interactive application to showcase it and let people participate by voting and sharing these goodies."
+          "DesignValley is a curated collection of remarkable design apps and resources. The whole project started as a Github README.md file that stored some useful design tools. Slowly, but steadily, this list was getting richer and richer. That's when I decided to create a community-based and interactive application to showcase it and let people participate by voting and sharing these goodies.",
+          "Featured on:",
+          <Row>
+            <ProductHunt />
+            <Prototypr />
+          </Row>
         ]}
       />
       <FaqSection
