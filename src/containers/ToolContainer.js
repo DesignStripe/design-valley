@@ -15,20 +15,22 @@ const ToolContainer = ({ match }) => {
   const [tool, setTool] = useState(null);
   const [relatedTools, setRelatedTools] = useState([]);
   const [isReady, setIsReady] = useState(false);
+  const [isRelatedReady, setIsRelatedReady] = useState(false);
 
   useEffect(() => {
-    const toolPromise = fetchToolById(id).then(res => {
+    fetchToolById(id).then(res => {
       setTool(res);
-    });
-    const relatedPromise = fetchRelated(id).then(data => {
-      setRelatedTools(data);
-    });
-    Promise.all([toolPromise, relatedPromise]).then(() => {
       setIsReady(true);
+    });
+    fetchRelated(id).then(data => {
+      setRelatedTools(data);
+      setIsRelatedReady(true);
     });
   }, [id]);
 
   if (!isReady) return <Spinner />;
+
+  console.log(tool);
 
   return (
     <Col>
@@ -38,7 +40,7 @@ const ToolContainer = ({ match }) => {
       <Cards
         tools={relatedTools}
         title={"Related Tools:"}
-        isReady={isReady}
+        isReady={isRelatedReady}
         isRelated
       />
     </Col>

@@ -31,7 +31,7 @@ const HomeContainer = ({ match }) => {
       setFeatures(res);
       setIsFeaturedReady(true);
     });
-    fetchLatest().then(res => {
+    fetchLatest(8).then(res => {
       setLatest(res);
       setIsLatestReady(true);
     });

@@ -88,7 +88,8 @@ function getInitialSaveStatus(id) {
   return isSaved;
 }
 
-const Tool = ({ image, name, description, id, url, category, votes }) => {
+const Tool = props => {
+  const { image, name, description, id, url, category, votes } = props;
   const [isSaved, setIsSaved] = useState(getInitialSaveStatus(id));
 
   useEffect(() => {
@@ -102,7 +103,7 @@ const Tool = ({ image, name, description, id, url, category, votes }) => {
     state => state.votes.find(vote => vote.id === id) || null
   );
 
-  const newVotes = reduxVotes ? reduxVotes.newVotes : votes.length;
+  const newVotes = reduxVotes ? reduxVotes.newVotes : votes;
 
   function saveTool(id) {
     addFavorite(id);
@@ -121,6 +122,7 @@ const Tool = ({ image, name, description, id, url, category, votes }) => {
       userSession: { ip, fingerprint, userInfo }
     });
   }
+  console.log(category);
 
   return (
     <Container lg={8}>
@@ -155,7 +157,7 @@ const Tool = ({ image, name, description, id, url, category, votes }) => {
       <Col>
         <Description>{description}</Description>
         <Link to={`/category/${category._id}`}>
-          <Tag color={category.color}>{category.name}</Tag>
+          <Tag>{category.name}</Tag>
         </Link>
       </Col>
       <Col></Col>

@@ -32,8 +32,8 @@ function fetchPopular() {
   return axios.get(API_BASE_URL + "popular").then(res => res.data);
 }
 
-function fetchLatest() {
-  return axios.get(API_BASE_URL + "latest").then(res => res.data);
+function fetchLatest(amount = 4) {
+  return axios.get(API_BASE_URL + `latest/${amount}`).then(res => res.data);
 }
 
 function fetchCategorById(id) {

@@ -9,7 +9,7 @@ const LatestContainer = ({}) => {
   const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
-    fetchLatest()
+    fetchLatest(20)
       .then(data => {
         setLatest(data);
         setIsReady(true);

@@ -97,7 +97,8 @@ const Description = styled.p`
   -webkit-box-orient: vertical;
   overflow: hidden;
 
-  color: rgba(0, 0, 0, 0.4);
+  color: ${props => props.theme.colors.primary[200]};
+  font-weight: 300;
 
   margin: 0 0 1rem 0;
 `;
@@ -176,11 +177,10 @@ const Card = ({
   const { socket, ip, fingerprint, userInfo } = useSelector(
     state => state.userSession
   );
-  const reduxVotes = useSelector(
-    state => state.votes.find(vote => vote.id === id) || null
+  const socketTool = useSelector(
+    state => state.votes.find(tool => tool.id === id) || null
   );
-
-  const newVotes = reduxVotes ? reduxVotes.newVotes : votes;
+  const newVotes = socketTool ? socketTool.newVotes : votes;
 
   function saveTool(id) {
     addFavorite(id);
@@ -231,10 +231,10 @@ const Card = ({
         </Row>
 
         {/* <Description> {description}</Description> */}
-        {/* 
-        <Row>
+
+        {/* <Row>
           <Link to={`/category/${category._id}`}>
-            <Tag color={category.color}>{category.name}</Tag>
+            <Tag>{category.name}</Tag>
           </Link>
         </Row> */}
 

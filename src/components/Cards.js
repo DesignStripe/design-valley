@@ -105,7 +105,7 @@ const Cards = ({
                 title={tool.name}
                 category={tool.category}
                 description={tool.description}
-                votes={tool.votes ? tool.votes.length : 0}
+                votes={tool.votes}
                 isFeatured={
                   tool.isFeatured ||
                   tool.name === "Vectary" ||
