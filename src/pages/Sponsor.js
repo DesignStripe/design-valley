@@ -2,12 +2,26 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import { Col } from "react-flexbox-grid";
+import { rgba } from "polished";
 
 import Button from "../components/Button";
 import FaqSection from "../components/UI/FaqSection";
+import toolPage from "../assets/Sponsorship - Tool page.jpg";
+import homePage from "../assets/Sponsorship - Feed.jpg";
 
 const Container = styled(Col)`
   margin-bottom: 2rem;
+`;
+
+const Image = styled.img`
+  margin-bottom: 1.5rem;
+  width: 50%;
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+
+  border-radius: 10px;
+  box-shadow: 0px 28px 40px -32px ${p => rgba(p.theme.colors.primary[500], 1)};
 `;
 
 const PageTitle = styled.h1`
@@ -78,6 +92,8 @@ const PricingCard = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  box-shadow: 0px 28px 40px -32px ${p => rgba(p.theme.colors.primary[500], 1)};
 
   .title {
     font-size: 1.1875rem;
@@ -220,7 +236,10 @@ const Sponsor = ({}) => {
         ]}
       />
 
-      <FaqSection title="More Info coming soon..." paragraphs={[]} />
+      <FaqSection
+        title="Sponsor Spots"
+        paragraphs={[<Image src={homePage} />, <Image src={toolPage} />]}
+      />
     </Container>
   );
 };
