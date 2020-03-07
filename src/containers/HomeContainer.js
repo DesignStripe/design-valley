@@ -11,22 +11,18 @@ import {
 const HomeContainer = ({ match }) => {
   const [isFeaturedReady, setIsFeaturedReady] = useState(false);
   const [isPopularReady, setIsPopularReady] = useState(false);
-  const [isFavoritesReady, setIsFavoritesReady] = useState(false);
+  // const [isFavoritesReady, setIsFavoritesReady] = useState(false);
   const [isLatestReady, setIsLatestReady] = useState(false);
   const [featured, setFeatures] = useState([]);
-  const [favorites, setFavorites] = useState([]);
+  // const [favorites, setFavorites] = useState([]);
   const [popular, setPopular] = useState([]);
   const [latest, setLatest] = useState([]);
 
   useEffect(() => {
-    fetchPopular().then(res => {
-      setPopular(res);
-      setIsPopularReady(true);
-    });
-    fetchFavorites().then(res => {
-      setFavorites(res);
-      setIsFavoritesReady(true);
-    });
+    // fetchFavorites().then(res => {
+    //   setFavorites(res);
+    //   setIsFavoritesReady(true);
+    // });
     fetchFeatured().then(res => {
       setFeatures(res);
       setIsFeaturedReady(true);
@@ -35,18 +31,22 @@ const HomeContainer = ({ match }) => {
       setLatest(res);
       setIsLatestReady(true);
     });
+    fetchPopular(8).then(res => {
+      setPopular(res);
+      setIsPopularReady(true);
+    });
   }, []);
 
   return (
     <Home
       featured={featured}
       popular={popular}
-      favorites={favorites}
       latest={latest}
       isFeaturedReady={isFeaturedReady}
       isPopularReady={isPopularReady}
-      isFavoritesReady={isFavoritesReady}
       isLatestReady={isLatestReady}
+      // favorites={favorites}
+      // isFavoritesReady={isFavoritesReady}
     />
   );
 };

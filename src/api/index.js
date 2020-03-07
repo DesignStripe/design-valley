@@ -28,8 +28,8 @@ function fetchRelated(id) {
     .then(res => shuffle(res.data).slice(0, 4));
 }
 
-function fetchPopular() {
-  return axios.get(API_BASE_URL + "popular").then(res => res.data);
+function fetchPopular(amount = 4) {
+  return axios.get(API_BASE_URL + `popular/${amount}`).then(res => res.data);
 }
 
 function fetchLatest(amount = 4) {
@@ -46,14 +46,6 @@ async function fetchFavorites() {
   return axios
     .get(API_BASE_URL + `tools/favorites/${favoritesIds.join(",")}`)
     .then(res => res.data);
-
-  const promiseArray = favoritesIds.map(id => {
-    return axios.get(API_BASE_URL + `tools/${id}`).then(res => res.data);
-  });
-
-  return await Promise.all(promiseArray).then(data =>
-    data.filter(item => item !== "")
-  );
 }
 
 function postEmail(email) {

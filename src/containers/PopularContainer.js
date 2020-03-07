@@ -8,7 +8,7 @@ const PopularContainer = ({ match }) => {
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    fetchPopular().then(res => {
+    fetchPopular(20).then(res => {
       setPopular(res);
       setIsReady(true);
     });
