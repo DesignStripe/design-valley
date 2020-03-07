@@ -28,8 +28,16 @@ const Home = ({
         title="Latest"
         isReady={isLatestReady}
         isNew={true}
+        hasMore
+        moreLink="/latest"
       />
-      <Cards tools={popular} title="Popular" isReady={isPopularReady} />
+      <Cards
+        tools={popular}
+        title="Popular"
+        isReady={isPopularReady}
+        hasMore
+        moreLink="/popular"
+      />
       {/* <Cards tools={favorites} title="Favorites" isReady={isFavoritesReady} /> */}
     </Container>
   );

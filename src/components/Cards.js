@@ -1,12 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import Link from "./Link";
 import Card from "./Card";
-import { Col } from "react-flexbox-grid";
+import { Col, Row } from "react-flexbox-grid";
 import LoadingCard from "./LoadingCard";
-import { rgba } from "polished";
+import { rgba, borderRadius } from "polished";
 import Button from "./Button";
 import NewBadge from "./UI/Badges/NewBadge";
+import theme from "../utils/theme";
+import { FiArrowRight } from "react-icons/fi";
 
 const Container = styled(Col)`
   margin-bottom: 2rem;
@@ -19,6 +22,7 @@ const Title = styled.h2`
   ${"" /* margin: 1rem 0 1.5rem 1rem; */}
   margin: 0;
   margin-bottom: 1rem;
+
   color: ${props => props.theme.colors.primary[900]};
 `;
 
@@ -76,7 +80,9 @@ const Cards = ({
   isFeatured,
   isReady,
   isRelated = false,
-  isNew = false
+  isNew = false,
+  hasMore = false,
+  moreLink
 }) => {
   const history = useHistory();
 
@@ -89,6 +95,7 @@ const Cards = ({
   return (
     <Container>
       {title && <Title>{title}</Title>}
+
       <CardContainer>
         {!isReady ? (
           <LoadingCard />
@@ -119,6 +126,28 @@ const Cards = ({
           </>
         )}
       </CardContainer>
+
+      {hasMore && (
+        <Row center="xs" middle="xs">
+          <Link
+            to={moreLink}
+            style={{
+              backgroundColor: rgba(theme.colors.primary[100], 0.3),
+              color: theme.colors.primary[900],
+              padding: "11px 25px",
+              fontSize: "14px",
+              fontWeight: "medium",
+              borderRadius: "10px",
+              marginTop: "2rem"
+            }}
+          >
+            <Row center="xs" middle="xs">
+              See more
+              <FiArrowRight style={{ marginLeft: "0.25rem" }} />
+            </Row>
+          </Link>
+        </Row>
+      )}
       {next && previous && (
         <div>
           <Link to={previous}>Previous</Link>
