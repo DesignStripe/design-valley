@@ -1,9 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { FiTwitter } from "react-icons/fi";
+import { FiTwitter, FiAward, FiUser, FiUsers } from "react-icons/fi";
 
 import Button from "./Button";
+import Link from "./Link";
 import LogoIcon from "./LogoIcon";
+
+import theme from "../utils/theme";
 
 const Container = styled.div`
   display: flex;
@@ -75,6 +78,35 @@ const HeaderBanner = ({}) => {
             }}
             onClick={() =>
               window.open(
+                "https://spectrum.chat/designvalley?tab=posts",
+                "_blank"
+              )
+            }
+          >
+            <FiUsers
+              style={{ marginRight: ".5rem", strokeWidth: "2.5px" }}
+              size={16}
+            />
+            Join the community
+          </Button>
+        </div>
+
+        {/* <div>
+          <Button
+            variant="primary"
+            style={{
+              right: "8px",
+              top: "8px",
+              padding: "11px",
+              fontSize: "12px",
+              margin: 0,
+              height: "auto",
+              color: "#fff",
+              display: "flex",
+              alignItems: "center"
+            }}
+            onClick={() =>
+              window.open(
                 "https://twitter.com/intent/tweet?text=" +
                   "🥇%20DesignValley%20is%20the%20ultimate%20design%20tools%20depository%20curated%20by%20@d__raptis.%0A%0AFind,%20Vote,%20Save%20and%20Share%20the%20best%20design%20tools%20and%20resources%20now%20https://designvalley.club",
                 "_blank"
@@ -84,7 +116,34 @@ const HeaderBanner = ({}) => {
             <FiTwitter style={{ marginRight: ".5rem" }} /> Share with your
             friends
           </Button>
-        </div>
+        </div> */}
+        {/* <div>
+          <Link to="/sponsor" style={{ color: "white" }}>
+            <Button
+              variant="primary"
+              style={{
+                right: "8px",
+                top: "8px",
+                padding: "11px",
+                fontSize: "12px",
+                margin: 0,
+                height: "auto",
+                color: "#fff",
+                display: "flex",
+                alignItems: "center"
+              }}
+              // onClick={() =>
+              // window.open(
+              //   "https://twitter.com/intent/tweet?text=" +
+              //     "🥇%20DesignValley%20is%20the%20ultimate%20design%20tools%20depository%20curated%20by%20@d__raptis.%0A%0AFind,%20Vote,%20Save%20and%20Share%20the%20best%20design%20tools%20and%20resources%20now%20https://designvalley.club",
+              //   "_blank"
+              // )
+              // }
+            >
+              <FiAward style={{ marginRight: ".5rem" }} /> Become a Sponsor
+            </Button>
+          </Link>
+        </div> */}
       </Info>
     </Container>
   );
