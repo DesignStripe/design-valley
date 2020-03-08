@@ -39,7 +39,7 @@ const Description = styled.p`
 
   color: ${props => props.theme.colors.primary[700]};
 
-
+  line-height: 1.7;
   margin: 0 0 1rem 0;
 `;
 
