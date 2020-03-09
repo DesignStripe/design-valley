@@ -79,13 +79,18 @@ const CallToAction = ({}) => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [alreadyExists, setAlreadyExists] = useState(false);
 
   const subscibeUser = e => {
     e.preventDefault();
     setLoading(true);
     postEmail(email)
       .then(res => {
-        setSuccess(true);
+        if (res.data) {
+          setSuccess(true);
+        } else {
+          setAlreadyExists(true);
+        }
       })
       .catch(err => setError(true))
       .finally(() => setLoading(false));
@@ -124,6 +129,11 @@ const CallToAction = ({}) => {
       {success && (
         <p style={{ marginTop: "0.5rem" }}>
           👍 You've subscribed successfully!
+        </p>
+      )}
+      {alreadyExists && (
+        <p style={{ marginTop: "0.5rem" }}>
+          🙀 You're already subscribed to our newsletter.
         </p>
       )}
       {error && (
