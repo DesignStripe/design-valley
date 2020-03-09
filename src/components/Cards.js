@@ -128,7 +128,7 @@ const Cards = ({
       </CardContainer>
 
       {hasMore && (
-        <Row center="xs" middle="xs">
+        <Row center="xs" middle="xs" style={{ width: "100%" }}>
           <Link
             to={moreLink}
             style={{
