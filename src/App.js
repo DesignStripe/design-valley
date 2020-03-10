@@ -18,6 +18,7 @@ import LatestContainer from "./containers/LatestContainer";
 // import Nav from "./components/Nav";
 import About from "./pages/About";
 import Sponsor from "./pages/Sponsor";
+import DomainOwnership from "./pages/DomainOwnership";
 
 import Body from "./components/Body";
 import MainSection from "./components/MainSection";
@@ -81,6 +82,12 @@ function App() {
               <Route path="/favorites" exact component={FavoritesContainer} />
               <Route path="/about" exact component={About} />
               <Route path="/sponsor" exact component={Sponsor} />
+              <Route
+                path="/domain-ownership-validation"
+                exact
+                component={DomainOwnership}
+              />
+
               <Route component={HomeContainer} />
             </Switch>
             <Footer />
