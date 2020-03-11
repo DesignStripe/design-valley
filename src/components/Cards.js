@@ -116,7 +116,7 @@ const Cards = ({
                 isFeatured={
                   tool.isFeatured ||
                   tool.name === "Vectary" ||
-                  tool.name === "Wireframer" ||
+                  tool.name === "Creative Tim" ||
                   tool.name === "Figma" ||
                   tool.name === "VisualEyes"
                 }
