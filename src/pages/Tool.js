@@ -164,12 +164,18 @@ const Tool = props => {
       <Col style={{ marginTop: "2rem" }}>
         <Button
           onClick={() => {
-            const hasTrailingSlash = url.slice(-1) === "/";
-            const refLink = hasTrailingSlash
-              ? "?ref=designvalley"
-              : "/?ref=designvalley";
-            const newTab = window.open(url + refLink, "_blank");
-            newTab.focus();
+            if (name === "Creative Tim" || name === "Vectary") {
+              const newTab = window.open(url, "_blank");
+              newTab.focus();
+              return;
+            } else {
+              const hasTrailingSlash = url.slice(-1) === "/";
+              const refLink = hasTrailingSlash
+                ? "?ref=designvalley"
+                : "/?ref=designvalley";
+              const newTab = window.open(url + refLink, "_blank");
+              newTab.focus();
+            }
           }}
           style={{
             width: "100%",
