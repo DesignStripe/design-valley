@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FiTwitter, FiAward, FiUser, FiUsers } from "react-icons/fi";
+import { FiTwitter, FiAward, FiUser, FiUsers, FiCoffee } from "react-icons/fi";
 
 import Button from "./Button";
 import Link from "./Link";
@@ -22,6 +22,27 @@ const Container = styled.div`
   margin-bottom: 2rem;
 
   box-sizing: border-box;
+`;
+
+const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  & > *:first-child {
+    margin: 0 0.5rem 0 0 !important;
+  }
+
+  @media only screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    & > *:first-child {
+      margin: 0 0 0.5rem 0 !important;
+    }
+  }
 `;
 
 const Info = styled.div`
@@ -62,7 +83,7 @@ const HeaderBanner = ({}) => {
           now!
         </h2>
 
-        <div>
+        <Row>
           <Button
             variant="primary"
             style={{
@@ -77,6 +98,33 @@ const HeaderBanner = ({}) => {
               alignItems: "center"
             }}
             onClick={() =>
+              window.open("https://www.buymeacoffee.com/dmraptis", "_blank")
+            }
+          >
+            <FiCoffee
+              style={{ marginRight: ".5rem", strokeWidth: "2.5px" }}
+              size={16}
+            />
+            Buy me a coffee
+          </Button>
+
+          <Button
+            variant="primary"
+            style={{
+              right: "8px",
+              top: "8px",
+              padding: "11px",
+              fontSize: "12px",
+              margin: 0,
+              height: "auto",
+              color: "#fff",
+              display: "flex",
+              alignItems: "center",
+              background: "transparent",
+              border: "2px solid " + theme.colors.primary[500],
+              color: theme.colors.primary[500]
+            }}
+            onClick={() =>
               window.open(
                 "https://spectrum.chat/designvalley?tab=posts",
                 "_blank"
@@ -89,7 +137,7 @@ const HeaderBanner = ({}) => {
             />
             Join the community
           </Button>
-        </div>
+        </Row>
 
         {/* <div>
           <Button
