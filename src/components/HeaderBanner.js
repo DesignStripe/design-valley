@@ -95,7 +95,8 @@ const HeaderBanner = ({}) => {
               height: "auto",
               color: "#fff",
               display: "flex",
-              alignItems: "center"
+              alignItems: "center",
+              border: "2px solid " + theme.colors.primary[500]
             }}
             onClick={() =>
               window.open("https://www.buymeacoffee.com/dmraptis", "_blank")

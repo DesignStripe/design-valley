@@ -32,8 +32,12 @@ const Button = styled(SemanticButton)`
   font-size: 14px;
   font-family: Rubik, "sans-serif";
 
+  border: 2px solid ${props => props.theme.colors.primary[500]};
+
   &:hover {
     background: ${props => props.theme.colors.primary[400]};
+    border: 2px solid ${props => props.theme.colors.primary[400]} !important;
+
     background-image: none;
     box-shadow: 0 0 0 1px transparent inset,
       0 0 0 0 rgba(34, 36, 38, 0.15) inset;
