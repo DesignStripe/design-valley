@@ -22,7 +22,7 @@ const Avatar = ({ size = 32, style }) => {
     >
       <CircleImage
         size={size}
-        src="https://pbs.twimg.com/profile_images/1212447937789399046/c4-7A8B-_400x400.jpg"
+        src="https://pbs.twimg.com/profile_images/1250316314498879498/-hr_7irm_400x400.jpg"
       />
     </a>
   );
