@@ -102,11 +102,11 @@ const HeaderBanner = ({}) => {
               window.open("https://www.buymeacoffee.com/dmraptis", "_blank")
             }
           >
-            <FiCoffee
+            <FiAward
               style={{ marginRight: ".5rem", strokeWidth: "2.5px" }}
               size={16}
             />
-            Buy me a coffee
+            Support DesignValley
           </Button>
 
           <Button
