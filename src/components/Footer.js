@@ -137,7 +137,7 @@ const Footer = ({}) => {
             </b>
             <p style={{marginLeft: 8}}>and</p>
             <b>
-              <a href="https://designstripe.com"> designstripe </a>
+              <a href="https://designstripe.com">designstripe </a>
             </b>
           </div>
           {/* <Avatar src={me} /> */}
