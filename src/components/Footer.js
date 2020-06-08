@@ -135,6 +135,10 @@ const Footer = ({}) => {
             <b>
               <a href="https://twitter.com/d__raptis"> Jim Raptis </a>
             </b>
+            <p style={{marginLeft: 8}}>and</p>
+            <b>
+              <a href="https://designstripe.com"> designstripe </a>
+            </b>
           </div>
           {/* <Avatar src={me} /> */}
           <small>
