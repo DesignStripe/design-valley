@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@analytics/google-analytics": "0.5.0",
+    "analytics": "0.5.5",
     "axios": "^0.19.0",
     "fingerprintjs2": "^2.1.0",
     "framer-motion": "^1.6.12",
+    "history": "5.0.0",
     "js-cookie": "^2.2.1",
     "open-graph-scraper": "^3.6.2",
     "polished": "^3.4.1",

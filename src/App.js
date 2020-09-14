@@ -1,7 +1,7 @@
 import { hot } from "react-hot-loader/root";
 import React, { useState, useEffect } from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import socketIOClient from "socket.io-client";
 import ReactTooltip from "react-tooltip";
@@ -26,6 +26,8 @@ import Footer from "./components/Footer";
 
 import theme from "./utils/theme";
 import { getFingerprint, getIp, getUserInfo } from "./utils/fingerprint";
+import { history } from "./utils/history";
+import "./utils/analytics";
 
 import {
   setFingerprint,
@@ -62,7 +64,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Router>
+      <Router history={history}>
         <GlobalStyle />
         {/* <FloatingHeader /> */}
         {/* <PolicyLabel /> TODO: add this again*/}

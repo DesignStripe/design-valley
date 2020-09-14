@@ -96,31 +96,6 @@ const HeaderBanner = ({}) => {
               color: "#fff",
               display: "flex",
               alignItems: "center",
-              border: "2px solid " + theme.colors.primary[500]
-            }}
-            onClick={() =>
-              window.open("https://www.buymeacoffee.com/dmraptis", "_blank")
-            }
-          >
-            <FiAward
-              style={{ marginRight: ".5rem", strokeWidth: "2.5px" }}
-              size={16}
-            />
-            Support DesignValley
-          </Button>
-
-          <Button
-            variant="primary"
-            style={{
-              right: "8px",
-              top: "8px",
-              padding: "11px",
-              fontSize: "12px",
-              margin: 0,
-              height: "auto",
-              color: "#fff",
-              display: "flex",
-              alignItems: "center",
               background: "transparent",
               border: "2px solid " + theme.colors.primary[500],
               color: theme.colors.primary[500]
