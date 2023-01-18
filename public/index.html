@@ -67,7 +67,7 @@
 
       gtag("config", "UA-115819910-7");
     </script> -->
-    <script>
+    <!-- <script>
       (function(d, s, id){
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)){ return; }
@@ -78,6 +78,18 @@
           js.src = "https://campaigns.designstripe.com/analytics.js";
           fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'ds-jssdk'));
-    </script>
+    </script> -->
+    <script>
+    (function(d, s, id, wid){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)){ return; }
+        js = d.createElement(s); js.id = id;
+        js.onload = function(){
+            dsads.la(wid);
+        };
+        js.src = "https://analytics-dev.bettermeter.com/analytics.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'bm-jssdk', "294995360"));
+  </script>
   </body>
 </html>
